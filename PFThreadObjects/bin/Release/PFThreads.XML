@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFThreads</name>
+    </assembly>
+    <members>
+        <member name="T:PFThreads.PFCurrentThread">
+            <summary>
+            Class to manage the currently executing thread.
+            </summary>
+        </member>
+        <member name="M:PFThreads.PFCurrentThread.#ctor">
+            <summary>
+            Class constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreads.PFCurrentThread.Wait(System.Int32)">
+            <summary>
+            Pauses current executing thread the specified number of seconds.
+            </summary>
+            <param name="numSecsToWait">Number of seconds to wait before resuming thread.</param>
+            <remarks>Specify zero to indicate that curent thread should be suspended to allow other waiting threads to execute.</remarks>
+        </member>
+        <member name="M:PFThreads.PFCurrentThread.Sleep(System.Int32)">
+            <summary>
+            Pauses current executing thread the specified number of milliseconds.
+            </summary>
+            <param name="numMillisecondsToSleep">Number of milliseconds to wait before resuming thread.</param>
+            <remarks>Specify zero to indicate that curent thread should be suspended to allow other waiting threads to execute.</remarks>
+        </member>
+        <member name="M:PFThreads.PFCurrentThread.Sleep(System.TimeSpan)">
+            <summary>
+            Pauses current executing thread for the amount of time specified in the TimeSpan parameter.
+            </summary>
+            <param name="waitTime">TimeSpan object that specifies how much time to suspend the current thread.</param>
+        </member>
+    </members>
+</doc>

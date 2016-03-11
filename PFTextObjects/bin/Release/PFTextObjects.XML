@@ -1,0 +1,636 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFTextObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFTextObjects.PFTextProcessor">
+            <summary>
+            Classes containing static routines for various string conversions and manipulations.
+            </summary>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertYesNoToTrueFalse(System.String)">
+            <summary>
+            Converts a string to a bool value.
+            </summary>
+            <param name="psYesNo">String to be converted.</param>
+            <returns>Bool value.</returns>
+            <remarks>Yes or No string value returns true; all other values return false.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToBoolean(System.String)">
+            <summary>
+            Converts string to a bool value.
+            </summary>
+            <param name="psValue">Value to be converted.</param>
+            <returns>Boolean value.</returns>
+            <remarks>Default conversion value if value is not one of following (yes, true, no, false) is false.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToBoolean(System.String,System.String)">
+            <summary>
+            Converts string to a bool value.
+            </summary>
+            <param name="psValue">Value to be converted.</param>
+            <param name="psDefaultValue">Default conversion value if value is not one of following: yes, true, no, false.</param>
+            <returns>Boolean value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToByte(System.String)">
+            <summary>
+            Converts string to Byte.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>Byte value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number or is too large for a Byte) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToByte(System.String,System.Byte)">
+            <summary>
+            Converts string to Byte.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is invalid.</param>
+            <returns>Byte value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToSByte(System.String)">
+            <summary>
+            Converts string to SByte.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>SByte value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number or is too large for a SByte) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToSByte(System.String,System.SByte)">
+            <summary>
+            Converts string to SByte.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is invalid.</param>
+            <returns>SByte value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToShort(System.String)">
+            <summary>
+            Converts string to short integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>Short value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number or is too large for a Short) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToShort(System.String,System.Int16)">
+            <summary>
+            Converts string to short integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is invalid.</param>
+            <returns>Short value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToushort(System.String)">
+            <summary>
+            Converts string to unsigned short integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>ushort value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number or is too large for a ushort) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToushort(System.String,System.UInt16)">
+            <summary>
+            Converts string to unsigned short integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is invalid.</param>
+            <returns>ushort value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToInt(System.String)">
+            <summary>
+            Converts string to integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>int value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToInt(System.String,System.Int32)">
+            <summary>
+            Converts string to integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>int value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToUint(System.String)">
+            <summary>
+            Converts string to unsigned integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>uint value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToUint(System.String,System.UInt32)">
+            <summary>
+            Converts string to unsigned integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>uint value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToLong(System.String)">
+            <summary>
+            Converts string to long.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>long value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToLong(System.String,System.Int64)">
+            <summary>
+            Converts string to long.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>int value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToUlong(System.String)">
+            <summary>
+            Converts string to unsigned long.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>ulong value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToUlong(System.String,System.UInt64)">
+            <summary>
+            Converts string to unsigned long.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>int value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToFloat(System.String)">
+            <summary>
+            Converts string to float.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>float value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToFloat(System.String,System.Single)">
+            <summary>
+            Converts string to float.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>float value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToDouble(System.String)">
+            <summary>
+            Converts string to double.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>double value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToDouble(System.String,System.Double)">
+            <summary>
+            Converts string to double.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>double value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToDecimal(System.String)">
+            <summary>
+            Converts string to Decimal.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>Decimal value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number or is too large for a Decimal) then 0 is returned.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToDecimal(System.String,System.Decimal)">
+            <summary>
+            Converts string to Decimal.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is invalid.</param>
+            <returns>Decimal value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToDateTime(System.String,System.String)">
+            <summary>
+            Converts string to DateTime value.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="psDefaultValue">Value to return if value is not a Date/Time.</param>
+            <returns>DateTime value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToTimeSpan(System.String,System.String)">
+            <summary>
+            Converts string to TimeSpan value.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="psDefaultValue">Value to return if value is not a TimeSpan.</param>
+            <returns>TimeSpan value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToDateTime(System.String,System.DateTime)">
+            <summary>
+            Converts string to DateTime value.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pdDefaultValue">Value to return if value is not a Date/Time.</param>
+            <returns>DateTime value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToTimeSpan(System.String,System.TimeSpan)">
+            <summary>
+            Converts string to TimeSpan value.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="tsDefaultValue">Value to return if value is not a TimeSpan.</param>
+            <returns>TimeSpan value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToTitleFormat(System.String)">
+            <summary>
+            Routine to capitalize the first letter of a string.
+            </summary>
+            <param name="psValue">String value to be formatted as a title.</param>
+            <returns>String with first letter capitalized and all subsequent letters in lower case.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.StringLength(System.String)">
+            <summary>
+            Gets length of a string.
+            </summary>
+            <param name="psStringValue">String to measure.</param>
+            <returns>Length of string.</returns>
+            <remarks>Use this is value could be null or empty string.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ReverseString(System.String)">
+            <summary>
+            Reverses a string.
+            </summary>
+            <param name="psStringValue">String to reverse.</param>
+            <returns>Reversed string.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringToByteArray(System.String)">
+            <summary>
+            Converts string to an array of bytes.
+            </summary>
+            <param name="str">String to convert.</param>
+            <returns>Byte array.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertByteArrayToCharArray(System.Byte[])">
+            <summary>
+            Converts byte array to a char array.
+            </summary>
+            <param name="bytes">Byte array to convert.</param>
+            <returns>char[].</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertByteArrayToString(System.Byte[])">
+            <summary>
+            Converts byte array to a string.
+            </summary>
+            <param name="bytes">Byte array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertByteArrayToAsciiString(System.Byte[])">
+            <summary>
+            Converts byte array to an ascii string.
+            </summary>
+            <param name="bytes">Byte array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertByteArrayToAsciiExtendedString(System.Byte[])">
+            <summary>
+            Converts byte array to an ascii extended string.
+            </summary>
+            <param name="bytes">Byte array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertByteArrayToUTF8String(System.Byte[])">
+            <summary>
+            Converts byte array to an UTF8 string.
+            </summary>
+            <param name="bytes">Byte array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertByteArrayToHexString(System.Byte[])">
+            <summary>
+            Converts byte array to a string formatted as hexadecimal numbers.
+            </summary>
+            <param name="bytes">Byte array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.RepeatChar(System.Char,System.Int32)">
+            <summary>
+            Returns string containing a character repeated the specified number of times.
+            </summary>
+            <param name="c">Char value to repeat.</param>
+            <param name="count">Number of times to repeat the char value.</param>
+            <returns>String containing the repeated char value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertCharArrayToByteArray(System.Char[])">
+            <summary>
+            Converts char array to a byte array.
+            </summary>
+            <param name="chars">Char array to convert.</param>
+            <returns>byte[]</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertCharArrayToString(System.Char[])">
+            <summary>
+            Converts char array to a string.
+            </summary>
+            <param name="chars">char array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertCharArrayToHexString(System.Char[])">
+            <summary>
+            Converts char array to a string formatted as hexadecimal numbers.
+            </summary>
+            <param name="chars">Char array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertCharToString(System.Char)">
+            <summary>
+            Convert a char value to a string value.
+            </summary>
+            <param name="ch">char to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.StringIsNumeric(System.String)">
+            <summary>
+            Returns whether or not a specified string represents a number.
+            </summary>
+            <param name="str">String to be parsed for a valid number.</param>
+            <returns>True if string represents a number; otherwise returns false.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.StringIsInt(System.String)">
+            <summary>
+            Returns whether or not a specified string represents an integer.
+            </summary>
+            <param name="str">String to be parsed for a valid integer.</param>
+            <returns>True if string represents an integer; otherwise returns false.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.StringIsLong(System.String)">
+            <summary>
+            Returns whether or not a specified string represents a long integer.
+            </summary>
+            <param name="str">String to be parsed for a valid long integer.</param>
+            <returns>True if string represents a long integer; otherwise returns false.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.FormatErrorMessage(System.Exception)">
+            <summary>
+            Produces error message in format that includes difference parts of the message. Stack trace is not included in the result.
+            </summary>
+            <param name="pex">Exception object.</param>
+            <returns>String with formatted error message.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.FormatErrorMessageWithStackTrace(System.Exception)">
+            <summary>
+            Produces error message in format that includes difference parts, including the stack trace, of the message.
+            </summary>
+            <param name="pex">Exception object.</param>
+            <returns>String with formatted error message.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.FormatElapsedTime(System.DateTime,System.DateTime)">
+            <summary>
+            Calculates the TimeSpan between the start and end times and returns the parts of the TimeSpan formatted into a string.
+            </summary>
+            <param name="startTime">DateTime representing the start of the time interval.</param>
+            <param name="endTime">DateTime representing the end of the time interval.</param>
+            <returns>String formatted as n day(s) n hour(s) n minute(s) n second(s).</returns>
+            <remarks>Parts of the TimeSpan only shown if they have a value. For example, if Days value is 0 then the n day(s) portion of the formatted output is suppressed.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.FormatElapsedTime(System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            Calculates the TimeSpan between the start and end times and returns the parts of the TimeSpan formatted into a string.
+            </summary>
+            <param name="startTime">DateTime representing the start of the time interval.</param>
+            <param name="endTime">DateTime representing the end of the time interval.</param>
+            <param name="showMilliseconds">If true, milliseconds will be included in the formatted output.</param>
+            <returns>String formatted as n day(s) n hour(s) n minute(s) n second(s) n ms.</returns>
+            <remarks>Parts of the TimeSpan only shown if they have a value. For example, if Days value is 0 then the n day(s) portion of the formatted output is suppressed.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.FormatTimeSpan(System.TimeSpan)">
+            <summary>
+            Returns the parts of the TimeSpan formatted into a string.
+            </summary>
+            <param name="ts">TimeSpan object.</param>
+            <returns>String formatted as n day(s) n hour(s) n minute(s) n second(s).</returns>
+            <remarks>Parts of the TimeSpan only shown if they have a value. For example, if Days value is 0 then the n day(s) portion of the formatted output is suppressed.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.FormatTimeSpan(System.TimeSpan,System.Boolean)">
+            <summary>
+            Returns the parts of the TimeSpan formatted into a string.
+            </summary>
+            <param name="ts">TimeSpan object.</param>
+            <param name="showMilliseconds">If true, milliseconds will be included in the formatted output.</param>
+            <returns>String formatted as n day(s) n hour(s) n minute(s) n second(s) n ms.</returns>
+            <remarks>Parts of the TimeSpan only shown if they have a value. For example, if Days value is 0 then the n day(s) portion of the formatted output is suppressed.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringArrayToString(System.String[])">
+            <summary>
+            Converts a string array into a concatenated string.
+            </summary>
+            <param name="strArray">Array of strings.</param>
+            <returns>String value.</returns>
+            <remarks>Inserts a space after each element in the array when the element is appended to the concatenated result string.</remarks>
+        </member>
+        <member name="M:PFTextObjects.PFTextProcessor.ConvertStringArrayToString(System.String[],System.String)">
+            <summary>
+            Converts a string array into a concatenated string.
+            </summary>
+            <param name="strArray">Array of strings.</param>
+            <param name="separatorAfterConversion">Separate to insert after each element in the array when the element is appended to the concatenated result string.</param>
+            <returns>String value.</returns>
+        </member>
+        <member name="T:PFTextObjects.PFSearchPattern">
+            <summary>
+            Class for searching strings using a pattern mask. Mask uses wildcards like those used for Windows file spec masks. Pattern matches are case insensitive.
+            </summary>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPattern.#ctor(System.String)">
+            <summary>
+            Initializes a FileSpec with the given search pattern.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPattern.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Initializes a FileSpec with the given search pattern and options.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+            <param name="options">A combination of one or more System.Text.RegexOption.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPattern.SearchPatternToRegex(System.String)">
+            <summary>
+            Converts a FileSpec to a regex.
+            </summary>
+            <param name="pattern">The FileSpec pattern to convert.</param>
+            <returns>A regex equivalent of the given FileSpec.</returns>
+        </member>
+        <member name="T:PFTextObjects.PFSearchPatternCS">
+            <summary>
+            Class encapsulates case sensitive pattern matching.
+            </summary>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPatternCS.#ctor(System.String)">
+            <summary>
+            Initializes a FileSpec with the given search pattern.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPatternCS.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Initializes a FileSpec with the given search pattern and options.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+            <param name="options">A combination of one or more System.Text.RegexOption.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPatternCS.SearchPatternToRegex(System.String)">
+            <summary>
+            Converts a FileSpec to a regex.
+            </summary>
+            <param name="pattern">The FileSpec pattern to convert.</param>
+            <returns>A regex equivalent of the given FileSpec.</returns>
+        </member>
+        <member name="T:PFTextObjects.PFParseString">
+            <summary>
+            Class to split a string into a defined set of components. Useful for parsing command lines.
+            </summary>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.Get(System.Int32)">
+            <summary>
+            Retrieves the argument specified by the index parameter.
+            </summary>
+            <param name="rnIndex">0 based index into the list of arguments found in the parsed string.</param>
+            <returns>Value at the specified index.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.Get(System.String)">
+            <summary>
+            Retrieves the value of the argument specified by the key parameter.
+            </summary>
+            <param name="rsKey">Key to lookup.</param>
+            <returns>Value associated with the key.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetKeyValuePair(PFTextObjects.PFParseString.PFScroll)">
+            <summary>
+            Method for scrolling through the list of key/value pairs found in a parsed string.
+            </summary>
+            <param name="scroll">Identifies which key/value pair to retrieve.</param>
+            <returns>Returns key and its associated value at the position on line specified by the PFScroll parameter.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.Get(PFTextObjects.PFParseString.PFScroll)">
+            <summary>
+            Method to retrieve values in parsed string by scrolling through the list of items found.
+            </summary>
+            <param name="scroll">Direction to scroll.</param>
+            <returns>Value found at the position specified by the scroll.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetFirst">
+            <summary>
+            Retrieves first value found in parsed string.
+            </summary>
+            <returns>String value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetLast">
+            <summary>
+            Retrieves last value found in parsed string.
+            </summary>
+            <returns>String value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetNext">
+            <summary>
+            Retrieves next value found in parsed string.
+            </summary>
+            <returns>String value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetPrev">
+            <summary>
+            Retrieves previous value found in parsed string.
+            </summary>
+            <returns>String value.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetFirstKeyValue">
+            <summary>
+            Gets first key/value pair in parsed string.
+            </summary>
+            <returns>Key/Value pair.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetLastKeyValue">
+            <summary>
+            Gets last key/value pair in parsed string.
+            </summary>
+            <returns>Key/Value pair.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetNextKeyValue">
+            <summary>
+            Gets next key/value pair in parsed string.
+            </summary>
+            <returns>Key/Value pair.</returns>
+        </member>
+        <member name="M:PFTextObjects.PFParseString.GetPrevKeyValue">
+            <summary>
+            Gets previous key/value pair in parsed string.
+            </summary>
+            <returns>Key/Value pair.</returns>
+        </member>
+        <member name="P:PFTextObjects.PFParseString.Delimiters">
+            <summary>
+            One or more delimiters used to separate arguments on a line.
+            </summary>
+        </member>
+        <member name="P:PFTextObjects.PFParseString.QuotedValues">
+            <summary>
+            If true, phrases with embedded spaces can be surrounded by quotes so they will be processed as one argument.
+            </summary>
+        </member>
+        <member name="P:PFTextObjects.PFParseString.NumItems">
+            <summary>
+            Returns number of items (arguments) found in a string.
+            </summary>
+        </member>
+        <member name="P:PFTextObjects.PFParseString.KeyType">
+            <summary>
+            Gets or sets the type of key to look for in the string being parsed.
+            </summary>
+        </member>
+        <member name="P:PFTextObjects.PFParseString.EOL">
+            <summary>
+            True if end of line has been reached.
+            </summary>
+        </member>
+        <member name="P:PFTextObjects.PFParseString.StringToParse">
+            <summary>
+            String that is to be parsed.
+            </summary>
+            <remarks>Setting this property automatically parses the string.</remarks>
+        </member>
+        <member name="P:PFTextObjects.PFParseString.NumKeys">
+            <summary>
+            Number of keys found in the parsed string.
+            </summary>
+        </member>
+        <member name="T:PFTextObjects.PFParseString.PFArgumentKeyType">
+            <summary>
+            Specifies how the arguments are grouped in a string.
+            </summary>
+        </member>
+        <member name="F:PFTextObjects.PFParseString.PFArgumentKeyType.NoKey">
+            <summary>
+            Arguments do have a key.
+            </summary>
+        </member>
+        <member name="F:PFTextObjects.PFParseString.PFArgumentKeyType.CharKey">
+            <summary>
+            One character key (e.g. /d parm1)
+            </summary>
+        </member>
+        <member name="F:PFTextObjects.PFParseString.PFArgumentKeyType.NamedKey">
+            <summary>
+            Example: /server MyServer
+            </summary>
+        </member>
+        <member name="T:PFTextObjects.PFParseString.PFKeyValuePair">
+            <summary>
+            Used for storing keys and value pairs found in a string.
+            </summary>
+        </member>
+    </members>
+</doc>

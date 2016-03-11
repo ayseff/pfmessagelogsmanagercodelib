@@ -1,0 +1,611 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFListObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFListObjects.PFListExComparers">
+            <summary>
+            Set of methods for allowing the sorting of key lists.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFListExComparers.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFListExComparers.CompareListString(System.String,System.String)">
+            <summary>
+            Compares two strings.
+            </summary>
+            <param name="x">First string to compare.</param>
+            <param name="y">Second string to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="M:PFListObjects.PFListExComparers.CompareListInt(System.Int32,System.Int32)">
+            <summary>
+            Compares two int values.
+            </summary>
+            <param name="x">First int to compare.</param>
+            <param name="y">Second int to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="M:PFListObjects.PFListExComparers.CompareListLong(System.Int64,System.Int64)">
+            <summary>
+            Compares two long values.
+            </summary>
+            <param name="x">First long to compare.</param>
+            <param name="y">Second long to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="M:PFListObjects.PFListExComparers.CompareListDouble(System.Double,System.Double)">
+            <summary>
+            Compares two double values.
+            </summary>
+            <param name="x">First double to compare.</param>
+            <param name="y">Second double to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="M:PFListObjects.PFListExComparers.CompareListDecimal(System.Decimal,System.Decimal)">
+            <summary>
+            Compares two decimal values.
+            </summary>
+            <param name="x">First decimal to compare.</param>
+            <param name="y">Second decimal to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="M:PFListObjects.PFListExComparers.CompareListDateTime(System.DateTime,System.DateTime)">
+            <summary>
+            Compares two DateTime values.
+            </summary>
+            <param name="x">First DateTime to compare.</param>
+            <param name="y">Second DateTime to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="T:PFListObjects.PFKeyValueListExSorted`2">
+            <summary>
+            Class to manage list of key/value pairs. List can be save to either XML or to a database.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.SetToBOF">
+            <summary>
+            Used to setup a while(myList.NextItem) loop. NextItem will return first element in the collection after this method is run.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.ConvertThisToPFKeyValueListEx">
+            <summary>
+            Converts PFKeyValueListExSorted object to PFKeyValueListEx object.
+            </summary>
+            <returns>PFKeyValueListEx object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.ConvertPFKeyValueListExToSortedList(PFListObjects.PFKeyValueListEx{`0,`1})">
+            <summary>
+            Converts PFKeyValueListEx object to PFKeyValueListExSorted object.
+            </summary>
+            <param name="kvlist"></param>
+            <returns>PFKeyValueListExSorted object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.SaveToXmlFile(System.String,System.String,System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to an encrypted file. Key and IV parameters are used
+            to specify an AES encryption. Serialization is used to get the object values into an XML string that will be encrypted and
+            written to the output file.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+            <param name="key">AES encryption key.</param>
+            <param name="iv">AES IV value.</param>
+            <remarks>Only AES encryption is supported by this routine.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.SaveToDatabase(System.String,System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the database specified by the connection string.
+            </summary>
+            <param name="connectionString">Contains information needed to open the database.</param>
+            <param name="listName">Name to give list in the database.</param>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFKeyValueListEx.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.LoadFromXmlFile(System.String,System.String,System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored in an encrypted file.
+            The file is first decrypted into an XML string and the XML string is then used to create an instance of the class.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <param name="key">AES encryption key.</param>
+            <param name="iv">AES IV value.</param>
+            <returns>An instance of PFKeyValueListEx.</returns>
+            <remarks>Only AES encryption is supported by this routine.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.LoadFromDatabase(System.String,System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a database record.
+            </summary>
+            <param name="connectionString">Connection parameters for the database.</param>
+            <param name="listName">Name of the list in the database.</param>
+            <returns>PFListEx object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.LoadFromXmlString(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored as a xml formatted string.
+            </summary>
+            <param name="xmlString">String containing the xml formatted representation of an instance of this class.</param>
+            <returns>An instance of PFKeyValueListEx.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExSorted`2.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListExSorted`2.EOF">
+            <summary>
+            EOF Property. Is true if current position is not pointing to any item in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListExSorted`2.CurrentItem">
+            <summary>
+            Current item selected from collection by latest navigation method (FirstItem, LastItem, NextItem, PrevItem).
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListExSorted`2.FirstItem">
+            <summary>
+            Selects first item in the collection. Returns null if no items in the collection. Returns null if there are no items in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListExSorted`2.LastItem">
+            <summary>
+            Selects the last item in the collection. Returns null if there are no items in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListExSorted`2.NextItem">
+            <summary>
+            Moves to and selects next item in the collection that follows the currently selected item. Returns null if navigation moves past the last item in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListExSorted`2.PrevItem">
+            <summary>
+            Navigates to and selects the previous item in the collection. Return null if navigation moves past the first item in the collection.
+            </summary>
+        </member>
+        <member name="T:PFListObjects.PFKeyValueListExComparers">
+            <summary>
+            Set of methods for allowing the sorting of key/value lists.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExComparers.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExComparers.CompareKeyValueListIntString(PFListObjects.pfKeyValuePair{System.Int32,System.String},PFListObjects.pfKeyValuePair{System.Int32,System.String})">
+            <summary>
+            Compares two keys that are int values.
+            </summary>
+            <param name="x">First key/value pair to compare.</param>
+            <param name="y">Second key/value pair to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListExComparers.CompareKeyValueListStringString(PFListObjects.pfKeyValuePair{System.String,System.String},PFListObjects.pfKeyValuePair{System.String,System.String})">
+            <summary>
+            Compares two keys that are string values.
+            </summary>
+            <param name="x">First key/value pair to compare.</param>
+            <param name="y">Second key/value pair to compare.</param>
+            <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
+        </member>
+        <member name="T:PFListObjects.PFListEx`1">
+            <summary>
+            Class inherits from generic List class and implements extra navigation and load/save methods. List can be save to either XML or to a database.
+            </summary>
+            <remarks>Class has database functionality not found in the classes in the PFCollectionsObjects namespace.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.SetToBOF">
+            <summary>
+            Used to setup a while(myList.NextItem) loop. NextItem will return first element in the collection after this method is run.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.SaveToXmlFile(System.String,System.String,System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to an encrypted file. Key and IV parameters are used
+            to specify an AES encryption. Serialization is used to get the object values into an XML string that will be encrypted and
+            written to the output file.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+            <param name="key">AES encryption key.</param>
+            <param name="iv">AES IV value.</param>
+            <remarks>Only AES encryption is supported by this routine.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.SaveToDatabase(System.String,System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the database specified by the connection string.
+            </summary>
+            <param name="connectionString">Contains information needed to open the database.</param>
+            <param name="listName">Name of the list in the database.</param>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFListEx.</returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.LoadFromXmlFile(System.String,System.String,System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored in an encrypted file.
+            The file is first decrypted into an XML string and the XML string is then used to create an instance of the class.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <param name="key">AES encryption key.</param>
+            <param name="iv">AES IV value.</param>
+            <returns>An instance of PFListEx.</returns>
+            <remarks>Only AES encryption is supported by this routine.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.LoadFromDatabase(System.String,System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a database record.
+            </summary>
+            <param name="connectionString">Connection parameters for the database.</param>
+            <param name="listName">Name of the list in the database.</param>
+            <returns>PFListEx object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.LoadFromXmlString(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored as a xml formatted string.
+            </summary>
+            <param name="xmlString">String containing the xml formatted representation of an instance of this class.</param>
+            <returns>An instance of PFListEx generic object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.ConcatenateLists(PFListObjects.PFListEx{`0}[])">
+            <summary>
+            Routine that concatenates two or more lists into one list.
+            </summary>
+            <param name="lists">Array of list objects to be concatenated.</param>
+            <returns>Concatenated list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.ConcatenateLists(PFListObjects.PFListEx{PFListObjects.PFListEx{`0}})">
+            <summary>
+            Routine that concatenates two or more lists into one list.
+            </summary>
+            <param name="lists">List of list objects to be concatenated.</param>
+            <returns>Concatenated list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.Merge(PFListObjects.PFListEx{`0})">
+            <summary>
+            Merges current list with the list specified in the parameter.
+            </summary>
+            <param name="list">List to merge with.</param>
+            <returns>Merged list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.Merge(PFListObjects.PFListEx{`0}[])">
+            <summary>
+            Merges current list with the array of lists specified in the parameter.
+            </summary>
+            <param name="lists">Lists to merge with.</param>
+            <returns>Merged list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFListEx`1.Merge(PFListObjects.PFListEx{PFListObjects.PFListEx{`0}})">
+            <summary>
+            Merges current list with the list of lists specified in the parameter.
+            </summary>
+            <param name="lists">Lists to merge with.</param>
+            <returns>Merged list.</returns>
+        </member>
+        <member name="P:PFListObjects.PFListEx`1.EOF">
+            <summary>
+            EOF Property. Is true if current position is not pointing to any item in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFListEx`1.CurrentItem">
+            <summary>
+            Current item selected from collection by latest navigation method (FirstItem, LastItem, NextItem, PrevItem).
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFListEx`1.FirstItem">
+            <summary>
+            Selects first item in the collection. Returns null if no items in the collection. Returns null if there are no items in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFListEx`1.LastItem">
+            <summary>
+            Selects the last item in the collection. Returns null if there are no items in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFListEx`1.NextItem">
+            <summary>
+            Moves to and selects next item in the collection that follows the currently selected item. Returns null if navigation moves past the last item in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFListEx`1.PrevItem">
+            <summary>
+            Navigates to and selects the previous item in the collection. Return null if navigation moves past the first item in the collection.
+            </summary>
+        </member>
+        <member name="T:PFListObjects.PFKeyValueListEx`2">
+            <summary>
+            Class to manage list of key/value pairs. List can be save to either XML or to a database.
+            </summary>
+            <remarks>Class has database functionality not found in the classes in the PFCollectionsObjects namespace.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.SetToBOF">
+            <summary>
+            Used to setup a while(myList.NextItem) loop. NextItem will return first element in the collection after this method is run.
+            </summary>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.CopyThisToPFKeyValueListEx">
+            <summary>
+            Converts currentg instance to another PFKeyValueListEx object.
+            </summary>
+            <returns>PFKeyValueListEx object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.ConvertThisToPFListEx">
+            <summary>
+            Converts current instance of a PFKeyValueListEx object to PFListEx object.
+            </summary>
+            <returns>PFListEx object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.Find(System.String)">
+            <summary>
+            Searches for and returns key/value pair that has matching key.
+            </summary>
+            <param name="keyToFind">Key to search for.</param>
+            <returns>Object containing key and value. Returns empty key/val object if not found.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.Exists(System.String)">
+            <summary>
+            Determines if specified key exists in the list.
+            </summary>
+            <param name="keyToFind">Key to search for.</param>
+            <returns>Returns true if found.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.Remove(System.String)">
+            <summary>
+            Removes the item identified by the specified key from the list.
+            </summary>
+            <param name="keyToRemove">Key to search for and remove.</param>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.SaveToXmlFile(System.String,System.String,System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to an encrypted file. Key and IV parameters are used
+            to specify an AES encryption. Serialization is used to get the object values into an XML string that will be encrypted and
+            written to the output file.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+            <param name="key">AES encryption key.</param>
+            <param name="iv">AES IV value.</param>
+            <remarks>Only AES encryption is supported by this routine.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.SaveToDatabase(System.String,System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the database specified by the connection string.
+            </summary>
+            <param name="connectionString">Contains information needed to open the database.</param>
+            <param name="listName">Name of the list in the database.</param>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFKeyValueListEx.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.LoadFromXmlFile(System.String,System.String,System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored in an encrypted file.
+            The file is first decrypted into an XML string and the XML string is then used to create an instance of the class.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <param name="key">AES encryption key.</param>
+            <param name="iv">AES IV value.</param>
+            <returns>An instance of PFKeyValueListEx.</returns>
+            <remarks>Only AES encryption is supported by this routine.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.LoadFromDatabase(System.String,System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a database record.
+            </summary>
+            <param name="connectionString">Connection parameters for the database.</param>
+            <param name="listName">Name of the list in the database.</param>
+            <returns>PFListEx object.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.LoadFromXmlString(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored as a xml formatted string.
+            </summary>
+            <param name="xmlString">String containing the xml formatted representation of an instance of this class.</param>
+            <returns>An instance of PFKeyValueListEx.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.ConcatenateLists(PFListObjects.PFKeyValueListEx{`0,`1}[])">
+            <summary>
+            Routine that concatenates two or more lists into one list.
+            </summary>
+            <param name="lists">Array of list objects to be concatenated.</param>
+            <returns>Concatenated list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.ConcatenateLists(PFListObjects.PFListEx{PFListObjects.PFKeyValueListEx{`0,`1}})">
+            <summary>
+            Routine that concatenates two or more lists into one list.
+            </summary>
+            <param name="lists">List of list objects to be concatenated.</param>
+            <returns>Concatenated list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.Merge(PFListObjects.PFKeyValueListEx{`0,`1})">
+            <summary>
+            Merges current list with the list specified in the parameter.
+            </summary>
+            <param name="list">List to merge with.</param>
+            <returns>Merged list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.Merge(PFListObjects.PFKeyValueListEx{`0,`1}[])">
+            <summary>
+            Merges current list with the array of lists specified in the parameter.
+            </summary>
+            <param name="lists">Lists to merge with.</param>
+            <returns>Merged list.</returns>
+        </member>
+        <member name="M:PFListObjects.PFKeyValueListEx`2.Merge(PFListObjects.PFListEx{PFListObjects.PFKeyValueListEx{`0,`1}})">
+            <summary>
+            Merges current list with the list of lists specified in the parameter.
+            </summary>
+            <param name="lists">Lists to merge with.</param>
+            <returns>Merged list.</returns>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListEx`2.EOF">
+            <summary>
+            EOF Property. Is true if current position is not pointing to any item in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListEx`2.CurrentItem">
+            <summary>
+            Current item selected from collection by latest navigation method (FirstItem, LastItem, NextItem, PrevItem).
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListEx`2.FirstItem">
+            <summary>
+            Selects first item in the collection. Returns null if no items in the collection. Returns null if there are no items in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListEx`2.LastItem">
+            <summary>
+            Selects the last item in the collection. Returns null if there are no items in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListEx`2.NextItem">
+            <summary>
+            Moves to and selects next item in the collection that follows the currently selected item. Returns null if navigation moves past the last item in the collection.
+            </summary>
+        </member>
+        <member name="P:PFListObjects.PFKeyValueListEx`2.PrevItem">
+            <summary>
+            Navigates to and selects the previous item in the collection. Return null if navigation moves past the first item in the collection.
+            </summary>
+        </member>
+    </members>
+</doc>

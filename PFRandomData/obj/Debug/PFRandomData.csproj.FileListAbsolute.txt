@@ -1,0 +1,5 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\bin\Debug\PFRandomData.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\bin\Debug\PFRandomData.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\obj\Debug\PFRandomData.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\obj\Debug\PFRandomData.pdb

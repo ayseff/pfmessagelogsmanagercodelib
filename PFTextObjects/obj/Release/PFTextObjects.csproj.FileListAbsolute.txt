@@ -1,0 +1,12 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\bin\Release\PFTextObjects.XML
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\bin\Release\PFTextObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\bin\Release\PFTextObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\obj\Release\PFTextObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\obj\Release\PFTextObjects.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\bin\Release\PFTextObjects.XML
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\bin\Release\PFTextObjects.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\bin\Release\PFTextObjects.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\obj\Release\PFTextObjects.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\obj\Release\PFTextObjects.pdb

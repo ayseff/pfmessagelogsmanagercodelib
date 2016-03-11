@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFThreadObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFThreadObjects.PFThread">
+            <summary>
+            Class inherits from Thread class and provides fields for optional extra information. 
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.#ctor(System.Threading.ThreadStart)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.#ctor(System.Threading.ParameterizedThreadStart)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.#ctor(System.Threading.ThreadStart,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.#ctor(System.Threading.ParameterizedThreadStart,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.Start">
+            <summary>
+            Causes the operating system to change the state of the current instance to ThreadState.Running. 
+            Once a thread is in the ThreadState.Running state, the operating system can schedule it for execution. 
+            The thread begins executing at the first line of the method represented by the ThreadStart or ParameterizedThreadStart delegate supplied to the thread constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.Start(System.Object)">
+            <summary>
+            Starts the thread and passes in a parameter containing data to be used by the thread.
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.Interrupt">
+            <summary>
+            Interrupts a thread that is in the WaitSleepJoin thread state.
+            </summary>
+            <remarks>If this thread is not currently blocked in a wait, sleep, or join state, it will be interrupted when it next begins to block. ThreadInterruptedException is thrown 
+            in the interrupted thread, but not until the thread blocks. 
+            If the thread never blocks, the exception is never thrown, and thus the thread might complete without ever being interrupted.</remarks>
+        </member>
+        <member name="M:PFThreadObjects.PFThread.Abort">
+            <summary>
+            Raises a ThreadAbortException in the thread on which it is invoked, to begin the process of terminating the thread. Calling this method usually terminates the thread.
+            </summary>
+            <remarks> When this method is invoked on a thread, the system throws a ThreadAbortException in the thread to abort it. 
+            ThreadAbortException is a special exception that can be caught by application code, 
+            but is re-thrown at the end of the catch block unless ResetAbort is called. 
+            ResetAbort cancels the request to abort, and prevents the ThreadAbortException from terminating the thread. Unexecuted finally blocks are executed before the thread is aborted. 
+            See MSDN documentation for complete description of Thread.Abort.</remarks>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.ThreadObject">
+            <summary>
+            Use this to access all the properties and methods of the underlying System.Threading.Thread being run by this inatance.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.ThreadName">
+            <summary>
+            Name given to the thread.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.ThreadDescription">
+            <summary>
+            Expanded description of what the thread is doing.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.IsAlive">
+            <summary>
+            Returns true if thread is executing.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.HasFinished">
+            <summary>
+            True if background worker has completed. Otherwise false.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.StartTime">
+            <summary>
+            StartTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.FinishTime">
+            <summary>
+            FinishTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.ElapsedTime">
+            <summary>
+            ElapsedTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.ElapsedTimeFormatted">
+            <summary>
+            Elapsed time returned as formatted string.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThread.ShowElapsedMilliseconds">
+            <summary>
+            Determines whether or not the ElapsedTime and ElapsedTimeFormatted properties will show milliseconds in their output.
+            Set to true if you wish to see the elapsed time broken down to milliseconds.
+            </summary>
+        </member>
+        <member name="T:PFThreadObjects.PFCurrentThread">
+            <summary>
+            Class to manage the currently executing thread.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFCurrentThread.#ctor">
+            <summary>
+            Class constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFCurrentThread.Wait(System.Int32)">
+            <summary>
+            Pauses current executing thread the specified number of seconds.
+            </summary>
+            <param name="numSecsToWait">Number of seconds to wait before resuming thread.</param>
+            <remarks>Specify zero to indicate that curent thread should be suspended to allow other waiting threads to execute.</remarks>
+        </member>
+        <member name="M:PFThreadObjects.PFCurrentThread.Sleep(System.Int32)">
+            <summary>
+            Pauses current executing thread the specified number of milliseconds.
+            </summary>
+            <param name="numMillisecondsToSleep">Number of milliseconds to wait before resuming thread.</param>
+            <remarks>Specify zero to indicate that curent thread should be suspended to allow other waiting threads to execute.</remarks>
+        </member>
+        <member name="M:PFThreadObjects.PFCurrentThread.Sleep(System.TimeSpan)">
+            <summary>
+            Pauses current executing thread for the amount of time specified in the TimeSpan parameter.
+            </summary>
+            <param name="waitTime">TimeSpan object that specifies how much time to suspend the current thread.</param>
+        </member>
+        <member name="T:PFThreadObjects.PFBackgroundWorker">
+            <summary>
+            Class inherits from BackgroundWorker class and provides fields for optional extra information. 
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="workerName">Unique name that identifies this worker.</param>
+        </member>
+        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor(System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="workerName">Unique name that identifies this worker.</param>
+            <param name="workerDescription">Description of what the worker does.</param>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.WorkerName">
+            <summary>
+            Optional name used to distinguish this worker from others of same kine. 
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.WorkerDescription">
+            <summary>
+            Optional text decribing this instance of the background worker. Can be used to provide a an identification that distinguishes this instance from others of this type.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.HasFinished">
+            <summary>
+            True if background worker has completed. Otherwise false.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.StartTime">
+            <summary>
+            StartTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.FinishTime">
+            <summary>
+            FinishTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.ElapsedTime">
+            <summary>
+            ElapsedTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.ElapsedTimeFormatted">
+            <summary>
+            Elapsed time returned as formatted string.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.ShowElapsedMilliseconds">
+            <summary>
+            Determines whether or not the ElapsedTime and ElapsedTimeFormatted properties will show milliseconds in their output.
+            Set to true if you wish to see the elapsed time broken down to milliseconds.
+            </summary>
+        </member>
+        <member name="T:PFThreadObjects.PFThreadTimer">
+            <summary>
+            Common routines for timing threads.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThreadTimer.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.HasFinished">
+            <summary>
+            True if background worker has completed. Otherwise false.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.StartTime">
+            <summary>
+            StartTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.FinishTime">
+            <summary>
+            FinishTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.ElapsedTime">
+            <summary>
+            ElapsedTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.ElapsedTimeFormatted">
+            <summary>
+            Elapsed time returned as formatted string.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.ShowElapsedMilliseconds">
+            <summary>
+            Determines whether or not the ElapsedTime and ElapsedTimeFormatted properties will show milliseconds in their output.
+            Set to true if you wish to see the elapsed time broken down to milliseconds.
+            </summary>
+        </member>
+    </members>
+</doc>

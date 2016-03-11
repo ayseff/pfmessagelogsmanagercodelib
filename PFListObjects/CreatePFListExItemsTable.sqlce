@@ -1,0 +1,14 @@
+--same table is used for PFCollectionsObjects and PFListObjects
+Drop table Lists
+go
+Create table Lists
+( ListName nvarchar(100) not null
+ ,ListType nvarchar(100) not null
+ ,ID nvarchar(40) not null
+ ,ListObject ntext not null
+);
+go
+create index idx_ListName on Lists (ListName);
+go
+alter table lists add constraint pk__lists__id primary key (id);
+GO

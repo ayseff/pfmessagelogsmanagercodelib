@@ -1,0 +1,7 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\bin\Debug\PFFileSystemObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\bin\Debug\PFFileSystemObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\obj\Debug\PFFileSystemObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\obj\Debug\PFFileSystemObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\bin\Debug\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFFileSystemObjects\bin\Debug\PFGlobalObjects.pdb

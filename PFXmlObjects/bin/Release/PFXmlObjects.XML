@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFXmlObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFXmlObjects.PFXmlDocument">
+            <summary>
+            Class for the processing of XML documents.
+            </summary>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.#ctor">
+            <summary>
+            Class constructor. Will created an Xml document with a DocumentElement name of "Root".
+            </summary>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.#ctor(System.String)">
+            <summary>
+            Class constructor. Will created an Xml document with a DocumentElement name as specified by parameter.
+            </summary>
+            <param name="rootNodeTagName">Name of DocumentElement.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.#ctor(System.String,System.String)">
+            <summary>
+            Class constructor. Will created an Xml document with a DocumentElement name as specified by parameter.
+            </summary>
+            <param name="rootNodeTagName">Name of DocumentElement.</param>
+            <param name="encoding">Encoding to use with this document.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.#ctor(System.String,System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            Class constructor. Will created an Xml document with a DocumentElement name as specified by parameter.
+            </summary>
+            <param name="rootNodeTagName">Name of DocumentElement.</param>
+            <param name="namespaces">One of more key/value pairs that identify the namespaces for the root element.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.#ctor(System.String,System.String,System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            Class constructor. Will created an Xml document with a DocumentElement name as specified by parameter.
+            </summary>
+            <param name="rootNodeTagName">Name of DocumentElement.</param>
+            <param name="encoding">Encoding to use with this document.</param>
+            <param name="namespaces">One of more key/value pairs that identify the namespaces for the root element.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.LoadFromFile(System.String)">
+            <summary>
+            Loads contents of specified file into the XmlDocument represented by this class.
+            </summary>
+            <param name="filename">Path to file containing Xml data.</param>
+            <remarks>Will throw an XmlException if the Xml is not well formed. Also throws exception if the file cannot be found.</remarks>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.LoadFromString(System.String)">
+            <summary>
+            Loads Xml contained in specified string to the XmlDocument represented by this class.
+            </summary>
+            <param name="xmlString">String containing the Xml data.</param>
+            <remarks>Will throw an XmlException if the Xml is not well formed.</remarks>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.SaveToFile(System.String)">
+            <summary>
+            Saves the Xml contents of the XmlDocument represented by this class to the specified file.
+            </summary>
+            <param name="filename">Path to output file.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.AddNewElement(System.Xml.XmlNode,System.String)">
+            <summary>
+            Adds new XmlElement to specified parent XmlNode.
+            </summary>
+            <param name="parentNode">XmlNode under which new element is to be placed.</param>
+            <param name="nodeName">Name of new node.</param>
+            <returns>XmlElement object for the new node.</returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.AddNewElement(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            Adds new XmlElement to specified parent XmlNode.
+            </summary>
+            <param name="parentNode">XmlNode under which new element is to be placed.</param>
+            <param name="nodeName">Name of new node.</param>
+            <param name="innerText">Inner text for the new node.</param>
+            <returns>XmlElement object for the new node.</returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.AddNewAttribute(System.Xml.XmlElement,System.String,System.String)">
+            <summary>
+            Sets attribute for specified XmlElement.
+            </summary>
+            <param name="xmlElement">XmlElement object to be modified.</param>
+            <param name="attributeName">Name of the attribute.</param>
+            <param name="attributeValue">Value for the specified attribute.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.DeleteAllNodesInDocument">
+            <summary>
+            Deletes all the nodes in a document. Only root node remains after operation completes.
+            </summary>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.DeleteAll(System.Xml.XmlElement)">
+            <summary>
+            Removes all specified attributes and children of the current node. Default attributes are not removed.
+            </summary>
+            <param name="xmlElement">XmlElement from which the attributes and children are to be removed.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.DeleteChildNodes(System.Xml.XmlElement)">
+            <summary>
+            Deletes all child nodes for specified XmlElement.
+            </summary>
+            <param name="xmlElement">XmlElement from which the nodes are to be removed.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.DeleteNode(System.Xml.XmlElement)">
+            <summary>
+            Deletes specified element plus all its children.
+            </summary>
+            <param name="xmlElement">Element to be deleted.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.FindElement(System.String)">
+            <summary>
+            Routine to find the element specified by the xpathQuery.
+            </summary>
+            <param name="xpathQuery">Query specifying the element to be found.</param>
+            <returns>Returns XmlElement if found; otherwise null.</returns>
+            <remarks>Throws an exception if the xpath query is malformed.</remarks>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.GetMultipleNodes(System.String)">
+            <summary>
+            Returns list of all nodes in the XmlDocument represented by this instance that are found by the specified xpathQuery.
+            </summary>
+            <param name="xpathQuery">Query specifying the element(s) to be found.</param>
+            <returns>List of nodes found as result of applying the xpath query.</returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.GetMultipleNodes(System.Xml.XmlNode,System.String)">
+            <summary>
+             Returns list of all nodes in the within the specified XmlNode that are found by the specified xpathQuery.
+            </summary>
+            <param name="node">Node for which search is to be conducted.</param>
+            <param name="xpathQuery">Query specifying the element(s) to be found.</param>
+            <returns>List of nodes found as result of applying the xpath query.</returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.GetInnerText(System.String)">
+            <summary>
+            Finds inner text for the XmlElement found by the xpathQuery.
+            </summary>
+            <param name="xpathQuery">Query specifying the element to be found.</param>
+            <returns>String containing the element's inner text.</returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.GetAttributeValue(System.Xml.XmlNode,System.String)">
+            <summary>
+            Gets the value for the specified attribute of the specified node.
+            </summary>
+            <param name="xmlNode">XmlNode containing the attribute.</param>
+            <param name="attributeName">Attribute containing the value to be returned.</param>
+            <returns>String containing the value for the specified attribute at the specified node.</returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.GetAttributeValue(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            Gets the value for the specified attribute of the specified node. Returns defaultValue if attribute not found.
+            </summary>
+            <param name="xmlNode">XmlNode containing the attribute.</param>
+            <param name="attributeName">Attribute containing the value to be returned.</param>
+            <param name="defaultValue">Value to return if the attribute is not found.</param>
+            <returns>String containing the value for the specified attribute at the specified node. Default value is returned if attribute not found.</returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.UpdateAttribute(System.Xml.XmlElement,System.String,System.String)">
+            <summary>
+            Modifies the value of the attribute for the specified XmlElement.
+            </summary>
+            <param name="xmlElement">Element containing the attribute to update.</param>
+            <param name="attributeName">Name of attribute to update.</param>
+            <param name="attributeValue">New value to apply to the attribute.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.UpdateElement(System.Xml.XmlElement,System.String)">
+            <summary>
+            Modified the inner text for the specified XmlElement.
+            </summary>
+            <param name="xmlElement">Element to modify.</param>
+            <param name="newInnerText">Inner text to apply to the specified XmlElement.</param>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFXmlObjects.PFXmlDocument.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.XmlDoc">
+            <summary>
+            Returns instance of XmlDocument class that is represented by this class. Use this property to get at all the methods and properties associated with an XmlDocument object.
+            </summary>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.DocumentRootNode">
+            <summary>
+            DocumentElement object of XmlDocument instance.
+            </summary>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.DocumentRootNodeName">
+            <summary>
+            DocumentElement Name.
+            </summary>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.DocumentFileName">
+            <summary>
+            Path to file containing the Xml data.
+            </summary>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.InnerXml">
+            <summary>
+            Returns InnerXml of the XmlDocument object represented by this class.
+            </summary>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.InnerText">
+            <summary>
+            Returns InnerText of the XmlDocument object represented by this class.
+            </summary>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.OuterXml">
+            <summary>
+            Returns OuterXml of the XmlDocument object represented by this class.
+            </summary>
+        </member>
+        <member name="P:PFXmlObjects.PFXmlDocument.ChildNodes">
+            <summary>
+            Returns a list of all the child nodes for the XmlDocument object represented by this class.
+            </summary>
+        </member>
+        <member name="T:PFXmlObjects.XMLValidator">
+            <summary>
+            Class contains routine that will verify validity of an XmlDocument based on a specified Xml Schema file.
+            </summary>
+        </member>
+        <member name="M:PFXmlObjects.XMLValidator.Validate(System.String,System.String)">
+            <summary>
+            Routine to verify whether or not XML in a file is well-formed.
+            </summary>
+            <param name="xmlFile">Path to Xml file.</param>
+            <param name="xsdFile">Path to Xml Schema file that will be used to validate the data.</param>
+            <returns>True if Xml is well-formed. Otherwise returns false.</returns>
+            <remarks>Check ValidationErrors property for the detailed error messages returned by this routine if any Xml errors were encountered.</remarks>
+        </member>
+        <member name="P:PFXmlObjects.XMLValidator.ValidationErrors">
+            <summary>
+            Returns all validation errors recorded by Validate method. Returns empty string if no errors.
+            </summary>
+        </member>
+    </members>
+</doc>

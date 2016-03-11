@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFLogManagerObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFLogManagerObjects.PFLogMessage">
+            <summary>
+            Contains definition for a log message that will be written by an instance of the PFLogManager class.
+            </summary>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.FormatLogMessageText">
+            <summary>
+            Routine to create a formatted message that includes such information at message severity level, date/time, application name and/or machine name.
+            </summary>
+            <returns>String value containing formatted message.</returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFLogMessage.</returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.LoadFromXmlString(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored as a xml formatted string.
+            </summary>
+            <param name="xmlString">String containing the xml formatted representation of an instance of this class.</param>
+            <returns>An instance of PFLogMessage.</returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogMessage.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.LogMessageDateTime">
+            <summary>
+            Date/time log message was written.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.LogMessageType">
+            <summary>
+            Specifies message level: Information, Alert, Warning or Error.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.ApplicationName">
+            <summary>
+            Name of application writing to the log. This will be shown as part of each message. Leave blank to not include application name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.DateTimeFormat">
+            <summary>
+            .NET format string to use for display of date/time values.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.MachineName">
+            <summary>
+            Name of PC on which log writes taking place. This name will be shown as part of each message. Leave blank to not include machine name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.Username">
+            <summary>
+            Logged on username.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.ShowDatetime">
+            <summary>
+            Specifies whether or not to show date/time with each message.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.ShowMessageType">
+            <summary>
+            Specifies whether or not to include the message type with the message. 
+            When true, all message types are identified as part of the message output.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.ShowErrorWarningTypes">
+            <summary>
+            Specifies whether or not to include Error and Warning message types with the message. 
+            When true, only the Error and Warning message type identifications are included as part of the message output.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.ShowApplicationName">
+            <summary>
+            Specifies whether or not to show the application name in front of the message in text output.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.ShowMachineName">
+            <summary>
+            Specifies whether or not to show the computer name in front of the message in text output.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.ShowUsername">
+            <summary>
+            Specifies whether or not to show the logon username in front of the message in text output.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.MessageText">
+            <summary>
+            Message that is to be logged.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogMessage.FormattedMessageText">
+            <summary>
+            Log message text that includes such information at message severity level, date/time, application name and/or machine name.
+            </summary>
+        </member>
+        <member name="T:PFLogManagerObjects.PFLogManager">
+            <summary>
+            Class to manage messages to an application log. Has features that save messages when a write fails. Manager will write the message to the log later using messages stored on a retry queue.
+            </summary>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.#ctor(PFLogManagerObjects.enLogFileStorageType,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.#ctor(PFLogManagerObjects.enLogFileStorageType,System.String,PFLogManagerObjects.enLogRetryQueueStorageType,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.WriteMessageToLog(PFLogManagerObjects.PFLogMessage)">
+            <summary>
+            Writes message to message log encapsulated by this instance of PFLogManager.
+            </summary>
+            <param name="logMessage">Text of message to be written to log.</param>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.WriteMessageToLogRetryQueue(PFLogManagerObjects.PFLogMessage)">
+            <summary>
+            Used by unit test routines to fill up a retry queue with dummy messages.
+            </summary>
+            <param name="logMessage">Text of message to be logged.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.WriteLogMessagesOnRetryQueue">
+            <summary>
+            Write a log message that was stored on the retry queue.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.TestWriteLogMessagesOnRetryQueue">
+            <summary>
+            Test routine for writing all messages on the retry queue.
+            </summary>
+            <returns>Number of messages sent.</returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFLogManager.</returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.LoadFromXmlString(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored as a xml formatted string.
+            </summary>
+            <param name="xmlString">String containing the xml formatted representation of an instance of this class.</param>
+            <returns>An instance of PFLogManager.</returns>
+        </member>
+        <member name="M:PFLogManagerObjects.PFLogManager.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogManager.LogFileStorageType">
+            <summary>
+            Specifies the type of data store in which the log messages will be written.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogManager.LogRetryQueueStorageType">
+            <summary>
+            Specifies how the retry queue for log messages will be saved to external storage.
+            </summary>
+            <remarks>Log retry queue contains messages where the write operation failed. The manager will use this queue to try to resend the message at a later time.</remarks>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogManager.LogFileConnectionString">
+            <summary>
+            Specifies the file path if log is formatted as a text or xml file.
+            </summary>
+        </member>
+        <member name="P:PFLogManagerObjects.PFLogManager.LogRetryQueueConnectionString">
+            <summary>
+            Specifies the file path if the retry queue is formatted as an xml file.
+            </summary>
+        </member>
+    </members>
+</doc>

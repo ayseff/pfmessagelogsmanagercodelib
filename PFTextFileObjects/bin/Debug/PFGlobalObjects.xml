@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFGlobalObjects</name>
+    </assembly>
+    <members>
+        <member name="T:AppGlobals.ConsoleMessages">
+            <summary>
+            Class that console applications can use for displaying application messages and logging events to text and windows logs.
+            </summary>
+        </member>
+        <member name="T:AppGlobals.AppTextGlobals">
+            <summary>
+            Class for various string manipulations.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertYesNoToTrueFalse(System.String)">
+            <summary>
+            Converts a string to a bool value.
+            </summary>
+            <param name="psYesNo">String to be converted.</param>
+            <returns>Bool value.</returns>
+            <remarks>Yes or No string value returns true; all other values return false.</remarks>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToBoolean(System.String)">
+            <summary>
+            Converts string to a bool value.
+            </summary>
+            <param name="psValue">Value to be converted.</param>
+            <returns>Boolean value.</returns>
+            <remarks>Default conversion value if value is not one of following (yes, true, no, false) is false.</remarks>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToBoolean(System.String,System.String)">
+            <summary>
+            Converts string to a bool value.
+            </summary>
+            <param name="psValue">Value to be converted.</param>
+            <param name="psDefaultValue">Default conversion value if value is not one of following: yes, true, no, false.</param>
+            <returns>Boolean value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToInt(System.String)">
+            <summary>
+            Converts string to integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>int value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToInt(System.String,System.Int32)">
+            <summary>
+            Converts string to integer.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>int value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToLong(System.String)">
+            <summary>
+            Converts string to long.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>long value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToLong(System.String,System.Int64)">
+            <summary>
+            Converts string to long.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>long value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToFloat(System.String)">
+            <summary>
+            Converts string to float.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>float value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToFloat(System.String,System.Single)">
+            <summary>
+            Converts string to float.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>float value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToDouble(System.String)">
+            <summary>
+            Converts string to double.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <returns>double value.</returns>
+            <remarks>If string cannot be converted (e.g. it is not a number) then 0 is returned.</remarks>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToDouble(System.String,System.Double)">
+            <summary>
+            Converts string to double.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pnDefaultValue">Value to return if value is not a number.</param>
+            <returns>double value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToDateTime(System.String,System.String)">
+            <summary>
+            Converts string to DateTime value.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="psDefaultValue">Value to return if value is not a Date/Time.</param>
+            <returns>DateTime value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToDateTime(System.String,System.DateTime)">
+            <summary>
+            Converts string to DateTime value.
+            </summary>
+            <param name="psValue">Value to convert.</param>
+            <param name="pdDefaultValue">Value to return if value is not a Date/Time.</param>
+            <returns>DateTime value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.StringLength(System.String)">
+            <summary>
+            Gets length of a string.
+            </summary>
+            <param name="psStringValue">String to measure.</param>
+            <returns>Length of string.</returns>
+            <remarks>Use this is value could be null or empty string.</remarks>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ReverseString(System.String)">
+            <summary>
+            Reverses a string.
+            </summary>
+            <param name="psStringValue">String to reverse.</param>
+            <returns>Reversed string.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertStringToByteArray(System.String)">
+            <summary>
+            Converts string to an array of bytes.
+            </summary>
+            <param name="str">String to convert.</param>
+            <returns>Byte array.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertByteArrayToString(System.Byte[])">
+            <summary>
+            Converts byte array to a string.
+            </summary>
+            <param name="bytes">Byte array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.RepeatChar(System.Char,System.Int32)">
+            <summary>
+            Returns string containing a character repeated the specified number of times.
+            </summary>
+            <param name="c">Char value to repeat.</param>
+            <param name="count">Number of times to repeat the char value.</param>
+            <returns>String containing the repeated char value.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertCharArrayToString(System.Char[])">
+            <summary>
+            Converts char array to a string.
+            </summary>
+            <param name="chars">char array to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="M:AppGlobals.AppTextGlobals.ConvertCharToString(System.Char)">
+            <summary>
+            Convert a char value to a string value.
+            </summary>
+            <param name="ch">char to convert.</param>
+            <returns>String.</returns>
+        </member>
+        <member name="T:AppGlobals.AppMessages">
+            <summary>
+            Class for managing windows forms application message displays and logging.
+            </summary>
+        </member>
+        <member name="T:AppGlobals.CAppGlobalErrorHandler">
+            <summary>
+            Class for handling all errors not processed by the application code.
+            </summary>
+        </member>
+        <member name="T:AppGlobals.CFormsCollection">
+            <summary>
+            Class defines a collection used to keep track of the forms open in an application. 
+            See <see cref="T:AppGlobals.CAppForms"/> class for more information.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.CFormsCollection.Add(System.Windows.Forms.Form)">
+            <summary>
+            Adds a form to the list of forms.
+            </summary>
+            <param name="poFormObject">Form to add to the list.</param>
+            <returns>Returns poFormObject.</returns>
+        </member>
+        <member name="M:AppGlobals.CFormsCollection.Remove(System.Windows.Forms.Form)">
+            <summary>
+            Removes a form from the collection of forms.
+            </summary>
+            <param name="poFormObject">For to remove.</param>
+        </member>
+        <member name="T:AppGlobals.CAppForms">
+            <summary>
+            Class for managing open windows forms. Particular useful for MDI applications. 
+            </summary>
+        </member>
+        <member name="M:AppGlobals.CAppForms.Add(System.Windows.Forms.Form)">
+            <summary>
+            Adds form to collection that contains this application's forms.
+            </summary>
+            <param name="winForm">Form object.</param>
+            <returns>The winform parameter is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.CAppForms.CloseAllForms">
+            <summary>
+            Close all the open forms.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.CAppForms.CloseAllForms(System.Windows.Forms.Form)">
+            <summary>
+            Closes all the open forms except the form with the current focus.
+            </summary>
+            <param name="doNotCloseThisForm"></param>
+        </member>
+        <member name="M:AppGlobals.CAppForms.Remove(System.Windows.Forms.Form)">
+            <summary>
+            Removes form from list of application forms.
+            </summary>
+            <param name="poForm">Form object to remove.</param>
+        </member>
+        <member name="P:AppGlobals.CAppForms.Forms">
+            <summary>
+            Collection containing the forms that are being tracked.
+            </summary>
+        </member>
+        <member name="T:AppGlobals.InputBox">
+            <summary>
+            Class to display an form where text data can be input.
+            </summary>
+        </member>
+        <member name="F:AppGlobals.InputBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.InputBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AppGlobals.InputBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.InputBox.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:AppGlobals.InputBox.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:AppGlobals.InputBox.HideForm">
+            <summary>
+            Method to hide form.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.InputBox.CloseForm">
+            <summary>
+            Method to close form.
+            </summary>
+        </member>
+        <member name="P:AppGlobals.InputBox.Caption">
+            <summary>
+            Caption Property.
+            </summary>
+        </member>
+        <member name="P:AppGlobals.InputBox.InputText">
+            <summary>
+            InputText Property.
+            </summary>
+        </member>
+        <member name="P:AppGlobals.InputBox.InputTextLabel">
+            <summary>
+            InputTextLabel Property.
+            </summary>
+        </member>
+        <member name="P:AppGlobals.InputBox.OkButtonText">
+            <summary>
+            OkButtonText Property.
+            </summary>
+        </member>
+        <member name="P:AppGlobals.InputBox.CancelButtonText">
+            <summary>
+            CancelButtonText Property.
+            </summary>
+        </member>
+        <member name="T:AppGlobals.AppInfo">
+            <summary>
+            Class contains properties that retrieve information on the currently executing assembly.
+            </summary>
+        </member>
+        <member name="T:AppGlobals.AppConfig">
+            <summary>
+            Routines for retrieving values for the application's configuration file.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetConfigValue(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>String value if key found; otherwise an empty string is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetStringValueFromConfigFile(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>String value if key found; otherwise an empty string is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetStringValueFromConfigFile(System.String,System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <param name="psDefaultValue">Value to return if key not found.</param>
+            <returns>String value if key found; otherwise an psDefaultValue is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetBooleanValueFromConfigFile(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>Boolean value defined by the key if key is found; otherwise false is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetBooleanValueFromConfigFile(System.String,System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <param name="psDefaultValue">Value to return if key not found.</param>
+            <returns>Boolean value defined by the key if key is found; otherwise psDefaultValue is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetIntValueFromConfigFile(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>Int value defined by the key if key is found; otherwise 0 is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetIntValueFromConfigFile(System.String,System.Int32)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <param name="pnDefaultValue">Value to return if key not found.</param>
+            <returns>Int value defined by the key if key is found; otherwise psDefaultValue is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetLongValueFromConfigFile(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>Long value defined by the key if key is found; otherwise 0 is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetLongValueFromConfigFile(System.String,System.Int64)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <param name="pnDefaultValue">Value to return if key not found.</param>
+            <returns>Long value defined by the key if key is found; otherwise psDefaultValue is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetFloatValueFromConfigFile(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>Float value defined by the key if key is found; otherwise 0.0 is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetFloatValueFromConfigFile(System.String,System.Single)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <param name="pnDefaultValue">Value to return if key not found.</param>
+            <returns>Float value defined by the key if key is found; otherwise psDefaultValue is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetDoubleValueFromConfigFile(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>Double value defined by the key if key is found; otherwise 0.0 is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetDoubleValueFromConfigFile(System.String,System.Double)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <param name="pnDefaultValue">Value to return if key not found.</param>
+            <returns>Double value defined by the key if key is found; otherwise psDefaultValue is returned.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetAllAppSettings">
+            <summary>
+            Retrieves all the app settings in the application configuration file.
+            </summary>
+            <returns>Collection containing all the application settings defined in the application configuration file.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.GetAllAppSettings(System.String)">
+            <summary>
+            Retrieves the app settings for the executable specified in the psExecutableFilePath parameter.
+            </summary>
+            <param name="psExecutableFilePath">Path to executable file.</param>
+            <returns>Collection containing all the application settings defined in the application configuration file for the specified executable file.</returns>
+        </member>
+        <member name="M:AppGlobals.AppConfig.SetConfigValue(System.Collections.Generic.KeyValuePair{System.String,System.String})">
+            <summary>
+            Modifies the configuration key specified in the parameter.
+            </summary>
+            <param name="configElement">Key/Value pair.</param>
+        </member>
+        <member name="M:AppGlobals.AppConfig.SetConfigValue(System.Collections.Generic.KeyValuePair{System.String,System.String}[])">
+            <summary>
+            Modifies the configuration key specified in the parameter.
+            </summary>
+            <param name="configElements">Array of Key/Value pairs.</param>
+        </member>
+        <member name="M:AppGlobals.AppConfig.SetConfigValue(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Modifies the configuration key specified in the parameter.
+            </summary>
+            <param name="configElements">Collection of Key/Value pairs.</param>
+        </member>
+        <member name="T:AppGlobals.AppNumberGlobals">
+            <summary>
+            Class contains various methods for converted numbers between different formats.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.AppNumberGlobals.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:AppGlobals.AppNumberGlobals.ConvertByteUnits(System.Double,AppGlobals.ByteUnits,AppGlobals.ByteUnits)">
+            <summary>
+            Use this to convert a number from one unit of byte measuremen to another. For example, convert from bytes to kilobytes or vice versa.
+             For example, double result = ConvertByteUnits(2048.0, ByteUnits.Bytes, ByteUnits.Kilobytes) returns 2.0 (i.e. 2KB).
+            </summary>
+            <param name="fromNumber">Number to convert.</param>
+            <param name="fromByteUnits">Current unit of measurement.</param>
+            <param name="toByteUnits">Desired unit of measurement.</param>
+            <returns>Revised number in new unit of measurement.</returns>
+        </member>
+        <member name="M:AppGlobals.AppNumberGlobals.GetEnumValues(System.Type)">
+            <summary>
+            Function returns a dictionary list containing all the elements of the specified et (enum type).
+            </summary>
+            <param name="et">The enum type to process.</param>
+            <returns>Dictionary list containing an int representing the integer value of the enum element and string representing the descriptive name of the enum element.</returns>
+        </member>
+    </members>
+</doc>

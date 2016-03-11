@@ -1,0 +1,5 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\bin\Debug\PFTextObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\bin\Debug\PFTextObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\obj\Debug\PFTextObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTextObjects\obj\Debug\PFTextObjects.pdb

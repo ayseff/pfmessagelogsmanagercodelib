@@ -1,0 +1,589 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFMessageLogs</name>
+    </assembly>
+    <members>
+        <member name="T:PFMessageLogs.Interfaces.IMessageLog">
+            <summary>
+            Interface for creating MessageLog classes.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.DllMessageLog">
+            <summary>
+            Class that wraps functionality for displaying a message log window directly from a DLL.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.Clear">
+            <summary>
+            Erases currently displayed text in the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.CloseWindow">
+            <summary>
+            Closes the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.Focus">
+            <summary>
+            Shifts focus to MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.HideWindow">
+            <summary>
+            Hides MessageLogForm windows.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.LoadFile(System.String)">
+            <summary>
+            Loads contents of specified file to the MessageLogForm display.
+            </summary>
+            <param name="filename">Path to file containing text to load.</param>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.SaveFile(System.String)">
+            <summary>
+            Saves contents of the MessageLogForm display to a file.
+            </summary>
+            <param name="filename">Saves contents of message log window to specified file.</param>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.ShowWindow">
+            <summary>
+            Makes the MessageLogForm visible.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.WriteLine(System.String)">
+            <summary>
+            Writes a line of text to the MessageLogForm display.
+            </summary>
+            <param name="message">Text to output.</param>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.AllowFileErase">
+            <summary>
+            If true the File/Erase menu item will be displayed on the MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.Caption">
+            <summary>
+            Sets MessageLogForm caption at top of form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.Form">
+            <summary>
+            Retrieves reference to the MessageLogForm. 
+            This allows caller to directly control the form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.FormIsVisible">
+            <summary>
+            Returns whether or not the MessageLogForm is currently visible.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.RetainFocus">
+            <summary>
+            Forces focus to remain on MessageLogForm after a line of text is written.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.ShowDatetime">
+            <summary>
+            Specifies whether or not to show the date and time with each message displayed on MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.Font">
+            <summary>
+            Specifies the name of the font to use for the displayed messages.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.FontSize">
+            <summary>
+            Specifies the font size to use for displayed messages.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.MessageLogForm">
+            <summary>
+            Displays form on which messages can be displayed.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.FileSave(System.Boolean)">
+            <summary>
+            Saves file without prompting for file name.
+            </summary>
+            <param name="pbRunningInBatchMode">Not used.</param>
+        </member>
+        <member name="F:PFMessageLogs.MessageLogForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLogForm.AllowFileErase">
+            <summary>
+            Allows caller of the form to specify whether or not the File\Erase menu option is visible.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.MessageLog">
+            <summary>
+            Classes containing the routines for updating the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.#ctor">
+            <summary>
+            Contructor. Initializes various class variables.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.Clear">
+            <summary>
+            Erases currently displayed text in the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.CloseWindow">
+            <summary>
+            Closes the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.Focus">
+            <summary>
+            Shifts focus to MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.HideWindow">
+            <summary>
+            Hides MessageLogForm windows.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.LoadFile(System.String)">
+            <summary>
+            Loads contents of specified file to the MessageLogForm display.
+            </summary>
+            <param name="filename">Path to file containing text to load.</param>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.SaveFile(System.String)">
+            <summary>
+            Saves contents of the MessageLogForm display to a file.
+            </summary>
+            <param name="filename">Saves contents of message log window to specified file.</param>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.ShowWindow">
+            <summary>
+            Makes the MessageLogForm visible.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLog.WriteLine(System.String)">
+            <summary>
+            Writes a line of text to the MessageLogForm display.
+            </summary>
+            <param name="message">Text to output.</param>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.AllowFileErase">
+            <summary>
+            If true the File/Erase menu item will be displayed on the MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.Caption">
+            <summary>
+            Sets MessageLogForm caption at top of form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.Form">
+            <summary>
+            Retrieves reference to the MessageLogForm. 
+            This allows caller to directly control the form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.FormIsVisible">
+            <summary>
+            Returns whether or not the MessageLogForm is currently visible.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.RetainFocus">
+            <summary>
+            Forces focus to remain on MessageLogForm after a line of text is written.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.ShowDatetime">
+            <summary>
+            Specifies whether or not to show the date and time with each message displayed on MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.Font">
+            <summary>
+            Specifies the name of the font to use for the displayed messages.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLog.FontSize">
+            <summary>
+            Specifies the font size to use for displayed messages.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.DllMessageLogExt">
+            <summary>
+            Static class for displaying a message log from a DLL.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.#cctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.Clear">
+            <summary>
+            Erases currently displayed text in the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.CloseWindow">
+            <summary>
+            Closes the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.Focus">
+            <summary>
+            Shifts focus to MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.HideWindow">
+            <summary>
+            Hides MessageLogForm windows.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.LoadFile(System.String)">
+            <summary>
+            Loads contents of specified file to the MessageLogForm display.
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.SaveFile(System.String)">
+            <summary>
+            Saves contents of the MessageLogForm display to a file.
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.ShowWindow">
+            <summary>
+            Makes the MessageLogForm visible.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLogExt.WriteLine(System.String)">
+            <summary>
+            Writes a line of text to the MessageLogForm display.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.AllowFileErase">
+            <summary>
+            If true the File/Erase menu item will be displayed on the MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.Caption">
+            <summary>
+            Sets MessageLogForm caption at top of form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.Form">
+            <summary>
+            Retrieves reference to the MessageLogForm. 
+            This allows caller to directly control the form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.FormIsVisible">
+            <summary>
+            Returns whether or not the MessageLogForm is currently visible.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.RetainFocus">
+            <summary>
+            Forces focus to remain on MessageLogForm after a line of text is written.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.ShowDatetime">
+            <summary>
+            Specifies whether or not to show the date and time with each message displayed on MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.Font">
+            <summary>
+            Specifies the name of the font to use for the displayed messages.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLogExt.FontSize">
+            <summary>
+            Specifies the font size to use for displayed messages.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.WindowsLog">
+            <summary>
+            Class encapsulates functionality to write to the Windows event log.
+            </summary>
+            <remarks>Caller must have elevated security permissions (e.g. administrator permissions) to create and delete event sources and event logs.</remarks>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.#ctor(PFMessageLogs.WindowsLog.EventLogName)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logName">Name of the log to write to.</param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.#ctor(PFMessageLogs.WindowsLog.EventLogName,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logName">Name of the log to write to.</param>
+            <param name="machineName">Name of machine where log is located.</param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.#ctor(PFMessageLogs.WindowsLog.EventLogName,System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logName">Name of the log to write to.</param>
+            <param name="machineName">Name of machine where log is located.</param>
+            <param name="eventSource">Source of the event log entries.</param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logName">Name of the log to write to.</param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.#ctor(System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logName">Name of the log to write to.</param>
+            <param name="machineName">Name of machine where log is located.</param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logName">Name of the log to write to.</param>
+            <param name="machineName">Name of machine where log is located.</param>
+            <param name="eventSource">Source of the event log entries.</param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.WriteEntry(System.String,PFMessageLogs.WindowsLog.WindowsEventLogEntryType)">
+            <summary>
+            Routine to write messages to an event log.
+            </summary>
+            <param name="message">Text of the message to be written.</param>
+            <param name="entryType">Type of message: Error, Warning, Information, SuccessAudit or FailureAudit.</param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.SourceExists(System.String)">
+            <summary>
+            Determines whether or not an event source is registered on the local computer.
+            </summary>
+            <param name="eventSourceName">Name of the event source.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.SourceExists(System.String,System.String)">
+            <summary>
+            Determines whether or not an event source is registered on a specified computer.
+            </summary>
+            <param name="eventSourceName">Name of the event source.</param>
+            <param name="machineName">Name of the computer on which to look, or "." for the local computer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.CreateEventSource(System.String)">
+            <summary>
+            Establishes a valid event source for writing event messages to the application log on the local computer.
+            </summary>
+            <param name="eventSourceName">The source by which the application is registered on the local computer. </param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.CreateEventSource(System.String,System.String)">
+            <summary>
+            Establishes the specified source name as a valid event source for writing entries to a log on the local computer. This method can also create a new custom log on the local computer.
+            </summary>
+            <param name="eventSourceName">The source by which the application is registered on the specified computer. </param>
+            <param name="logName">The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log. If you do not specify a value, logName defaults to Application. </param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.CreateEventSource(System.String,System.String,System.String)">
+            <summary>
+            Establishes the specified source name as a valid event source for writing entries to a log on the specified computer. This method can also be used to create a new custom log on the specified computer.
+            </summary>
+            <param name="eventSourceName">The source by which the application is registered on the specified computer. </param>
+            <param name="logName">The name of the log the source's entries are written to. Possible values include Application, System, or a custom event log. If you do not specify a value, logName defaults to Application. </param>
+            <param name="machineName">The name of the computer to register this event source with, or "." for the local computer. </param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.DeleteEventSource(System.String)">
+            <summary>
+            Removes the event source registration from the event log of the local computer.
+            </summary>
+            <param name="eventSourceName">The name by which the application is registered in the event log system. </param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.DeleteEventSource(System.String,System.String)">
+            <summary>
+            Removes the application's event source registration from the specified computer.
+            </summary>
+            <param name="eventSourceName">The name by which the application is registered in the event log system. </param>
+            <param name="machineName">The name of the computer to remove the registration from, or "." for the local computer. </param>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.GetStringValueFromConfigFile(System.String,System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <param name="psDefaultValue">Value to return if key not found.</param>
+            <returns>String value if key found; otherwise an psDefaultValue is returned.</returns>
+        </member>
+        <member name="M:PFMessageLogs.WindowsLog.GetConfigValue(System.String)">
+            <summary>
+            Retrieves application configuration value for specified key.
+            </summary>
+            <param name="psKey">Configuration key to search for.</param>
+            <returns>String value if key found; otherwise an empty string is returned.</returns>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.EventLog">
+            <summary>
+            EventLog Property.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.LogName">
+            <summary>
+            LogName Property.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.MachineName">
+            <summary>
+            MachineName Property.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.EventSource">
+            <summary>
+            EventSource Property.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.EventSourceInitializer">
+            <summary>
+            Full path to the executable that can initialize an event source. 
+            </summary>
+            <remarks>Value can be specified in an application's config file by setting the value for the EventSourceInitializer key.</remarks>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.CurrentWorkingDirectory">
+            <summary>
+            CurrentWorkingDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.OutputMessages">
+            <summary>
+            Returns output messages, if any, generated by the process that registers the event source name.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.WindowsLog.ErrorMessages">
+            <summary>
+            Returns error messages, if any, generated by the process that registers the event source name.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.WindowsLog.EventLogName">
+            <summary>
+            Enumeration of windows event log names.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.WindowsLog.WindowsEventLogEntryType">
+            <summary>
+            Enumeration of valid message types for windows event logs.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.TextLogFile">
+            <summary>
+            Class for routines to write messages to a text log file. No User Interface output window is provided by this class.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileName">Name of file messages will be stored in.</param>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.TruncateFile">
+            <summary>
+            Sets file size to 0 bytes. Erases any existing messages in the log.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.WriteLine(System.String)">
+            <summary>
+            Writes message line to text log file. This is considered to be an Information message.
+            </summary>
+            <param name="message">Text to output.</param>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.WriteLine(System.String,PFMessageLogs.TextLogFile.LogMessageType)">
+            <summary>
+            Writes message line to text log file. Type of message is also specified.
+            </summary>
+            <param name="message">Text to output.</param>
+            <param name="logMessageType">Use LogMessageType enumeration to specify the type of the message: e.g. Information, warning, error.</param>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.WriteBlankLine">
+            <summary>
+            Writes empty string to text log file.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ApplicationName">
+            <summary>
+            Name of application writing to the log. This will be shown as part of each message. Leave blank to not include application name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.DateTimeFormat">
+            <summary>
+            .NET format string to use for display of date/time values.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.FileName">
+            <summary>
+            Full path to log file.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.MachineName">
+            <summary>
+            Name of PC on which log writes taking place. This name will be shown as part of each message. Leave blank to not include machine name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ShowDatetime">
+            <summary>
+            Specifies whether or not to show date/time with each message.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ShowMessageType">
+            <summary>
+            Specifies whether or not to include the message type with the message. 
+            When true, all message types are identified as part of the message output.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ShowErrorWarningTypes">
+            <summary>
+            Specifies whether or not to include Error and Warning message types with the message. 
+            When true, only the Error and Warning message type identifications are included as part of the message output.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.TextLogFile.LogMessageType">
+            <summary>
+            Enumerates different types of messages that can appear in the log.
+            </summary>
+        </member>
+    </members>
+</doc>

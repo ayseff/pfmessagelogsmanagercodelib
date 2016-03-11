@@ -1,0 +1,5 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\bin\Debug\PFTimers.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\bin\Debug\PFTimers.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\obj\Debug\PFTimers.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\obj\Debug\PFTimers.pdb

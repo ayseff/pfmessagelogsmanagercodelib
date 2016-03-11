@@ -1,0 +1,1592 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFFileSystemObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFFileSystemObjects.PFDiskDrive">
+            <summary>
+            Class for managing objects to encapsulate disk drive information.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="drivePath">A valid drive path or drive letter. Can be either uppercase or lowercase4, 'a' to 'z'. Null value is not valid.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.GetDiskDrives">
+            <summary>
+            Returns an array of DriveInfo objects representing all the disk drives defined for the computer.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.GetDiskDrivesRootDirectories">
+            <summary>
+            Returns list of root directory paths for the computer.
+            </summary>
+            <returns>List of strings representing root directory full paths.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.GetDiskDrivesRootDirectories(System.Boolean)">
+            <summary>
+            Returns list of root directory paths for the computer.
+            </summary>
+            <param name="excludeNotReadyDevices">Set to true if you wish to exclude any not ready devices from the return list.</param>
+            <returns>List of strings representing root directory full paths.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFDiskDrive.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDiskDrive.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DriveInfoObject">
+            <summary>
+            DriveInfo object that represents the data for the drive that is represented by an instance of this class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DriveName">
+            <summary>
+            Name of the disk drive represented by an instance of this class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DriveRootDirectoryPath">
+            <summary>
+            Returns root directory path for drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DriveAvailableFreeSpace">
+            <summary>
+            Returns available free space for drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DriveTotalFreeSpace">
+            <summary>
+            Returns total free space for drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DriveTotalSpace">
+            <summary>
+            Returns total space for drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DriveIsReady">
+            <summary>
+            Returns status for drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DiskFormat">
+            <summary>
+            Returns disk drive format for drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DiskType">
+            <summary>
+            Returns type of drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDiskDrive.DiskVolumeLabel">
+            <summary>
+            Returns volume label for drive represented by current instance of the class.
+            </summary>
+        </member>
+        <member name="T:PFFileSystemObjects.PFFileSpec">
+            <summary>
+            Represents a FileSpec running on the
+            <see cref="N:System.Text.RegularExpressions"/> engine.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileSpec.#ctor(System.String)">
+            <summary>
+            Initializes a FileSpec with the given search pattern.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileSpec.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Initializes a FileSpec with the given search pattern and options.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+            <param name="options">A combination of one or more System.Text.RegexOption.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileSpec.FileSpecToRegex(System.String)">
+            <summary>
+            Converts a FileSpec to a regex.
+            </summary>
+            <param name="pattern">The FileSpec pattern to convert.</param>
+            <returns>A regex equivalent of the given FileSpec.</returns>
+        </member>
+        <member name="T:PFFileSystemObjects.PFDirectoryEx">
+            <summary>
+            Class for retrieving and manipulating directory information. Class includes support for outputting the contents of the class field to text and XML.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="directoryPath">Full path to directory this instance will represent.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="directoryPath">Full path to directory this instance will represent.</param>
+            <param name="getDirectoryTree">If true, an internal list of all subdirectories and files will be built.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.IsAttribute(System.IO.FileAttributes)">
+            <summary>
+            Method to determine if folder has specified attribute.
+            </summary>
+            <param name="attribute">Attribute to query for.</param>
+            <returns>Returns true if the file has the specified attribute.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.Refresh(System.Boolean)">
+            <summary>
+            Recalculates the number of bytes, files and subdirectories in this instance.
+            </summary>
+            <param name="includeSubfolders">If true, size of all objects in directory subfolders are calculated.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.GetDirectorySize">
+            <summary>
+            Gets number of bytes contained in the objects in this directory.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.GetDirectoryTreeSize">
+            <summary>
+            Gets number of bytes contained in the objects in this directory tree.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.SaveToXmlFile(System.String,System.Boolean)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+            <param name="summaryOnly">If true, only very high level information from the object is stored. Otherwise, full detail of all values from objects and subojects in the instance are retrieved.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFDirectoryEx.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.ToXmlString(System.Boolean)">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <param name="summaryOnly">If true, only very high level information from the object is stored. Otherwise, full detail of all values from objects and subojects in the instance are retrieved.</param>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.ToXmlDocument(System.Boolean)">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <param name="summaryOnly">If true, only very high level information from the object is stored. Otherwise, full detail of all values from objects and subojects in the instance are retrieved.</param>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.DirectoryInfoObject">
+            <summary>
+            Underlying DirectoryInfo instance.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.Files">
+            <summary>
+            Returns list of PFFileEx objects representing the files in this directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.Subdirectories">
+            <summary>
+            Returns list of PFDirectoryEx objects representing the subdirectories in this directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.WarningMessages">
+            <summary>
+            Collection of warning messages encountered during processing. Usually these will involve 
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.Name">
+            <summary>
+            Name of the directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.FullName">
+            <summary>
+            Full path for the directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumBytesInDirectory">
+            <summary>
+            NumBytesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumBytesInDirectoryTree">
+            <summary>
+            NumBytesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumFilesInDirectory">
+            <summary>
+            NumFilesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumSubdirectoriesInDirectory">
+            <summary>
+            NumSubdirectoriesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.TotalNumFilesInDirectoryTree">
+            <summary>
+            TotalNumFilesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.TotalNumSubdirectoriesInDirectoryTree">
+            <summary>
+            TotalNumSubdirectoriesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumErrors">
+            <summary>
+            Number of errors encountered while getting directory and file information.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.ErrorMessages">
+            <summary>
+            ErrorMessages recorded while getting directory and file information.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.StatsAsOfDate">
+            <summary>
+            Statistics for folder are current as of this date and time.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.Attributes">
+            <summary>
+            File's attributes. 
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsReadOnly">
+            <summary>
+            If true, the file is read-only.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsReadyToArchive">
+            <summary>
+            If true, the file archive bit has been set.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsEncrypted">
+            <summary>
+            If true, the file has been encrypted so that only the user account used to encrypt the file can read the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsCompressed">
+            <summary>
+            If true, the file has been compressed using Windows NTFS compression.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsTemporary">
+            <summary>
+            If true, the file has been marked as temporary.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsOffline">
+            <summary>
+            If true, the file is offline. The data in the file is not immediately available.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsSystemFile">
+            <summary>
+            If true, the file is system file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.IsHidden">
+            <summary>
+            If true, the file is a hidden file.
+            </summary>
+        </member>
+        <member name="T:PFFileSystemObjects.PFTempFileCollection">
+            <summary>
+            Class is a thin wrapper for the TempFileCollection class of System.CodeDom.Compiler class.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="tempDirectory">A path to the temporary directory to use for storing the temporary files.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="tempDirectory">A path to the temporary directory to use for storing the temporary files.</param>
+            <param name="keepFiles">true if the temporary files should be kept after use; false if the temporary files should be deleted. </param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.AddExtension(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.AddExtension(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="ext"></param>
+            <param name="keepFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.AddFile(System.String,System.Boolean)">
+            <summary>
+            Adds the specified file to the collection, using the specified value indicating whether to keep the file after the collection is disposed or when the Delete method is called.
+            </summary>
+            <param name="fileName">The name of the file to add to the collection. </param>
+            <param name="keepFile">true if the file should be kept after use; false if the file should be deleted.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.DeleteFiles">
+            <summary>
+            The Delete method examines each file in the collection to determine, on an individual basis, whether the file is to be kept or deleted.
+             Files can be explicitly marked to be kept when added to the collection using add methods that take a keepFile parameter.
+             When adding a file to the collection using the AddExtension overload that does not have a keepFile parameter the value of the KeepFiles property is used as the default keep file indicator. 
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFileCollection.Dispose">
+            <summary>
+            Dispose method for the class.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFTempFileCollection.KeepFiles">
+            <summary>
+            Set to false to have temp files deleted when this instance is disposed.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFTempFileCollection.Count">
+            <summary>
+            Number of files in this instance of the temp file collection.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFTempFileCollection.TempDirectory">
+            <summary>
+            Gets the temporary directory to store the temporary files in.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFTempFileCollection.BasePath">
+            <summary>
+            Gets the full path to the base file name, without a file name extension, on the temporary directory path, that is used to generate temporary file names for the collection.
+            </summary>
+        </member>
+        <member name="T:PFFileSystemObjects.PFTempFile">
+            <summary>
+            Class for creating and managing temporary files.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFile.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFile.DeleteFile">
+            <summary>
+            Deletes the temp file.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFTempFile.Dispose">
+            <summary>
+            Dispose method for the class. Will delete the temp file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFTempFile.TempFileName">
+            <summary>
+            Retrieves file name of temp file encapsulated by this instance of the class.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.FilePathParts.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name and value for all public properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PFFileSystemObjects.PFFile">
+            <summary>
+            Class for retrieving file information.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.#ctor">
+            <summary>
+            Cosntructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.CopyFileLongPath(System.String,System.String)">
+            <summary>
+            Method attempts to copy files whose paths are longer the default Windows maximum path length of 260.
+            </summary>
+            <param name="sourcePath"></param>
+            <param name="destinationPath"></param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.CopyFileLongPath(System.String,System.String,System.Boolean)">
+            <summary>
+            Method attempts to copy files whose paths are longer the default Windows maximum path length of 260.
+            </summary>
+            <param name="sourcePath"></param>
+            <param name="destinationPath"></param>
+            <param name="failIfFileExists">If true, destination path must not exist.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.GetShortFilePath(System.String)">
+            <summary>
+            Produces the Windows short names for the folder names in the path.
+            </summary>
+            <param name="longFilePath"></param>
+            <returns>Windows short file path names.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.GetLongFilePath(System.String)">
+            <summary>
+            Produces the long names for the folder names in the shortFilePath value.
+            </summary>
+            <param name="shortFilePath"></param>
+            <returns>Windows long file path names.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatDrivePlusFolderPath(System.String,System.String)">
+            <summary>
+            Takes the drive name and folderPath and combines them into a formatted path. Backslash will be appended to end of folderPath if none supplied with input parameter.
+            </summary>
+            <param name="drive">Drive name (e.g. C:\).</param>
+            <param name="folderPath">Path (e.g. foldername\subfoldername\</param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String)">
+            <summary>
+            Creates full path that includes folder names and file name.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <returns>Formatted path (e.g. testdir\subdir1\file1.dat</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <returns>String containing path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path. Optionally, a date/time string can be appended to the filename.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <param name="AppendDateTimeToFileName">Current date/time will be appended to the filename if this is set to true.</param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path. Optionally, a date/time string can be appended to the filename.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <param name="AppendDateTimeToFileName">Current date/time will be appended to the filename if this is set to true.</param>
+            <param name="dateTimeFormat">Format for the date/time string. If left blank or null, a default format of _yyyyMMdd_HHmmss will be used.</param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String,System.Boolean,System.String,System.DateTime)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path. Optionally, a date/time string can be appended to the filename.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <param name="AppendDateTimeToFileName">Date/time specified by the dateTimeToAppend parameter will be appended to the filename if this is set to true.</param>
+            <param name="dateTimeFormat">Format for the date/time string. If left blank or null, a default format of _yyyyMMdd_HHmmss will be used.</param>
+            <param name="dateTimeToAppend"></param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.ParsefilePath(System.String)">
+            <summary>
+            Breaks up a file path string into its constituent parts.
+            </summary>
+            <param name="filePath">Path to parse.</param>
+            <returns>FilePathParts struct containing the different parts of the path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.GetFileSize(System.String)">
+            <summary>
+            Gets size of file.
+            </summary>
+            <param name="fileName"></param>
+            <returns>Long value that represents size of file.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.Compress(System.String)">
+            <summary>
+            Compresses the file at the path represented by the specified file name. Windows compression is used.
+            </summary>
+            <param name="fileName">Path to file to be compressed.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.Uncompress(System.String)">
+            <summary>
+            Uncompresses the file at the path represented by the specified fileName. Windows compression is used.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileDelete(System.String)">
+            <summary>
+            Deletes specified file.
+            </summary>
+            <param name="fileToDelete">Full path to file to be deleted.</param>
+            <remarks>Read-only files will be deleted by this method. See overloaded method with overrideReadOnlyAttribute parameter. You can set the parameter to false to bypass read-only files.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileDelete(System.String,System.Boolean)">
+            <summary>
+            Deletes specified file.
+            </summary>
+            <param name="fileToDelete">Full path to file to be deleted.</param>
+            <param name="overrideReadOnlyAttribute">If true, file with read-only attribute will be deleted. If false, file delete will fail.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileCopy(System.String,System.String)">
+            <summary>
+            Copies files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be copied.</param>
+            <param name="destinationFile">Name of file at copy destination.</param>
+            <remarks>Copy fails if destinationFile already exists.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileCopy(System.String,System.String,System.Boolean)">
+            <summary>
+            Copies files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be copied.</param>
+            <param name="destinationFile">Name of file at copy destination.</param>
+            <param name="overwriteDestination">If true and destination file exists, destination file will be deleted before sourceFile is copied.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileMove(System.String,System.String)">
+            <summary>
+            Moves files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be moved.</param>
+            <param name="destinationFile">Name of file at move destination.</param>
+            <remarks>Move fails if destination file already exists. Original file is deleted after a successful move.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileMove(System.String,System.String,System.Boolean)">
+            <summary>
+            Moves files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be moved.</param>
+            <param name="destinationFile">Name of file at move destination.</param>
+            <param name="overwriteDestination">If true and destination file exists, destination file will be deleted before sourceFile is moved.</param>
+            <remarks>Original file is deleted after the move.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileRename(System.String,System.String)">
+            <summary>
+            Renames file. Renamed file exists in same directory as original file name.
+            </summary>
+            <param name="originalFile">Full path to original file.</param>
+            <param name="newFileName">New file name.</param>
+            <remarks>Rename will fail if file with new name already exists.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileRename(System.String,System.String,System.Boolean)">
+            <summary>
+            Renames file. Renamed file exists in same directory as original file name.
+            </summary>
+            <param name="originalFile">Full path to original file.</param>
+            <param name="newFileName">New file name.</param>
+            <param name="overwriteDestination">If true and a file with same name as original exists, the file with same name will be deleted </param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.IsValidFileName(System.String)">
+            <summary>
+            Checks if file name is a valid Windows file name.
+            </summary>
+            <param name="fileName">File name plus extension, if any.</param>
+            <returns>True if file name is valid.</returns>
+            <remarks>Do not specify a folder path for this method. The folder separators (\ or /) will be considered an error.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.IsValidPath(System.String)">
+            <summary>
+            Determines whether or not the specified path contains legal Windows file path characters.
+            </summary>
+            <param name="pathName">Path to be validated.</param>
+            <returns>True if path is a valid Windows path.</returns>
+        </member>
+        <member name="T:PFFileSystemObjects.PFFileStats">
+            <summary>
+            Contains set of statistics for an individual file.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.#ctor(System.IO.FileInfo)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileInfoObject"></param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.IsAttribute(System.IO.FileAttributes)">
+            <summary>
+            Method to determine if file has specified attribute.
+            </summary>
+            <param name="attribute">Attribute to query for.</param>
+            <returns>Returns true if the file has the specified attribute.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.GetFileStats(System.String)">
+            <summary>
+            Static method for obtaining a PFFileStats object instance.
+            </summary>
+            <param name="filePath">Path to file for which stats will be retrieved.</param>
+            <returns>PFFileStats object.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFFileStats.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.LoadFromXmlString(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored as a xml formatted string.
+            </summary>
+            <param name="xmlString">String containing the xml formatted representation of an instance of this class.</param>
+            <returns>An instance of PFFileStats.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileStats.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.StatsAsOfDate">
+            <summary>
+            Statistics for file are current as of this date and time.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.Name">
+            <summary>
+            Name Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.FullName">
+            <summary>
+            FullName Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.Extension">
+            <summary>
+            Extension Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.Size">
+            <summary>
+            Size Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.CreationTime">
+            <summary>
+            CreationTime Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.CreationTimeUtc">
+            <summary>
+            CreationTimeUtc Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.LastModifiedTime">
+            <summary>
+            LastModifiedTime Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.LastModifiedTimeUtc">
+            <summary>
+            LastModifiedTimeUtc Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.LastAccessTime">
+            <summary>
+            LastAccessTime Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.LastAccessTimeUtc">
+            <summary>
+            LastAccessTimeUtc Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsReadOnly">
+            <summary>
+            IsReadOnly Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsReadyToArchive">
+            <summary>
+            IsReadyToArchive Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsEncrypted">
+            <summary>
+            IsEncrypted Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsCompressed">
+            <summary>
+            IsCompressed Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsTemporary">
+            <summary>
+            IsTemporary Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsOffline">
+            <summary>
+            IsOffline Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsSystemFile">
+            <summary>
+            IsSystemFile Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileStats.IsHidden">
+            <summary>
+            IsHidden Property.
+            </summary>
+        </member>
+        <member name="T:PFFileSystemObjects.PFDirectoryStats">
+            <summary>
+            Class to organize collections of statistics for a directory and optionally for the subdirectories of the directory.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.GetDirectoryStats(System.String,System.Boolean)">
+            <summary>
+            Method to get a new PFDirectoryStats instance.
+            </summary>
+            <param name="folderPath">Path to folder for which statistics to be retrieved.</param>
+            <param name="getDirectoryTree">If true, all subfolders will be included in the statistics.</param>
+            <returns>PFDirectoryStats object.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.IsAttribute(System.IO.FileAttributes)">
+            <summary>
+            Method to determine if folder has specified attribute.
+            </summary>
+            <param name="attribute">Attribute to query for.</param>
+            <returns>Returns true if the file has the specified attribute.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.Refresh(System.Boolean)">
+            <summary>
+            Recalculates the number of bytes, files and subdirectories in this instance.
+            </summary>
+            <param name="includeSubfolders">If true, size of all objects in directory subfolders are calculated.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.GetDirectoryInfo">
+            <summary>
+            Gets name, date/time and attributes values for the directory referred to by this instance.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.GetDirectorySize">
+            <summary>
+            Gets number of bytes contained in the objects in this directory.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.GetDirectoryTreeSize">
+            <summary>
+            Gets number of bytes contained in the objects in this directory tree.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the public property values contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFDirectoryStats.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.LoadFromXmlString(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance stored as a xml formatted string.
+            </summary>
+            <param name="xmlString">String containing the xml formatted representation of an instance of this class.</param>
+            <returns>An instance of PFDirectoryStats.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryStats.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.Files">
+            <summary>
+            Files Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.Subdirectories">
+            <summary>
+            Subdirectories Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.WarningMessages">
+            <summary>
+            WarningMessages Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.Name">
+            <summary>
+            Name Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.FullName">
+            <summary>
+            FullName Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.ParentDirectory">
+            <summary>
+            ParentDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.PathRoot">
+            <summary>
+            PathRoot: The root directory for the current path encompassed in the FullName.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.SearchRoot">
+            <summary>
+            Root folder: the folder which started the directory info search.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.NumBytesInDirectory">
+            <summary>
+            NumBytesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.NumBytesInDirectoryTree">
+            <summary>
+            NumBytesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.NumFilesInDirectory">
+            <summary>
+            NumFilesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.NumSubdirectoriesInDirectory">
+            <summary>
+            NumSubdirectoriesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.TotalNumFilesInDirectoryTree">
+            <summary>
+            TotalNumFilesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.TotalNumSubdirectoriesInDirectoryTree">
+            <summary>
+            TotalNumSubdirectoriesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.NumErrors">
+            <summary>
+            NumErrors Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.ErrorMessages">
+            <summary>
+            ErrorMessages Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.StatsAsOfDate">
+            <summary>
+            StatsAsOfDate Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.CreationTime">
+            <summary>
+            CreationTime Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.CreationTimeUtc">
+            <summary>
+            CreationTimeUtc Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.LastModifiedTime">
+            <summary>
+            LastModifiedTime Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.LastModifiedTimeUtc">
+            <summary>
+            LastModifiedTimeUtc Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.LastAccessTime">
+            <summary>
+            LastAccessTime Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.LastAccessTimeUtc">
+            <summary>
+            LastAccessTimeUtc Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsReadOnly">
+            <summary>
+            IsReadOnly Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsReadyToArchive">
+            <summary>
+            IsReadyToArchive Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsEncrypted">
+            <summary>
+            IsEncrypted Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsCompressed">
+            <summary>
+            IsCompressed Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsTemporary">
+            <summary>
+            IsTemporary Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsOffline">
+            <summary>
+            IsOffline Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsSystemFile">
+            <summary>
+            IsSystemFile Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryStats.IsHidden">
+            <summary>
+            IsHidden Property.
+            </summary>
+        </member>
+        <member name="T:PFFileSystemObjects.PFFileEx">
+            <summary>
+            Class for retrieving and manipulating file information. Class includes support for outputting the contents of the class field to text and XML.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.#ctor(System.IO.FileInfo)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileInfoObject"></param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.IsAttribute(System.IO.FileAttributes)">
+            <summary>
+            Method to determine if file has specified attribute.
+            </summary>
+            <param name="attribute">Attribute to query for.</param>
+            <returns>Returns true if the file has the specified attribute.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.Encrypt">
+            <summary>
+            Encrypts a file so that only the account used to encrypt the file can decrypt it.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.Decrypt">
+            <summary>
+            Decrypts a file that was encrypted by the current account using the Encrypt method.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.SetReadOnlyAttribute">
+            <summary>
+            Makes file read-only.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.RemoveReadOnlyAttribute">
+            <summary>
+            Makes file read-write.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.SetHiddenAttribute">
+            <summary>
+            Hides file.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.RemoveHiddenAttribute">
+            <summary>
+            Unhides file.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.SetAttributes(System.IO.FileAttributes)">
+            <summary>
+            Sets file attributes to the specified attributes.
+            </summary>
+            <param name="attributesToSet">One or more attributes to set.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.RemoveAttributes(System.IO.FileAttributes)">
+            <summary>
+            Removes the specified attributes from the file.
+            </summary>
+            <param name="attributesToRemove">One or more attributes to remove.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFFileEx object. If unable to create the instance, null is returned.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.FileInfoObject">
+            <summary>
+            Returns FileInfo object underlying this instance.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Name">
+            <summary>
+            The file name.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.FullName">
+            <summary>
+            Full path of the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Extension">
+            <summary>
+            File extension for the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Attributes">
+            <summary>
+            File's attributes. 
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsReadOnly">
+            <summary>
+            If true, the file is read-only.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsReadyToArchive">
+            <summary>
+            If true, the file archive bit has been set.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsEncrypted">
+            <summary>
+            If true, the file has been encrypted so that only the user account used to encrypt the file can read the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsCompressed">
+            <summary>
+            If true, the file has been compressed using Windows NTFS compression.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsTemporary">
+            <summary>
+            If true, the file has been marked as temporary.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsOffline">
+            <summary>
+            If true, the file is offline. The data in the file is not immediately available.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsSystemFile">
+            <summary>
+            If true, the file is system file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsHidden">
+            <summary>
+            If true, the file is a hidden file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Size">
+            <summary>
+            Size in bytes of file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.CreationTime">
+            <summary>
+            Date and time file was created.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.CreationTimeUtc">
+            <summary>
+            Date and time file was created in universal time format.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastModifiedTime">
+            <summary>
+            Date and time of last write to the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastModifiedTimeUtc">
+            <summary>
+            Date and time of last write to the file in universal time format.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastAccessTime">
+            <summary>
+            Date and time of last access to the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastAccessTimeUtc">
+            <summary>
+            Date and time of last access to the file in universal time format.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.StatsAsOfDate">
+            <summary>
+            Statistics for file are current as of this date and time.
+            </summary>
+        </member>
+        <member name="T:PFFileSystemObjects.PFDirectory">
+            <summary>
+            Class for working with Windows directories (folders).
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.GetDirectorySize(System.String,System.Boolean)">
+            <summary>
+            Calculates size in bytes of the directory.
+            </summary>
+            <param name="directoryPath">Path to directory to be sized.</param>
+            <param name="includeSubfolders">True if you wish to include all subdirectories in the size calculation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Compress(System.String)">
+            <summary>
+            Compresses the folder at the path represented by the current instance of the class. Windows compression is used.
+            </summary>
+            <remarks>Subdirectories are not included in the compression.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Compress(System.String,System.Boolean)">
+            <summary>
+            Compresses the folder at the path represented by the current instance of the class.  Windows compression is used.
+            </summary>
+            <param name="directoryName">Path to directory to be compressed.</param>
+            <param name="compressSubdirectories">If true, the subdirectories for the directory are included in the compression.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Uncompress(System.String)">
+            <summary>
+            Uncompresses the folder at the path represented by the specified directory name. Windows compression is used.
+            </summary>
+            <param name="directoryName">Path to directory to be uncompressed.</param>
+            <remarks>Subdirectories are not included in the uncompression.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Uncompress(System.String,System.Boolean)">
+            <summary>
+            Uncompresses the folder at the path represented by the current instance of the class. Windows compression is used.
+            </summary>
+            <param name="directoryName">Path to directory to be uncompressed.</param>
+            <param name="uncompressSubdirectories">If true, the subdirectories for the directory are included in the uncompression.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String,System.Boolean)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <param name="copySubDirs">If true, the folder plus all its subfolders will be copied. If false, only the files in the source folder will be copied.</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String,System.String)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <param name="fileSearchPattern">You can specify a Windows style search pattern to limit which files are copied. For example, *.* search pattern means copy all files. Copy all is the default.</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <param name="overwriteIfDestAreadyExists">If true, contents of output folder or file will be replaced. If false, copy will fail and be recorded as an error. See continueOnError and maxNumError parameters for information on how copy errors are handled.</param>
+            <param name="copySubDirs">If true, the folder plus all its subfolders will be copied. If false, only the files in the source folder will be copied.</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <param name="fileSearchPattern">You can specify a Windows style search pattern to limit which files are copied. For example, *.* search pattern means copy all files. Copy all is the default.</param>
+            <param name="overwriteIfDestAreadyExists">If true, contents of output folder or file will be replaced. If false, copy will fail and be recorded as an error. See continueOnError and maxNumError parameters for information on how copy errors are handled.</param>
+            <param name="copySubDirs">If true, the folder plus all its subfolders will be copied. If false, only the files in the source folder will be copied.</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <param name="overwriteIfDestAreadyExists">If true, contents of output folder or file will be replaced. If false, copy will fail and be recorded as an error. See continueOnError and maxNumError parameters for information on how copy errors are handled.</param>
+            <param name="copySubDirs">If true, the folder plus all its subfolders will be copied. If false, only the files in the source folder will be copied.</param>
+            <param name="preserveTimestamps">If true then last write and create date of the destination files are set to corresponding values of the source files. If false, then default System.IO File.Copy rules apply (modified date is preserved while create date is set to date of file copy).</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <param name="fileSearchPattern">You can specify a Windows style search pattern to limit which files are copied. For example, *.* search pattern means copy all files. Copy all is the default.</param>
+            <param name="overwriteIfDestAreadyExists">If true, contents of output folder or file will be replaced. If false, copy will fail and be recorded as an error. See continueOnError and maxNumError parameters for information on how copy errors are handled.</param>
+            <param name="copySubDirs">If true, the folder plus all its subfolders will be copied. If false, only the files in the source folder will be copied.</param>
+            <param name="preserveTimestamps">If true then last write and create date of the destination files are set to corresponding values of the source files. If false, then default System.IO File.Copy rules apply (modified date is preserved while create date is set to date of file copy).</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XCopy(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Routine to copy the contents of a folder to another location. 
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be copied.</param>
+            <param name="destFolderPath">Full path of the destination folder for the copy operation. Folder will be created if it does not already exist.</param>
+            <param name="fileSearchPattern">You can specify a Windows style search pattern to limit which files are copied. For example, *.* search pattern means copy all files. Copy all is the default.</param>
+            <param name="overwriteIfDestAreadyExists">If true, contents of output folder or file will be replaced. If false, copy will fail and be recorded as an error. See continueOnError and maxNumError parameters for information on how copy errors are handled.</param>
+            <param name="copySubDirs">If true, the folder plus all its subfolders will be copied. If false, only the files in the source folder will be copied.</param>
+            <param name="preserveTimestamps">If true then last write and create date of the destination files are set to corresponding values of the source files. If false, then default System.IO File.Copy rules apply (modified date is preserved while create date is set to date of file copy).</param>
+            <param name="continueOnError">If true, the application will attempt to continue if a folder copy operation failed because the source folder or file was unavailable or the destination folder or file could not be created. Default is to continue on error.</param>
+            <param name="maxNumErrors">Maximum number of copy errors before the routine will terminate and throw an error message. Default is 5.</param>
+            <returns>XCopyInfo structure is returned. See <see cref="T:PFFileSystemObjects.XCopyInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.SyncDirectoryTimestamps(System.String,System.String,System.Boolean)">
+            <summary>
+            Routine to set the create and modified folder timestamps in the destination path to be the same as those in the source path.
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder contaning the timestamps to be used in the sync operation.</param>
+            <param name="destFolderPath">Full path of the destination folder for the timestamp sync operation.</param>
+            <param name="includeSubdirs">If true, the folder plus all its subfolders will have their timestamps synchronized. If false, only the files in the source folder will have their timestamsp synchronized.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.SyncFileTimestamps(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Routine to set the create and modified timestamps for files in the destination path to be the same as those in the source path.
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder contaning file timestamps to be used in the sync operation.</param>
+            <param name="destFolderPath">Full path of the destination folder for the file timestamp sync operation.</param>
+            <param name="fileSearchPattern">You can specify a Windows style search pattern to limit which files will have their timestamps synchronized. For example, *.* search pattern means synchronize the timestamps for all files. Synchronize all file timestamps is the default.</param>
+            <param name="includeSubdirs">If true, the folder plus all its subfolders will have their file timestamps synchronized. If false, only the files in the source folder will have their timestamsp synchronized.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XDelete(System.String,System.Boolean)">
+            <summary>
+            Routine to delete files. Will override attributes to delete read-only files. Can delete all files and subfolders in the source's directory tree.
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be deleted.</param>
+            <param name="includeSubDirs">If true, the folder plus all its subfolders will be deleted. If false, only the files in the source folder will be deleted.</param>
+            <returns>XDeleteInfo structure is returned. See <see cref="T:PFFileSystemObjects.XDeleteInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XDelete(System.String,System.String,System.Boolean)">
+            <summary>
+            Routine to delete files. Will override attributes to delete read-only files. Can delete all files and subfolders in the source's directory tree.
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be deleted.</param>
+            <param name="fileSearchPattern">You can specify a Windows style search pattern to limit which files are deleted. For example, *.* search pattern means delete all files. Delete all is the default.</param>
+            <param name="includeSubDirs">If true, the folder plus all its subfolders will be deleted. If false, only the files in the source folder will be deleted.</param>
+            <returns>XDeleteInfo structure is returned. See <see cref="T:PFFileSystemObjects.XDeleteInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.XDelete(System.String,System.String,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Routine to delete files. Will override attributes to delete read-only files. Can delete all files and subfolders in the source's directory tree.
+            </summary>
+            <param name="sourceFolderPath">Full path of the folder to be deleted.</param>
+            <param name="fileSearchPattern">You can specify a Windows style search pattern to limit which files are deleted. For example, *.* search pattern means delete all files. Delete all is the default.</param>
+            <param name="includeSubDirs">If true, the folder plus all its subfolders will be deleted. If false, only the files in the source folder will be deleted.</param>
+            <param name="continueOnError">If true, the application will attempt to continue if a folder delete operation failed because the source folder or file was unavailable. Default is to continue on error.</param>
+            <param name="maxNumErrors">Maximum number of delete errors before the routine will terminate and throw an error message. Default is 5.</param>
+            <returns>XDeleteInfo structure is returned. See <see cref="T:PFFileSystemObjects.XDeleteInfo"/> for information on contents of the structure.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteFiles(System.String)">
+            <summary>
+            Method to delete files from the specified folder. All files in the folder are deleted. Subfolders and their files are not deleted.
+            </summary>
+            <param name="folderPath">Path of folder containing files to be deleted.</param>
+            <returns>Total number of files that were deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteFiles(System.String,System.String)">
+            <summary>
+            Method to delete files from the specified folder. Subfolders are not searched.
+            </summary>
+            <param name="folderPath">Path of folder containing files to be deleted.</param>
+            <param name="searchPattern">Mask to use when selecting which files to delete. Examples: *.* for all files; *.txt for files with .txt file extension.</param>
+            <returns>Total number of files that were deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteFiles(System.String,System.String,System.Boolean)">
+            <summary>
+            Method to delete files from the specified folder.
+            </summary>
+            <param name="folderPath">Path of folder containing files to be deleted.</param>
+            <param name="searchPattern">Mask to use when selecting which files to delete. Examples: *.* for all files; *.txt for files with .txt file extension.</param>
+            <param name="includeSubFolders">Recursively search the subfolder tree to delete files that match the searchPattern.</param>
+            <returns>Total number of files that were deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String)">
+            <summary>
+            Deletes all subfolders in the specified folderPath. Specified folderPath and any files in it will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            <returns>Number of subfolders deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String,System.String)">
+            <summary>
+            Deletes subfolders in the specified folderPath when subfolder name matches searchPattern mask.  Specified folderPath and any files in it will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            <param name="searchPattern">Mask to specify which subfolders to delete. Specify *.* to specify all subfolders.</param>
+            <returns>Number of directory entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String,System.Boolean)">
+            <summary>
+            Deletes subfolders in the specified folderPath. Specified folderPath will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            ///<param name="includeFiles">If true, files in the specified folderPath are also deleted. If false, only the subfolders are deleted.</param>
+            <returns>Number of directory entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String,System.String,System.Boolean)">
+            <summary>
+            Deletes subfolders in the specified folderPath when subfolder name matches searchPattern mask.  Specified folderPath will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            <param name="searchPattern">Mask to specify which subfolders to delete. Specify *.* to specify all subfolders. Pattern is also used to determine which files to delete if includeFiles is set to true.</param>
+            ///<param name="includeFiles">If true, files in the specified folderPath are also deleted. If false, only the subfolders are deleted.</param>
+            <returns>Number of directory entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.IsValidPath(System.String)">
+            <summary>
+            Determines whether or not the specified path contains legal Windows file path characters.
+            </summary>
+            <param name="pathName">Path to be validated.</param>
+            <returns>True if path is a valid Windows path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.FolderNamesAreEqual(System.String,System.String)">
+            <summary>
+            Method determines if two folder names are equal. If necessary, the method will append a backslash (\) to the folder names.
+            </summary>
+            <param name="folderName1">First folder name to compare.</param>
+            <param name="folderName2">Second folder name to compare.</param>
+            <returns>True if folder names are equal.</returns>
+            <remarks>In general, the folder names should include the full paths to the folder.</remarks>
+        </member>
+    </members>
+</doc>

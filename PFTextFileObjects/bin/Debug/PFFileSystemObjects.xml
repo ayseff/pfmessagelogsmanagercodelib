@@ -1,0 +1,1104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFFileSystemObjects</name>
+    </assembly>
+    <members>
+        <member name="T:PFFileSystemObjects.PFFileEx">
+            <summary>
+            Initial class prototype for ProFast application or library code that includes ToString override, XML Serialization and output to XML document or string.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.#ctor(System.IO.FileInfo)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileInfoObject"></param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.IsAttribute(System.IO.FileAttributes)">
+            <summary>
+            Method to determine if file has specified attribute.
+            </summary>
+            <param name="attribute">Attribute to query for.</param>
+            <returns>Returns true if the file has the specified attribute.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.Encrypt">
+            <summary>
+            Encrypts a file so that only the account used to encrypt the file can decrypt it.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.Decrypt">
+            <summary>
+            Decrypts a file that was encrypted by the current account using the Encrypt method.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFFileEx object. If unable to create the instance, null is returned.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileEx.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.FileInfoObject">
+            <summary>
+            Returns FileInfo object underlying this instance.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Name">
+            <summary>
+            The file name.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.FullName">
+            <summary>
+            Full path of the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Extension">
+            <summary>
+            File extension for the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Attributes">
+            <summary>
+            File's attributes. 
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsReadOnly">
+            <summary>
+            If true, the file is read-only.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsReadyToArchive">
+            <summary>
+            If true, the file archive bit has been set.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsEncrypted">
+            <summary>
+            If true, the file has been encrypted so that only the user account used to encrypt the file can read the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsCompressed">
+            <summary>
+            If true, the file has been compressed using Windows NTFS compression.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsTemporary">
+            <summary>
+            If true, the file has been marked as temporary.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsOffline">
+            <summary>
+            If true, the file is offline. The data in the file is not immediately available.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsSystemFile">
+            <summary>
+            If true, the file is system file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.IsHidden">
+            <summary>
+            If true, the file is a hidden file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.Size">
+            <summary>
+            Size in bytes of file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.CreationTime">
+            <summary>
+            Date and time file was created.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.CreationTimeUtc">
+            <summary>
+            Date and time file was created in universal time format.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastModifiedTime">
+            <summary>
+            Date and time of last write to the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastModifiedTimeUtc">
+            <summary>
+            Date and time of last write to the file in universal time format.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastAccessTime">
+            <summary>
+            Date and time of last access to the file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFFileEx.LastAccessTimeUtc">
+            <summary>
+            Date and time of last access to the file in universal time format.
+            </summary>
+        </member>
+        <member name="T:PFFileSystemObjects.PFFileSpec">
+            <summary>
+            Represents a FileSpec running on the
+            <see cref="N:System.Text.RegularExpressions"/> engine.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileSpec.#ctor(System.String)">
+            <summary>
+            Initializes a FileSpec with the given search pattern.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileSpec.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Initializes a FileSpec with the given search pattern and options.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+            <param name="options">A combination of one or more System.Text.RegexOption.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFileSpec.FileSpecToRegex(System.String)">
+            <summary>
+            Converts a FileSpec to a regex.
+            </summary>
+            <param name="pattern">The FileSpec pattern to convert.</param>
+            <returns>A regex equivalent of the given FileSpec.</returns>
+        </member>
+        <member name="T:PFFileSystemObjects.PFDirectory">
+            <summary>
+            Class for working with Windows directories (folders).
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.GetDirectorySize(System.String,System.Boolean)">
+            <summary>
+            Calculates size in bytes of the directory.
+            </summary>
+            <param name="directoryPath">Path to directory to be sized.</param>
+            <param name="includeSubfolders">True if you wish to include all subdirectories in the size calculation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Compress(System.String)">
+            <summary>
+            Compresses the folder at the path represented by the current instance of the class. Windows compression is used.
+            </summary>
+            <remarks>Subdirectories are not included in the compression.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Compress(System.String,System.Boolean)">
+            <summary>
+            Compresses the folder at the path represented by the current instance of the class.  Windows compression is used.
+            </summary>
+            <param name="directoryName">Path to directory to be compressed.</param>
+            <param name="compressSubdirectories">If true, the subdirectories for the directory are included in the compression.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Uncompress(System.String)">
+            <summary>
+            Uncompresses the folder at the path represented by the specified directory name. Windows compression is used.
+            </summary>
+            <param name="directoryName">Path to directory to be uncompressed.</param>
+            <remarks>Subdirectories are not included in the uncompression.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.Uncompress(System.String,System.Boolean)">
+            <summary>
+            Uncompresses the folder at the path represented by the current instance of the class. Windows compression is used.
+            </summary>
+            <param name="directoryName">Path to directory to be uncompressed.</param>
+            <param name="uncompressSubdirectories">If true, the subdirectories for the directory are included in the uncompression.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteFiles(System.String)">
+            <summary>
+            Method to delete files from the specified folder. All files in the folder are deleted. Subfolders and their files are not deleted.
+            </summary>
+            <param name="folderPath">Path of folder containing files to be deleted.</param>
+            <returns>Total number of files that were deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteFiles(System.String,System.String)">
+            <summary>
+            Method to delete files from the specified folder. Subfolders are not searched.
+            </summary>
+            <param name="folderPath">Path of folder containing files to be deleted.</param>
+            <param name="searchPattern">Mask to use when selecting which files to delete. Examples: *.* for all files; *.txt for files with .txt file extension.</param>
+            <returns>Total number of files that were deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteFiles(System.String,System.String,System.Boolean)">
+            <summary>
+            Method to delete files from the specified folder.
+            </summary>
+            <param name="folderPath">Path of folder containing files to be deleted.</param>
+            <param name="searchPattern">Mask to use when selecting which files to delete. Examples: *.* for all files; *.txt for files with .txt file extension.</param>
+            <param name="includeSubFolders">Recursively search the subfolder tree to delete files that match the searchPattern.</param>
+            <returns>Total number of files that were deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String)">
+            <summary>
+            Deletes all subfolders in the specified folderPath. Specified folderPath and any files in it will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            <returns>Number of subfolders deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String,System.String)">
+            <summary>
+            Deletes subfolders in the specified folderPath when subfolder name matches searchPattern mask.  Specified folderPath and any files in it will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            <param name="searchPattern">Mask to specify which subfolders to delete. Specify *.* to specify all subfolders.</param>
+            <returns>Number of directory entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String,System.Boolean)">
+            <summary>
+            Deletes subfolders in the specified folderPath. Specified folderPath will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            ///<param name="includeFiles">If true, files in the specified folderPath are also deleted. If false, only the subfolders are deleted.</param>
+            <returns>Number of directory entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.DeleteSubFolders(System.String,System.String,System.Boolean)">
+            <summary>
+            Deletes subfolders in the specified folderPath when subfolder name matches searchPattern mask.  Specified folderPath will remain.
+            </summary>
+            <param name="folderPath">Path to folder to process.</param>
+            <param name="searchPattern">Mask to specify which subfolders to delete. Specify *.* to specify all subfolders. Pattern is also used to determine which files to delete if includeFiles is set to true.</param>
+            ///<param name="includeFiles">If true, files in the specified folderPath are also deleted. If false, only the subfolders are deleted.</param>
+            <returns>Number of directory entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectory.IsValidPath(System.String)">
+            <summary>
+            Determines whether or not the specified path contains legal Windows file path characters.
+            </summary>
+            <param name="pathName">Path to be validated.</param>
+            <returns>True if path is a valid Windows path.</returns>
+        </member>
+        <member name="T:PFFileSystemObjects.ZipArchive">
+            <summary>
+            Class to manage adding, extracting and removing entries in a zip file.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileName">Path to the zip archive file.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.#ctor(System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileName">Path to the zip archive file.</param>
+            <param name="password">Sets the password to use when adding or retrieving entries from the zip file.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFile(System.String)">
+            <summary>
+            Compresses file using Zip format.
+            </summary>
+            <param name="sourceFile">Path to file to be zipped.</param>
+            <returns>Returns true if file successfully added to the zip archive.</returns>
+            <remarks>Path names are not stored in the zip file. For example, adding the file "c:\temp\samples\readme.txt" to the zip file will create an entry called "readme.txt".</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFile(System.String,System.Int32)">
+            <summary>
+            Compresses file using Zip format.
+            </summary>
+            <param name="sourceFile">Path to file to be zipped.</param>
+            <param name="pathLevel">The number of path levels to be stored as the entry name.</param>
+            <returns>Returns true if file successfully added to the zip archive.</returns>
+            <remarks>By default, path names are not stored in the zip file. For example, adding the file "c:\temp\samples\readme.txt" to the zip file will create an entry called "readme.txt". 
+            The pathLevels parameter allows you to store one or more levels of the path in the entry name. For example, adding the file "c:\temp\samples\readme.txt" to the zip file 
+            with pathLevels=1 will create an entry called "samples\readme.txt".</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFile(System.String,System.String)">
+            <summary>
+            Compresses file using Zip format.
+            </summary>
+            <param name="sourceFile">Path to file to be zipped.</param>
+            <param name="entryName">Name of the new entry as stored in the zip file.</param>
+            <returns>Returns true if file successfully added to the zip archive.</returns>
+            <remarks>By default, entries in the zip file have the same name as the original (uncompressed) file. This method allows you to specify a different name, including a path for example.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFiles(System.String[])">
+            <summary>
+            Compresses group of files using Zip format.
+            </summary>
+            <param name="sourceFiles">Array of file paths to be zipped.</param>
+            <returns>Returns true if files successfully added to the zip archive.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolder(System.String)">
+            <summary>
+            Compresses folder and its subfolders (if any) to the zip archive.
+            </summary>
+            <param name="folderName">Path to folder to be zipped.</param>
+            <returns>Returns true if folder is successfully added to the zip archive.</returns>
+            <remarks>See AddFolderEx for method that allows for greater control over fromat of entry names in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolder(System.String,System.String)">
+            <summary>
+            Compresses folder and its subfolders (if any) to the zip archive.
+            </summary>
+            <param name="folderName">Path to folder to be zipped.</param>
+            <param name="searchPattern">Mask used to select which files to zip.</param>
+            <returns>Returns true if folder is successfully added to the zip archive.</returns>
+            <remarks>See AddFolderEx for method that allows for greater control over fromat of entry names in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolder(System.String,System.String,System.Boolean)">
+            <summary>
+            Compresses folder to the zip archive. IncludeSubFolders parameter determines whether or not subfolders are included. 
+            </summary>
+            <param name="folderName">Path to folder to be zipped.</param>
+            <param name="searchPattern">Mask used to select which files to zip.</param>
+            <param name="includeSubFolders">If true, subfolders are included in archive. Otherwise only the specified folder is zipped.</param>
+            <returns>Returns true if folder is successfully added to the zip archive.</returns>
+            <remarks>Parent path information is not preserved in the archive by this call. Folder path name is not saved. Subfolder path names are saved.
+             See AddFolderEx for method that allows for greater control over fromat of entry names in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolders(System.String[])">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive.
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks>See AddFoldersEx for method that allows for more control over the organization of the data in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolders(System.String[],System.String)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive.
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="searchPattern">Mask used to select which files to zip.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks>See AddFoldersEx for method that allows for more control over the organization of the data in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolders(System.String[],System.String,System.Boolean)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive. IncludeSubFolders parameter determines whether or not subfolders are included. 
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="searchPattern">Mask used to select which files to zip.</param>
+            <param name="includeSubFolders">If true, subfolders are included in archive. Otherwise only the specified folders are zipped.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks>See AddFoldersEx for method that allows for more control over the organization of the data in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolderEx(System.String)">
+            <summary>
+            Adds files in specified folder to the zip archive.
+            </summary>
+            <param name="folderName">Name of folder to archive.</param>
+            <returns>True if zip process succeeded; otherwise false.</returns>
+            <remarks>All files and subfolders are automatically included.
+             Path levels to include in the zip entry name will be automatically determined based on the number of directory names in the folderName parameter.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolderEx(System.String,System.Boolean)">
+            <summary>
+            Adds files in specified folder to the zip archive.
+            </summary>
+            <param name="folderName">Name of folder to archive.</param>
+            <param name="includeSubFolders">If true, files in subfolders are included in the zip archive.</param>
+            <returns>True if zip process succeeded; otherwise false.</returns>
+            <remarks>All files in the folder and its subfolders are included.
+             Path levels to include in the zip entry name will be automatically determined based on the number of directory names in the folderName parameter.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolderEx(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Adds files in specified folder to the zip archive.
+            </summary>
+            <param name="folderName">Name of folder to archive.</param>
+            <param name="includeSubFolders">If true, files in subfolders are included in the zip archive.</param>
+            <param name="pathLevels">The number of path levels to be stored as the entry name.</param>
+            <returns>True if zip process succeeded; otherwise false.</returns>
+            <remarks>All files in the folder and its subfolders are included.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolderEx(System.String,System.Int32)">
+             <summary>
+             Adds files in specified folder to the zip archive.
+             </summary>
+             <param name="folderName">Name of folder to archive.</param>
+             <param name="pathLevels">The number of path levels to be stored as the entry name.</param>
+             <returns>True if zip process succeeded; otherwise false.</returns>
+             <remarks>All files in the folder and its subfolders are included. All subfolders are automatically included.
+            </remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolderEx(System.String,System.String)">
+            <summary>
+            Adds files in specified folder to the zip archive.
+            </summary>
+            <param name="folderName">Name of folder to archive.</param>
+            <param name="searchPattern">Search mask to determine which files in folders and subfolders to include. Use *.* to include all files.</param>
+            <returns>True if zip process succeeded; otherwise false.</returns>
+            <remarks>All subfolders are automatically included.
+             Path levels to include in the zip entry name will be automatically determined based on the number of directory names in the folderName parameter.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolderEx(System.String,System.String,System.Boolean)">
+            <summary>
+            Adds files in specified folder to the zip archive.
+            </summary>
+            <param name="folderName">Name of folder to archive.</param>
+            <param name="searchPattern">Search mask to determine which files to include. Use *.* to include all files.</param>
+            <param name="includeSubFolders">If true, files in subfolders are included in the zip archive.</param>
+            <returns>True if zip process succeeded; otherwise false.</returns>
+            <remarks>Path levels to include in the zip entry name will be automatically determined based on the number of directory names in the folderName parameter.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFolderEx(System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Adds files in specified folder to the zip archive.
+            </summary>
+            <param name="folderName">Name of folder to archive.</param>
+            <param name="searchPattern">Search mask to determine which files to include. Use *.* to include all files.</param>
+            <param name="includeSubFolders">If true, files in subfolders are included in the zip archive.</param>
+            <param name="pathLevels">The number of path levels to be stored as the entry name.</param>
+            <returns>True if zip process succeeded; otherwise false.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFoldersEx(System.String[],System.String,System.Boolean,System.Int32)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive. IncludeSubFolders parameter determines whether or not subfolders are included. 
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="searchPattern">Mask used to select which files to zip. Use *.* to include all files.</param>
+            <param name="includeSubFolders">If true, subfolders are included in archive. Otherwise only the specified folders are zipped.</param>
+            <param name="pathLevels">The number of path levels to be stored as the entry name.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFoldersEx(System.String[],System.String,System.Boolean)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive. IncludeSubFolders parameter determines whether or not subfolders are included. 
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="searchPattern">Mask used to select which files to zip.</param>
+            <param name="includeSubFolders">If true, subfolders are included in archive. Otherwise only the specified folders are zipped.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks>Numer of folder levels to include in the zip entry name is automatically determined from the paths for each folder name passed in via the foldeNames parameter..</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFoldersEx(System.String[],System.Boolean)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive. IncludeSubFolders parameter determines whether or not subfolders are included. 
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="includeSubFolders">If true, subfolders are included in archive. Otherwise only the specified folders are zipped.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks>All files are included in the zip archive. Numer of folder levels to include in the zip entry name is automatically determined from the paths for each folder name passed in via the foldeNames parameter..</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFoldersEx(System.String[],System.Boolean,System.Int32)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive. IncludeSubFolders parameter determines whether or not subfolders are included. 
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="includeSubFolders">If true, subfolders are included in archive. Otherwise only the specified folders are zipped.</param>
+            <param name="pathLevels">The number of path levels to be stored as the entry name.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks>All files are included in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFoldersEx(System.String[],System.Int32)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive. IncludeSubFolders parameter determines whether or not subfolders are included. 
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="pathLevels">The number of path levels to be stored as the entry name.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks>All files and subfolders are included in the zip archive.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFoldersEx(System.String[],System.String)">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive.
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <param name="searchPattern">Mask used to select which files to zip.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks> Subfolders are automatically included in the zip file.
+             Numer of folder levels to include in the zip entry name is automatically determined from the paths for each folder name passed in via the foldeNames parameter..</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.AddFoldersEx(System.String[])">
+            <summary>
+            Compresses group of folders and their subfolders (if any) to the zip archive.
+            </summary>
+            <param name="folderNames">Array of folder paths to be zipped.</param>
+            <returns>Returns true if folders are successfully added to the zip archive.</returns>
+            <remarks> All files are included. Subfolders are automatically included in the zip file.
+             Numer of folder levels to include in the zip entry name is automatically determined from the paths for each folder name passed in via the foldeNames parameter..</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.Extract(System.String)">
+            <summary>
+            Extracts a file from the current zip file. 
+            </summary>
+            <param name="entryName">Name of the entry to extract.</param>
+            <returns></returns>
+            <remarks>The entry is extracted to a file in the same folder as the current zip file, with the same name as the entry. </remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.Extract(System.String,System.String)">
+            <summary>
+            Extracts a file from the current zip file. 
+            </summary>
+            <param name="entryName">Name of the entry to extract.</param>
+            <param name="destFileName">Name and location of the extracted file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.Extract(System.String[])">
+            <summary>
+            Extracts group of entries from zip archive.
+            </summary>
+            <param name="entryNames">Array of entry names to unzip.</param>
+            <returns>Number of entries extracted. Check this to determine if all entries were found in the archive.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.Extract(System.String[],System.String)">
+            <summary>
+            Extracts group of entries from zip archive.
+            </summary>
+            <param name="entryNames">Array of entry names to unzip.</param>
+            <param name="destinationFolder">Path to the folder that will contain the entracted entries.</param>
+            <returns>Number of entries extracted. Check this to determine if all entries were found in the archive.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.ExtractWildcard(System.String)">
+            <summary>
+            Extracts group of entries from zip archive.
+            </summary>
+            <param name="searchPattern">Wildcard pattern that determines which entries to include.</param>
+            <returns>Number of entries extracted. Check this to determine if all entries were found in the archive.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.ExtractWildcard(System.String,System.String)">
+            <summary>
+            Extracts group of entries from zip archive. Uses wildcard search pattern to select which entries to extract.
+            </summary>
+            <param name="destinationFolder">Path to the folder that will contain the entracted entries.</param>
+            <param name="searchPattern">Wildcard pattern that determines which entries to include.</param>
+            <returns>Number of entries extracted. Check this to determine if all entries were found in the archive.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.ExtractAll(System.String)">
+            <summary>
+            Unzips all the entries in a zip archive.
+            </summary>
+            <param name="destinationFolder">Path to the folder that will contain the entracted entries.</param>
+            <returns>Returns the number of entries extracted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.ExtractFolder(System.String)">
+            <summary>
+            Unzips all the entries in a zip archive.
+            </summary>
+            <param name="destinationFolder">Path to the folder that will contain the entracted entries.</param>
+            <returns>Returns the number of entries extracted.</returns>
+            <remarks>This method uses ExtractAll to process request.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.Contains(System.String)">
+            <summary>
+            Determines whether the collection contains an entry with a given name. 
+            </summary>
+            <param name="entryName">Name of the entry to look for.</param>
+            <returns>True if the collection contains an entry with the given name, false otherwise.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.Remove(System.String)">
+            <summary>
+            Deletes an entry from the zip archive.
+            </summary>
+            <param name="entryName">Name of entry to delete.</param>
+            <returns>Returns 1 if delete succeeded; otherwise 0.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.Remove(System.String[])">
+            <summary>
+            Deletes a group of entries from the zip archive.
+            </summary>
+            <param name="entryNames">Array of entry names to delete.</param>
+            <returns>Number of entries deleted. 0 if delete failed.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.RemoveAll">
+            <summary>
+            Deletes all entries from the zip archive.
+            </summary>
+            <returns>Number of entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.RemoveWildcard(System.String)">
+            <summary>
+            Deletes all entries that match the searchPattern from the zip archive.
+            </summary>
+            <param name="searchPattern">Mask for selecting which files to remove. For example, *.txt means remove all entries with .txt extension.</param>
+            <returns>Number of entries deleted.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.ZipArchive.GetNumberOfPathLevels(System.String)">
+            <summary>
+            Calculates the number of directory levels in the specified file system path.
+            </summary>
+            <param name="sourcePath">Path containing path levels to be counted.</param>
+            <returns>Number of levels in the path.</returns>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.FileName">
+            <summary>
+            Path to the zip archive file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.Count">
+            <summary>
+            Returns the number of entries currently in the zip archive.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.Entries">
+            <summary>
+            Returns an array of strings containing the names of the entries in the zip archive.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.Comment">
+            <summary>
+             Gets or sets a comment associated with the current zip file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.CompressionLevel">
+            <summary>
+             Gets or sets the compression level to use when adding entries to the zip archive.
+            </summary>Higher compression settings create smaller files, but take longer to process.
+             The default setting ZipCompressionLevel.DefaultCompression) provides a good trade-off between compression and speed.
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.MemoryThreshold">
+            <summary>
+            Gets or sets the size of the largest stream to be compressed in memory.
+            </summary>
+            <remarks>
+            C1.C1Zip.C1ZipFile compresses entries into temporary streams before adding
+             them to the zip file.
+             Entries with fewer than MemoryThreshold bytes are compressed
+             using a temporary memory stream.
+             Entries with more than MemoryThreshold bytes are compressed
+             using a temporary file. You can control the location of the temporary file
+             using the TempFileName property.
+            </remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.OverwriteHidden">
+            <summary>
+            Determines whether the component should overwrite hidden files when extracting entries from the zip file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.OverwriteReadOnly">
+            <summary>
+            Determines whether the component should overwrite read-only files when extracting entries from the zip file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.OverwriteSystem">
+            <summary>
+            Determines whether the component should overwrite system files when extracting entries from the zip file.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.TempFileName">
+            <summary>
+            Gets or sets the name of the temporary file to use when adding entries to the zip file.
+            </summary>
+            <remarks>
+            Process creates temporary streams while adding entries to a zip
+            file.  These temporary streams can be memory-based or disk-based, depending
+            on the size of the entry and on the setting of the MemoryThreshold
+            property.
+            If a temporary file is used, you can control its location
+            by setting the TempFileName property. If you don't select
+            a path for the temporary file, the zip process will create one automatically
+            using the System.IO.Path.GetTempFileName() method.
+            </remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.ZipArchive.UseUtf8Encoding">
+            <summary>
+             Determines whether file names and comments should be stored in UTF8 format.
+            </summary>
+            <remarks>
+            The Zip specification does not specify what character encoding to be used
+            for the embedded file names and comments. The original IBM PC character encoding
+            set, commonly referred to as IBM Code Page 437, is supposed to be the only
+            encoding supported.  Because of this, some zip utilities will not allow storing
+            file names or comments with Unicode characters. Others do allow it, but those
+            file names and comments may not be read correctly by other utilities.
+            Setting the UseUtf8Encoding to true causes C1Zip to store and retrieve file
+            names and comments using the Utf8 encoding, which allows Unicode characters.
+            The caveat is that Unicode file names may not be read correctly by other
+            zip utilities.
+            </remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.FilePathParts.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name and value for all public properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PFFileSystemObjects.PFFile">
+            <summary>
+            Class for retrieving file information.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.#ctor">
+            <summary>
+            Cosntructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.CopyFileLongPath(System.String,System.String)">
+            <summary>
+            Method attempts to copy files whose paths are longer the default Windows maximum path length of 260.
+            </summary>
+            <param name="sourcePath"></param>
+            <param name="destinationPath"></param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.CopyFileLongPath(System.String,System.String,System.Boolean)">
+            <summary>
+            Method attempts to copy files whose paths are longer the default Windows maximum path length of 260.
+            </summary>
+            <param name="sourcePath"></param>
+            <param name="destinationPath"></param>
+            <param name="failIfFileExists">If true, destination path must not exist.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.GetShortFilePath(System.String)">
+            <summary>
+            Produces the Windows short names for the folder names in the path.
+            </summary>
+            <param name="longFilePath"></param>
+            <returns>Windows short file path names.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.GetLongFilePath(System.String)">
+            <summary>
+            Produces the long names for the folder names in the shortFilePath value.
+            </summary>
+            <param name="shortFilePath"></param>
+            <returns>Windows long file path names.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatDrivePlusFolderPath(System.String,System.String)">
+            <summary>
+            Takes the drive name and folderPath and combines them into a formatted path. Backslash will be appended to end of folderPath if none supplied with input parameter.
+            </summary>
+            <param name="drive">Drive name (e.g. C:\).</param>
+            <param name="folderPath">Path (e.g. foldername\subfoldername\</param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String)">
+            <summary>
+            Creates full path that includes folder names and file name.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <returns>Formatted path (e.g. testdir\subdir1\file1.dat</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <returns>String containing path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path. Optionally, a date/time string can be appended to the filename.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <param name="AppendDateTimeToFileName">Current date/time will be appended to the filename if this is set to true.</param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path. Optionally, a date/time string can be appended to the filename.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <param name="AppendDateTimeToFileName">Current date/time will be appended to the filename if this is set to true.</param>
+            <param name="dateTimeFormat">Format for the date/time string. If left blank or null, a default format of _yyyyMMdd_HHmmss will be used.</param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FormatFilePath(System.String,System.String,System.String,System.Boolean,System.String,System.DateTime)">
+            <summary>
+            Pulls together separate folderPath, fileName and fileExtension into a valid path. Optionally, a date/time string can be appended to the filename.
+            </summary>
+            <param name="folderPath"></param>
+            <param name="fileName"></param>
+            <param name="fileExtension"></param>
+            <param name="AppendDateTimeToFileName">Date/time specified by the dateTimeToAppend parameter will be appended to the filename if this is set to true.</param>
+            <param name="dateTimeFormat">Format for the date/time string. If left blank or null, a default format of _yyyyMMdd_HHmmss will be used.</param>
+            <param name="dateTimeToAppend"></param>
+            <returns>String containing formatted path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.ParsefilePath(System.String)">
+            <summary>
+            Breaks up a file path string into its constituent parts.
+            </summary>
+            <param name="filePath">Path to parse.</param>
+            <returns>FilePathParts struct containing the different parts of the path.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.GetFileSize(System.String)">
+            <summary>
+            Gets size of file.
+            </summary>
+            <param name="fileName"></param>
+            <returns>Long value that represents size of file.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.Compress(System.String)">
+            <summary>
+            Compresses the file at the path represented by the specified file name. Windows compression is used.
+            </summary>
+            <param name="fileName">Path to file to be compressed.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.Uncompress(System.String)">
+            <summary>
+            Uncompresses the file at the path represented by the specified fileName. Windows compression is used.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileCopy(System.String,System.String)">
+            <summary>
+            Copies files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be copied.</param>
+            <param name="destinationFile">Name of file at copy destination.</param>
+            <remarks>Copy fails if destinationFile already exists.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileCopy(System.String,System.String,System.Boolean)">
+            <summary>
+            Copies files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be copied.</param>
+            <param name="destinationFile">Name of file at copy destination.</param>
+            <param name="overwriteDestination">If true and destination file exists, destination file will be deleted before sourceFile is copied.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileMove(System.String,System.String)">
+            <summary>
+            Moves files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be moved.</param>
+            <param name="destinationFile">Name of file at move destination.</param>
+            <remarks>Move fails if destination file already exists. Original file is deleted after a successful move.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileMove(System.String,System.String,System.Boolean)">
+            <summary>
+            Moves files over a local area network.
+            </summary>
+            <param name="sourceFile">File to be moved.</param>
+            <param name="destinationFile">Name of file at move destination.</param>
+            <param name="overwriteDestination">If true and destination file exists, destination file will be deleted before sourceFile is moved.</param>
+            <remarks>Original file is deleted after the move.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileRename(System.String,System.String)">
+            <summary>
+            Renames file. Renamed file exists in same directory as original file name.
+            </summary>
+            <param name="originalFile">Full path to original file.</param>
+            <param name="newFileName">New file name.</param>
+            <remarks>Rename will fail if file with new name already exists.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.FileRename(System.String,System.String,System.Boolean)">
+            <summary>
+            Renames file. Renamed file exists in same directory as original file name.
+            </summary>
+            <param name="originalFile">Full path to original file.</param>
+            <param name="newFileName">New file name.</param>
+            <param name="overwriteDestination">If true and a file with same name as original exists, the file with same name will be deleted </param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.IsValidFileName(System.String)">
+            <summary>
+            Checks if file name is a valid Windows file name.
+            </summary>
+            <param name="fileName">File name plus extension, if any.</param>
+            <returns>True if file name is valid.</returns>
+            <remarks>Do not specify a folder path for this method. The folder separators (\ or /) will be considered an error.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFFile.IsValidPath(System.String)">
+            <summary>
+            Determines whether or not the specified path contains legal Windows file path characters.
+            </summary>
+            <param name="pathName">Path to be validated.</param>
+            <returns>True if path is a valid Windows path.</returns>
+        </member>
+        <member name="T:PFFileSystemObjects.PFDirectoryEx">
+            <summary>
+            Initial class prototype for ProFast application or library code that includes ToString override, XML Serialization and output to XML document or string.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="directoryPath">Full path to directory this instance will represent.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="directoryPath">Full path to directory this instance will represent.</param>
+            <param name="getDirectoryTree">If true, an internal list of all subdirectories and files will be built.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.Refresh(System.Boolean)">
+            <summary>
+            Recalculates the number of bytes, files and subdirectories in this instance.
+            </summary>
+            <param name="includeSubfolders">If true, size of all objects in directory subfolders are calculated.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.GetDirectorySize">
+            <summary>
+            Gets number of bytes contained in the objects in this directory.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.GetDirectoryTreeSize">
+            <summary>
+            Gets number of bytes contained in the objects in this directory tree.
+            </summary>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.SaveToXmlFile(System.String,System.Boolean)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+            <param name="summaryOnly">If true, only very high level information from the object is stored. Otherwise, full detail of all values from objects and subojects in the instance are retrieved.</param>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFDirectoryEx.</returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.ToString">
+            <summary>
+            Routine overrides default ToString method and outputs name, type, scope and value for all class properties and fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.PropertiesToString">
+            <summary>
+            Routine outputs name and value for all properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.FieldsToString">
+            <summary>
+            Routine outputs name and value for all fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.ToXmlString(System.Boolean)">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <param name="summaryOnly">If true, only very high level information from the object is stored. Otherwise, full detail of all values from objects and subojects in the instance are retrieved.</param>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFFileSystemObjects.PFDirectoryEx.ToXmlDocument(System.Boolean)">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <param name="summaryOnly">If true, only very high level information from the object is stored. Otherwise, full detail of all values from objects and subojects in the instance are retrieved.</param>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.DirectoryInfoObject">
+            <summary>
+            Underlying DirectoryInfo instance.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.Files">
+            <summary>
+            Returns list of PFFileEx objects representing the files in this directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.Subdirectories">
+            <summary>
+            Returns list of PFDirectoryEx objects representing the subdirectories in this directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.WarningMessages">
+            <summary>
+            Collection of warning messages encountered during processing. Usually these will involve 
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.Name">
+            <summary>
+            Name of the directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.FullName">
+            <summary>
+            Full path for the directory.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumBytesInDirectory">
+            <summary>
+            NumBytesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumBytesInDirectoryTree">
+            <summary>
+            NumBytesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumFilesInDirectory">
+            <summary>
+            NumFilesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumSubdirectoriesInDirectory">
+            <summary>
+            NumSubdirectoriesInDirectory Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.TotalNumFilesInDirectoryTree">
+            <summary>
+            TotalNumFilesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.TotalNumSubdirectoriesInDirectoryTree">
+            <summary>
+            TotalNumSubdirectoriesInDirectoryTree Property.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.NumErrors">
+            <summary>
+            Number of errors encountered while getting directory and file information.
+            </summary>
+        </member>
+        <member name="P:PFFileSystemObjects.PFDirectoryEx.ErrorMessages">
+            <summary>
+            ErrorMessages recorded while getting directory and file information.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,7 @@
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Debug\PFTextFile.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Debug\PFTextFile.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\obj\Debug\PFTextFile.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\obj\Debug\PFTextFile.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Debug\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Debug\PFGlobalObjects.pdb

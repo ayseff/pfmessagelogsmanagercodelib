@@ -1,0 +1,12 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\bin\Release\PFRandomData.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\bin\Release\PFRandomData.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\obj\Release\PFRandomData.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\obj\Release\PFRandomData.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFRandomData\bin\Release\PFRandomData.XML
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\bin\Release\PFRandomData.XML
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\bin\Release\PFRandomData.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\bin\Release\PFRandomData.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\obj\Release\PFRandomData.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\obj\Release\PFRandomData.pdb

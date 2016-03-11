@@ -1,0 +1,10 @@
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Release\PFTextFile.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Release\PFTextFile.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Release\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Release\PFGlobalObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\obj\Release\PFTextFile.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\obj\Release\PFTextFile.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Release\PFTextFile.XML
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Release\PFFileSystemObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFTextFile\bin\Release\PFFileSystemObjects.pdb

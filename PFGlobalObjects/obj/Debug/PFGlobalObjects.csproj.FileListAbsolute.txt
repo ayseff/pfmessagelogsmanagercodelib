@@ -1,0 +1,10 @@
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFGlobalObjects\bin\Debug\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFGlobalObjects\bin\Debug\PFGlobalObjects.pdb
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFGlobalObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFGlobalObjects\obj\Debug\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFGlobalObjects\obj\Debug\PFGlobalObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFGlobalObjects\bin\Debug\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFGlobalObjects\bin\Debug\PFGlobalObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFGlobalObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFGlobalObjects\obj\Debug\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFGlobalObjects\obj\Debug\PFGlobalObjects.pdb

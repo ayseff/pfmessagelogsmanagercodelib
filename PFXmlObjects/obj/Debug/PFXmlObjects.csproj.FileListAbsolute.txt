@@ -1,0 +1,6 @@
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\bin\Debug\PFXmlObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\bin\Debug\PFXmlObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\bin\Debug\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\obj\Debug\PFXmlObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\obj\Debug\PFXmlObjects.pdb

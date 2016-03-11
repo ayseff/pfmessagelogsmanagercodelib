@@ -1,0 +1,13 @@
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFMessageLogs\bin\Debug\PFMessageLogs.dll
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFMessageLogs\bin\Debug\PFMessageLogs.pdb
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFMessageLogs\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFMessageLogs\obj\Debug\PFMessageLogs.dll
+C:\ProFast\Projects\DotNetPrototypesV3\WinAppComponents\PFMessageLogs\obj\Debug\PFMessageLogs.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\bin\Debug\PFMessageLogs.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\bin\Debug\PFMessageLogs.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\obj\Debug\PFMessageLogs.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\obj\Debug\PFMessageLogs.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\obj\Debug\PFMessageLogs.MessageLogForm.resources
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\obj\Debug\GenerateResource.read.1.tlog
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFMessageLogs\obj\Debug\GenerateResource.write.1.tlog

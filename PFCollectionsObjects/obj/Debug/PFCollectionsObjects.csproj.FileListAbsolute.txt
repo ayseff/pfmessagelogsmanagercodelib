@@ -1,0 +1,5 @@
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\bin\Debug\PFCollectionsObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\bin\Debug\PFCollectionsObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\obj\Debug\PFCollectionsObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFCollectionsObjects\obj\Debug\PFCollectionsObjects.pdb

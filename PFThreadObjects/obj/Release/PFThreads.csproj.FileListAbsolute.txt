@@ -1,0 +1,6 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFThreads\bin\Release\PFThreads.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFThreads\bin\Release\PFThreads.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFThreads\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFThreads\obj\Release\PFThreads.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFThreads\obj\Release\PFThreads.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFThreads\bin\Release\PFThreads.XML

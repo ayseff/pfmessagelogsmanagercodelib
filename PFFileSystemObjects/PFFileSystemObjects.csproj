@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38C70FC1-479D-4B21-BE8E-3CCE52CE9829}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PFFileSystemObjects</RootNamespace>
+    <AssemblyName>PFFileSystemObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PFFileSystemObjects.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PFDirectory.cs" />
+    <Compile Include="PFDirectoryEx.cs" />
+    <Compile Include="PFDirectoryStats.cs" />
+    <Compile Include="PFDiskDrive.cs" />
+    <Compile Include="PFFile.cs" />
+    <Compile Include="PFFileEx.cs" />
+    <Compile Include="PFFileSpec.cs" />
+    <Compile Include="PFFileStats.cs" />
+    <Compile Include="PFFileSystemEnumsAndStructs.cs" />
+    <Compile Include="PFTempFile.cs" />
+    <Compile Include="PFTempFileCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PFCollectionsObjects\PFCollectionsObjects.csproj">
+      <Project>{77E20E9C-6315-490E-A618-BAA055B769E1}</Project>
+      <Name>PFCollectionsObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PFGlobalObjects\PFGlobalObjects.csproj">
+      <Project>{18CAA5DE-94AA-42F7-80AE-DD65CE3BB32F}</Project>
+      <Name>PFGlobalObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PFXmlObjects\PFXmlObjects.csproj">
+      <Project>{AA41229F-9215-4E30-9B07-FA4C27C25571}</Project>
+      <Name>PFXmlObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>C:\ProFast\Projects\Binaries\ProFast\CopyPFBinary.bat $(TargetPath) $(TargetFileName) $(ConfigurationName)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

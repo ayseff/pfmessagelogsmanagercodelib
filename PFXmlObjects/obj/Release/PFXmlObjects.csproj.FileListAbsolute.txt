@@ -1,0 +1,16 @@
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\bin\Release\PFXmlObjects.XML
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\bin\Release\PFXmlObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\bin\Release\PFXmlObjects.pdb
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\bin\Release\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\obj\Release\PFXmlObjects.dll
+C:\ProFast\Projects\DotNetClassesV3\DatabaseComponents\PFXmlObjects\obj\Release\PFXmlObjects.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFXmlObjects.XML
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFXmlObjects.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFXmlObjects.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\obj\Release\PFXmlObjects.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\obj\Release\PFXmlObjects.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.xml

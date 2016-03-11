@@ -1,0 +1,12 @@
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\bin\Release\PFTimers.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\bin\Release\PFTimers.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\obj\Release\PFTimers.dll
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\obj\Release\PFTimers.pdb
+C:\ProFast\Projects\DotNetClassesV3\WinAppComponents\PFTimers\bin\Release\PFTimers.XML
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\bin\Release\PFTimers.XML
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\bin\Release\PFTimers.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\bin\Release\PFTimers.pdb
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\obj\Release\PFTimers.dll
+C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\obj\Release\PFTimers.pdb

@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PFRandomData</name>
+    </assembly>
+    <members>
+        <member name="T:PFRandomData.RandomString">
+            <summary>
+            Class has methods to generate random strings.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetString(System.Int32)">
+            <summary>
+            Generates random string using characters between ascii 32 and 127 (\ excluded).
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+            <remarks>Backslash is excluded to make sure the resulting string can be stored correctly in a string variable.</remarks>
+            <example>
+            <code>
+            int stringLength=100;
+            string retval = string.Empty;
+            RandomString rs = new RandomString();
+            retval = rs.GetString(stringLength);
+            </code>
+            </example>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringAN(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringANUC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringANLC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringANX(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9) or random punctuation marks from among the following: !   @   #   $   %   ^  &amp;  *   (   )   _   +   :   ?   ;  &gt; &lt;
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringAL(System.Int32)">
+            <summary>
+            Generates upper and lower case letters random string (a-z, A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringLC(System.Int32)">
+            <summary>
+            Generates alpha random string of lower case letters (a-z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringUC(System.Int32)">
+            <summary>
+            Generates alpha random string of Upper case letters (A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringDEC(System.Int32)">
+            <summary>
+            Generates alpha random string of numeric characters (0-9).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringHEX(System.Int32)">
+            <summary>
+            Generates alpha random string of hexadecimal numeric characters (0-9, A-F).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringIncludingBackslashAndDoubleQuotes(System.Int32)">
+            <summary>
+            Retrieves a random string that can include backslash (\) and double-quote characters ("). 
+            Ascii characters between decimal 32 and 127 can be included in the return string.
+            </summary>
+            <param name="size">Size of random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringNoSpaces(System.Int32)">
+            <summary>
+            Retrieves string of random ascii characters from decimal 33 to 127.
+            Space, backslash and double-quote characters are excluded from inclusion in random string output.
+            </summary>
+            <param name="size">Size of the random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetRandomSyllablesLC(System.Int32)">
+            <summary>
+            Generates random syllables in lower case.
+            </summary>
+            <param name="size">Number of syllables to generate.</param>
+            <returns>String containing the random syllables.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetRandomSyllablesUC(System.Int32)">
+            <summary>
+            Generates random syllables in upper case.
+            </summary>
+            <param name="size">Number of syllables to generate.</param>
+            <returns>String containing the random syllables.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetRandomSyllablesUCLC(System.Int32)">
+            <summary>
+            Generates random syllables with first letter of first syllable in upper case and all othrs in lower case.
+            </summary>
+            <param name="size">Number of syllables to generate.</param>
+            <returns>String containing the random syllables.</returns>
+        </member>
+        <member name="T:PFRandomData.RandomSingleCharacterRepeated">
+            <summary>
+            Class for producing repeated random characters. (For example, a line consisting of nothing but the letter A repeated x number of times.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringAN(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANUC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANLC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANX(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9) or random punctuation marks from among the following: !   @   #   $   %   ^  &amp;  *   (   )   _   +   :   ?   ;  &gt; &lt;
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringAL(System.Int32)">
+            <summary>
+            Generates upper and lower case letters random string (a-z, A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringLC(System.Int32)">
+            <summary>
+            Generates alpha random string of lower case letters (a-z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringUC(System.Int32)">
+            <summary>
+            Generates alpha random string of Upper case letters (A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringDEC(System.Int32)">
+            <summary>
+            Generates alpha random string of numeric characters (0-9).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringHEX(System.Int32)">
+            <summary>
+            Generates alpha random string of hexadecimal numeric characters (0-9, A-F).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="T:PFRandomData.RandomValues">
+            <summary>
+            Basic prototype for a ProFast application or library class.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomValues.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetDefaultNationalId(PFRandomData.RandomValues.enNationalIdCountry)">
+            <summary>
+            Routine for generating the default national id of all zeros.
+            </summary>
+            <returns>Always returns string containing an all zeros national id.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetNationalId(PFRandomData.RandomValues.enNationalIdCountry)">
+            <summary>
+            Routine to generate a random (non-valid) national id.
+            </summary>
+            <param name="country">Country for which the random id will be formatted.</param>
+            <returns>String containing the random national id.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetNationalIdUS">
+            <summary>
+            Routine to generate a random (non-valid) SSN.
+            </summary>
+            <returns>String containing the random SSN.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetNationalIdCAN">
+            <summary>
+            Routine to generate a random (non-valid) national id.
+            </summary>
+            <returns>String containing the random national id.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetNationalIdMEX">
+            <summary>
+            Routine to generate a random (non-valid) national id.
+            </summary>
+            <returns>String containing the random SSN.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetTelephoneNumber">
+            <summary>
+            Routine to generate a random and invalid telephone number.
+            </summary>
+            <returns>String containing random telephone number.</returns>
+            <remarks>Country code of 1 and area code of 000 will be specified in the resulting random telephone number.</remarks>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetTelephoneNumber(System.String)">
+            <summary>
+            Routine to generate a random and invalid telephone number.
+            </summary>
+            <param name="areaCode">Specify the area code for the telephone number.</param>
+            <returns>String containing random telephone number.</returns>
+            <remarks>Country code of 1 will be specified in the resulting random telephone number.</remarks>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetTelephoneNumber(System.String,System.String)">
+            <summary>
+            Routine to generate a random and invalid telephone number.
+            </summary>
+            <param name="countryCode">Specify the country code for the telephone number.</param>
+            <param name="areaCode">Specify the area code for the telephone number.</param>
+            <returns>String containing random telephone number.</returns>
+            <remarks>Leave countryCode and/or areaCode blank to omit those portions of the telephone number from the random result.</remarks>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetEmailAddress">
+            <summary>
+            Routine to generate a random email address.
+            </summary>
+            <returns>String containing random email address.</returns>
+            <remarks>All email addresses are for the example domain.</remarks>
+        </member>
+        <member name="M:PFRandomData.RandomValues.GetEmailAddress(System.String)">
+            <summary>
+            Routine to generate a random email address.
+            </summary>
+            <param name="topLevelDomain">Top level domain to use for this address (e.g. com, net, org, edu).</param>
+            <returns>String containing random email address.</returns>
+            <remarks>All email addresses are for the example domain.</remarks>
+        </member>
+        <member name="T:PFRandomData.RandomNumber">
+            <summary>
+            Generates random numeric values for various .NET numeric types.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.#ctor">
+            <summary>
+            Constructor for the class. Does nothing.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomInt(System.Int32,System.Int32)">
+            <summary>
+            Generates an int32 number in the specified range.
+            </summary>
+            <param name="min">Output will be equal to or greater than this number.</param>
+            <param name="max">Output will be less than this number.</param>
+            <returns>
+            A 32-bit signed integer greater than or equal to min and less than or equal to max
+            </returns>
+            <remarks>Uses Next method of the .NET Framework Random class.</remarks>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Int32,System.Int32)">
+            <summary>
+            Generates random integer with a value within min to max range.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>Returns random int32.</returns>
+            <remarks>Method first generates a random double which it converts to an integer value.</remarks>
+            <example>
+            <code>
+            </code>
+            </example>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Double,System.Double)">
+            <summary>
+            Generates random double.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>Double</returns>
+            <example>
+            <code>
+            </code>
+            </example>
+            
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Single,System.Single)">
+            <summary>
+            Generates random float.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>float</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.UInt32,System.UInt32)">
+            <summary>
+            Generates random unsigned integer.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>uint</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Int64,System.Int64)">
+            <summary>
+            Generates random long integer.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>long</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.UInt64,System.UInt64)">
+            <summary>
+            Generates random unsigned long integer.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>ulong</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Int16,System.Int16)">
+            <summary>
+            Generates random short integer.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>short</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.UInt16,System.UInt16)">
+            <summary>
+            Generates random unsigned short integer.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>ushort</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Decimal,System.Decimal)">
+            <summary>
+            Generates random decimal number.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>decimal</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Byte,System.Byte)">
+            <summary>
+            Generates random byte.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>byte</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.SByte,System.SByte)">
+            <summary>
+            Generates random signed byte.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <returns>sbyte</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomInt(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Method generates an array of random int values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>
+            An array of 32-bit signed integers, each greater than or equal to min and less than or equal to max.
+            </returns>
+            <remarks>Uses Next method of the .NET Framework Random class.</remarks>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Method generates an array of random integer values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>int[] array</returns>
+            <remarks>Method first generates a random double which it converts to an integer value.</remarks>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Double,System.Double,System.Int32)">
+            <summary>
+            Method generates an array of random double values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>double[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Single,System.Single,System.Int32)">
+            <summary>
+            Method generates an array of random float values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>float[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.UInt32,System.UInt32,System.Int32)">
+            <summary>
+            Method generates an array of random unsigned integer values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>uint[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Method generates an array of random long integer values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>long[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.UInt64,System.UInt64,System.Int32)">
+            <summary>
+            Method generates an array of random unsigned long integer values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>ulong[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Int16,System.Int16,System.Int32)">
+            <summary>
+            Method generates an array of random short integer values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>short[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.UInt16,System.UInt16,System.Int32)">
+            <summary>
+            Method generates an array of random unsigned short integer values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>ushort[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            Method generates an array of random unsigned decimal values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>decimal[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.Byte,System.Byte,System.Int32)">
+            <summary>
+            Method generates an array of random byte values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>byte[] array</returns>
+        </member>
+        <member name="M:PFRandomData.RandomNumber.GenerateRandomNumber(System.SByte,System.SByte,System.Int32)">
+            <summary>
+            Method generates an array of random signed byte values.
+            </summary>
+            <param name="min">Min value to generate.</param>
+            <param name="max">Max value to generate.</param>
+            <param name="arraySize">Number of random numbers to generate.</param>
+            <returns>sbyte[] array</returns>
+        </member>
+        <member name="T:PFRandomData.RandomBytes">
+            <summary>
+            Class for generating byte arrays containing random characters.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomBytes.#ctor">
+            <summary>
+            Constructor for the class. Does nothing.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomBytes.GenerateRandomBytes(System.Int32)">
+            <summary>
+            Method for generating a byte array containing random values.
+            </summary>
+            <param name="numBytesToGenerate">Number of random bytes to produce.</param>
+            <returns>Byte array.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomBytes.GenerateRandomChars(System.Int32)">
+            <summary>
+            Method for generating a char array containing random values.
+            </summary>
+            <param name="numCharsToGenerate">Number of char values to produce.</param>
+            <returns>Char array.</returns>
+        </member>
+    </members>
+</doc>

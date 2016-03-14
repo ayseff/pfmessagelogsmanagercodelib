@@ -4,6 +4,31 @@
         <name>PFTextObjects</name>
     </assembly>
     <members>
+        <member name="T:PFTextObjects.PFSearchPatternCS">
+            <summary>
+            Class encapsulates case sensitive pattern matching.
+            </summary>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPatternCS.#ctor(System.String)">
+            <summary>
+            Initializes a FileSpec with the given search pattern.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPatternCS.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Initializes a FileSpec with the given search pattern and options.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+            <param name="options">A combination of one or more System.Text.RegexOption.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPatternCS.SearchPatternToRegex(System.String)">
+            <summary>
+            Converts a FileSpec to a regex.
+            </summary>
+            <param name="pattern">The FileSpec pattern to convert.</param>
+            <returns>A regex equivalent of the given FileSpec.</returns>
+        </member>
         <member name="T:PFTextObjects.PFTextProcessor">
             <summary>
             Classes containing static routines for various string conversions and manipulations.
@@ -435,56 +460,6 @@
             <param name="separatorAfterConversion">Separate to insert after each element in the array when the element is appended to the concatenated result string.</param>
             <returns>String value.</returns>
         </member>
-        <member name="T:PFTextObjects.PFSearchPattern">
-            <summary>
-            Class for searching strings using a pattern mask. Mask uses wildcards like those used for Windows file spec masks. Pattern matches are case insensitive.
-            </summary>
-        </member>
-        <member name="M:PFTextObjects.PFSearchPattern.#ctor(System.String)">
-            <summary>
-            Initializes a FileSpec with the given search pattern.
-            </summary>
-            <param name="pattern">The FileSpec pattern to match.</param>
-        </member>
-        <member name="M:PFTextObjects.PFSearchPattern.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
-            <summary>
-            Initializes a FileSpec with the given search pattern and options.
-            </summary>
-            <param name="pattern">The FileSpec pattern to match.</param>
-            <param name="options">A combination of one or more System.Text.RegexOption.</param>
-        </member>
-        <member name="M:PFTextObjects.PFSearchPattern.SearchPatternToRegex(System.String)">
-            <summary>
-            Converts a FileSpec to a regex.
-            </summary>
-            <param name="pattern">The FileSpec pattern to convert.</param>
-            <returns>A regex equivalent of the given FileSpec.</returns>
-        </member>
-        <member name="T:PFTextObjects.PFSearchPatternCS">
-            <summary>
-            Class encapsulates case sensitive pattern matching.
-            </summary>
-        </member>
-        <member name="M:PFTextObjects.PFSearchPatternCS.#ctor(System.String)">
-            <summary>
-            Initializes a FileSpec with the given search pattern.
-            </summary>
-            <param name="pattern">The FileSpec pattern to match.</param>
-        </member>
-        <member name="M:PFTextObjects.PFSearchPatternCS.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
-            <summary>
-            Initializes a FileSpec with the given search pattern and options.
-            </summary>
-            <param name="pattern">The FileSpec pattern to match.</param>
-            <param name="options">A combination of one or more System.Text.RegexOption.</param>
-        </member>
-        <member name="M:PFTextObjects.PFSearchPatternCS.SearchPatternToRegex(System.String)">
-            <summary>
-            Converts a FileSpec to a regex.
-            </summary>
-            <param name="pattern">The FileSpec pattern to convert.</param>
-            <returns>A regex equivalent of the given FileSpec.</returns>
-        </member>
         <member name="T:PFTextObjects.PFParseString">
             <summary>
             Class to split a string into a defined set of components. Useful for parsing command lines.
@@ -631,6 +606,31 @@
             <summary>
             Used for storing keys and value pairs found in a string.
             </summary>
+        </member>
+        <member name="T:PFTextObjects.PFSearchPattern">
+            <summary>
+            Class for searching strings using a pattern mask. Mask uses wildcards like those used for Windows file spec masks. Pattern matches are case insensitive.
+            </summary>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPattern.#ctor(System.String)">
+            <summary>
+            Initializes a FileSpec with the given search pattern.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPattern.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Initializes a FileSpec with the given search pattern and options.
+            </summary>
+            <param name="pattern">The FileSpec pattern to match.</param>
+            <param name="options">A combination of one or more System.Text.RegexOption.</param>
+        </member>
+        <member name="M:PFTextObjects.PFSearchPattern.SearchPatternToRegex(System.String)">
+            <summary>
+            Converts a FileSpec to a regex.
+            </summary>
+            <param name="pattern">The FileSpec pattern to convert.</param>
+            <returns>A regex equivalent of the given FileSpec.</returns>
         </member>
     </members>
 </doc>

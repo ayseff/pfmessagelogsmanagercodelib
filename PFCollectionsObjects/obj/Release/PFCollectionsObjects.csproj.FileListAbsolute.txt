@@ -22,3 +22,12 @@ C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFCollectionsO
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFRandomData.pdb
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFRandomData.xml
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFCollectionsObjects\obj\Release\PFCollectionsObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFCollectionsObjects.XML
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFCollectionsObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFCollectionsObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFRandomData.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFRandomData.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\bin\Release\PFRandomData.xml
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\obj\Release\PFCollectionsObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFCollectionsObjects\obj\Release\PFCollectionsObjects.pdb

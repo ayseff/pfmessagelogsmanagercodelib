@@ -4,6 +4,111 @@
         <name>PFThreadObjects</name>
     </assembly>
     <members>
+        <member name="T:PFThreadObjects.PFBackgroundWorker">
+            <summary>
+            Class inherits from BackgroundWorker class and provides fields for optional extra information. 
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="workerName">Unique name that identifies this worker.</param>
+        </member>
+        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor(System.String,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="workerName">Unique name that identifies this worker.</param>
+            <param name="workerDescription">Description of what the worker does.</param>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.WorkerName">
+            <summary>
+            Optional name used to distinguish this worker from others of same kine. 
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.WorkerDescription">
+            <summary>
+            Optional text decribing this instance of the background worker. Can be used to provide a an identification that distinguishes this instance from others of this type.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.HasFinished">
+            <summary>
+            True if background worker has completed. Otherwise false.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.StartTime">
+            <summary>
+            StartTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.FinishTime">
+            <summary>
+            FinishTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.ElapsedTime">
+            <summary>
+            ElapsedTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.ElapsedTimeFormatted">
+            <summary>
+            Elapsed time returned as formatted string.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFBackgroundWorker.ShowElapsedMilliseconds">
+            <summary>
+            Determines whether or not the ElapsedTime and ElapsedTimeFormatted properties will show milliseconds in their output.
+            Set to true if you wish to see the elapsed time broken down to milliseconds.
+            </summary>
+        </member>
+        <member name="T:PFThreadObjects.PFThreadTimer">
+            <summary>
+            Common routines for timing threads.
+            </summary>
+        </member>
+        <member name="M:PFThreadObjects.PFThreadTimer.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.HasFinished">
+            <summary>
+            True if background worker has completed. Otherwise false.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.StartTime">
+            <summary>
+            StartTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.FinishTime">
+            <summary>
+            FinishTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.ElapsedTime">
+            <summary>
+            ElapsedTime Property.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.ElapsedTimeFormatted">
+            <summary>
+            Elapsed time returned as formatted string.
+            </summary>
+        </member>
+        <member name="P:PFThreadObjects.PFThreadTimer.ShowElapsedMilliseconds">
+            <summary>
+            Determines whether or not the ElapsedTime and ElapsedTimeFormatted properties will show milliseconds in their output.
+            Set to true if you wish to see the elapsed time broken down to milliseconds.
+            </summary>
+        </member>
         <member name="T:PFThreadObjects.PFThread">
             <summary>
             Class inherits from Thread class and provides fields for optional extra information. 
@@ -140,111 +245,6 @@
             Pauses current executing thread for the amount of time specified in the TimeSpan parameter.
             </summary>
             <param name="waitTime">TimeSpan object that specifies how much time to suspend the current thread.</param>
-        </member>
-        <member name="T:PFThreadObjects.PFBackgroundWorker">
-            <summary>
-            Class inherits from BackgroundWorker class and provides fields for optional extra information. 
-            </summary>
-        </member>
-        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor(System.String)">
-            <summary>
-            Constructor.
-            </summary>
-            <param name="workerName">Unique name that identifies this worker.</param>
-        </member>
-        <member name="M:PFThreadObjects.PFBackgroundWorker.#ctor(System.String,System.String)">
-            <summary>
-            Constructor.
-            </summary>
-            <param name="workerName">Unique name that identifies this worker.</param>
-            <param name="workerDescription">Description of what the worker does.</param>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.WorkerName">
-            <summary>
-            Optional name used to distinguish this worker from others of same kine. 
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.WorkerDescription">
-            <summary>
-            Optional text decribing this instance of the background worker. Can be used to provide a an identification that distinguishes this instance from others of this type.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.HasFinished">
-            <summary>
-            True if background worker has completed. Otherwise false.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.StartTime">
-            <summary>
-            StartTime Property.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.FinishTime">
-            <summary>
-            FinishTime Property.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.ElapsedTime">
-            <summary>
-            ElapsedTime Property.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.ElapsedTimeFormatted">
-            <summary>
-            Elapsed time returned as formatted string.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFBackgroundWorker.ShowElapsedMilliseconds">
-            <summary>
-            Determines whether or not the ElapsedTime and ElapsedTimeFormatted properties will show milliseconds in their output.
-            Set to true if you wish to see the elapsed time broken down to milliseconds.
-            </summary>
-        </member>
-        <member name="T:PFThreadObjects.PFThreadTimer">
-            <summary>
-            Common routines for timing threads.
-            </summary>
-        </member>
-        <member name="M:PFThreadObjects.PFThreadTimer.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFThreadTimer.HasFinished">
-            <summary>
-            True if background worker has completed. Otherwise false.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFThreadTimer.StartTime">
-            <summary>
-            StartTime Property.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFThreadTimer.FinishTime">
-            <summary>
-            FinishTime Property.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFThreadTimer.ElapsedTime">
-            <summary>
-            ElapsedTime Property.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFThreadTimer.ElapsedTimeFormatted">
-            <summary>
-            Elapsed time returned as formatted string.
-            </summary>
-        </member>
-        <member name="P:PFThreadObjects.PFThreadTimer.ShowElapsedMilliseconds">
-            <summary>
-            Determines whether or not the ElapsedTime and ElapsedTimeFormatted properties will show milliseconds in their output.
-            Set to true if you wish to see the elapsed time broken down to milliseconds.
-            </summary>
         </member>
     </members>
 </doc>

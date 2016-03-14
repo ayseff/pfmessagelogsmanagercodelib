@@ -4,200 +4,6 @@
         <name>PFRandomData</name>
     </assembly>
     <members>
-        <member name="T:PFRandomData.RandomString">
-            <summary>
-            Class has methods to generate random strings.
-            </summary>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetString(System.Int32)">
-            <summary>
-            Generates random string using characters between ascii 32 and 127 (\ excluded).
-            </summary>
-            <param name="size">Number of characters in random string.</param>
-            <returns>String of random characters.</returns>
-            <remarks>Backslash is excluded to make sure the resulting string can be stored correctly in a string variable.</remarks>
-            <example>
-            <code>
-            int stringLength=100;
-            string retval = string.Empty;
-            RandomString rs = new RandomString();
-            retval = rs.GetString(stringLength);
-            </code>
-            </example>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringAN(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (a-z, A-Z, 0-9)
-            </summary>
-            <param name="size">Number of characters in random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringANUC(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (A-Z, 0-9)
-            </summary>
-            <param name="size">Number of characters in random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringANLC(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (a-z, 0-9)
-            </summary>
-            <param name="size">Number of characters in random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringANX(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (a-z, A-Z, 0-9) or random punctuation marks from among the following: !   @   #   $   %   ^  &amp;  *   (   )   _   +   :   ?   ;  &gt; &lt;
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringAL(System.Int32)">
-            <summary>
-            Generates upper and lower case letters random string (a-z, A-Z).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringLC(System.Int32)">
-            <summary>
-            Generates alpha random string of lower case letters (a-z).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringUC(System.Int32)">
-            <summary>
-            Generates alpha random string of Upper case letters (A-Z).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringDEC(System.Int32)">
-            <summary>
-            Generates alpha random string of numeric characters (0-9).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringHEX(System.Int32)">
-            <summary>
-            Generates alpha random string of hexadecimal numeric characters (0-9, A-F).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringIncludingBackslashAndDoubleQuotes(System.Int32)">
-            <summary>
-            Retrieves a random string that can include backslash (\) and double-quote characters ("). 
-            Ascii characters between decimal 32 and 127 can be included in the return string.
-            </summary>
-            <param name="size">Size of random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetStringNoSpaces(System.Int32)">
-            <summary>
-            Retrieves string of random ascii characters from decimal 33 to 127.
-            Space, backslash and double-quote characters are excluded from inclusion in random string output.
-            </summary>
-            <param name="size">Size of the random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetRandomSyllablesLC(System.Int32)">
-            <summary>
-            Generates random syllables in lower case.
-            </summary>
-            <param name="size">Number of syllables to generate.</param>
-            <returns>String containing the random syllables.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetRandomSyllablesUC(System.Int32)">
-            <summary>
-            Generates random syllables in upper case.
-            </summary>
-            <param name="size">Number of syllables to generate.</param>
-            <returns>String containing the random syllables.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomString.GetRandomSyllablesUCLC(System.Int32)">
-            <summary>
-            Generates random syllables with first letter of first syllable in upper case and all othrs in lower case.
-            </summary>
-            <param name="size">Number of syllables to generate.</param>
-            <returns>String containing the random syllables.</returns>
-        </member>
-        <member name="T:PFRandomData.RandomSingleCharacterRepeated">
-            <summary>
-            Class for producing repeated random characters. (For example, a line consisting of nothing but the letter A repeated x number of times.
-            </summary>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringAN(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (a-z, A-Z, 0-9)
-            </summary>
-            <param name="size">Number of characters in random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANUC(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (A-Z, 0-9)
-            </summary>
-            <param name="size">Number of characters in random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANLC(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (a-z, 0-9)
-            </summary>
-            <param name="size">Number of characters in random string.</param>
-            <returns>String of random characters.</returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANX(System.Int32)">
-            <summary>
-            Generates alpha numeric random string (a-z, A-Z, 0-9) or random punctuation marks from among the following: !   @   #   $   %   ^  &amp;  *   (   )   _   +   :   ?   ;  &gt; &lt;
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringAL(System.Int32)">
-            <summary>
-            Generates upper and lower case letters random string (a-z, A-Z).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringLC(System.Int32)">
-            <summary>
-            Generates alpha random string of lower case letters (a-z).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringUC(System.Int32)">
-            <summary>
-            Generates alpha random string of Upper case letters (A-Z).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringDEC(System.Int32)">
-            <summary>
-            Generates alpha random string of numeric characters (0-9).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
-        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringHEX(System.Int32)">
-            <summary>
-            Generates alpha random string of hexadecimal numeric characters (0-9, A-F).
-            </summary>
-            <param name="size">Number of characters in random string</param>
-            <returns></returns>
-        </member>
         <member name="T:PFRandomData.RandomValues">
             <summary>
             Basic prototype for a ProFast application or library class.
@@ -532,6 +338,200 @@
             </summary>
             <param name="numCharsToGenerate">Number of char values to produce.</param>
             <returns>Char array.</returns>
+        </member>
+        <member name="T:PFRandomData.RandomString">
+            <summary>
+            Class has methods to generate random strings.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetString(System.Int32)">
+            <summary>
+            Generates random string using characters between ascii 32 and 127 (\ excluded).
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+            <remarks>Backslash is excluded to make sure the resulting string can be stored correctly in a string variable.</remarks>
+            <example>
+            <code>
+            int stringLength=100;
+            string retval = string.Empty;
+            RandomString rs = new RandomString();
+            retval = rs.GetString(stringLength);
+            </code>
+            </example>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringAN(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringANUC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringANLC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringANX(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9) or random punctuation marks from among the following: !   @   #   $   %   ^  &amp;  *   (   )   _   +   :   ?   ;  &gt; &lt;
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringAL(System.Int32)">
+            <summary>
+            Generates upper and lower case letters random string (a-z, A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringLC(System.Int32)">
+            <summary>
+            Generates alpha random string of lower case letters (a-z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringUC(System.Int32)">
+            <summary>
+            Generates alpha random string of Upper case letters (A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringDEC(System.Int32)">
+            <summary>
+            Generates alpha random string of numeric characters (0-9).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringHEX(System.Int32)">
+            <summary>
+            Generates alpha random string of hexadecimal numeric characters (0-9, A-F).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringIncludingBackslashAndDoubleQuotes(System.Int32)">
+            <summary>
+            Retrieves a random string that can include backslash (\) and double-quote characters ("). 
+            Ascii characters between decimal 32 and 127 can be included in the return string.
+            </summary>
+            <param name="size">Size of random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetStringNoSpaces(System.Int32)">
+            <summary>
+            Retrieves string of random ascii characters from decimal 33 to 127.
+            Space, backslash and double-quote characters are excluded from inclusion in random string output.
+            </summary>
+            <param name="size">Size of the random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetRandomSyllablesLC(System.Int32)">
+            <summary>
+            Generates random syllables in lower case.
+            </summary>
+            <param name="size">Number of syllables to generate.</param>
+            <returns>String containing the random syllables.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetRandomSyllablesUC(System.Int32)">
+            <summary>
+            Generates random syllables in upper case.
+            </summary>
+            <param name="size">Number of syllables to generate.</param>
+            <returns>String containing the random syllables.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomString.GetRandomSyllablesUCLC(System.Int32)">
+            <summary>
+            Generates random syllables with first letter of first syllable in upper case and all othrs in lower case.
+            </summary>
+            <param name="size">Number of syllables to generate.</param>
+            <returns>String containing the random syllables.</returns>
+        </member>
+        <member name="T:PFRandomData.RandomSingleCharacterRepeated">
+            <summary>
+            Class for producing repeated random characters. (For example, a line consisting of nothing but the letter A repeated x number of times.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringAN(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANUC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (A-Z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANLC(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, 0-9)
+            </summary>
+            <param name="size">Number of characters in random string.</param>
+            <returns>String of random characters.</returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringANX(System.Int32)">
+            <summary>
+            Generates alpha numeric random string (a-z, A-Z, 0-9) or random punctuation marks from among the following: !   @   #   $   %   ^  &amp;  *   (   )   _   +   :   ?   ;  &gt; &lt;
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringAL(System.Int32)">
+            <summary>
+            Generates upper and lower case letters random string (a-z, A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringLC(System.Int32)">
+            <summary>
+            Generates alpha random string of lower case letters (a-z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringUC(System.Int32)">
+            <summary>
+            Generates alpha random string of Upper case letters (A-Z).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringDEC(System.Int32)">
+            <summary>
+            Generates alpha random string of numeric characters (0-9).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PFRandomData.RandomSingleCharacterRepeated.GetStringHEX(System.Int32)">
+            <summary>
+            Generates alpha random string of hexadecimal numeric characters (0-9, A-F).
+            </summary>
+            <param name="size">Number of characters in random string</param>
+            <returns></returns>
         </member>
     </members>
 </doc>

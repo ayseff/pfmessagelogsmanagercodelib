@@ -4,6 +4,32 @@
         <name>PFTimers</name>
     </assembly>
     <members>
+        <member name="T:PFTimers.WaitTimer">
+            <summary>
+            Class implementing wait interval functionality.
+            </summary>
+        </member>
+        <member name="M:PFTimers.WaitTimer.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFTimers.WaitTimer.Wait(System.Int64)">
+            <summary>
+            Causes current thread to sleep for specified number of seconds.
+            </summary>
+            <param name="numSecsToWait"></param>
+        </member>
+        <member name="P:PFTimers.WaitTimer.ThreadSleepInterval">
+            <summary>
+            Number of milliseconds an instance of this class will sleep to allow other processes cpu time.
+            </summary>
+        </member>
+        <member name="P:PFTimers.WaitTimer.Timer">
+            <summary>
+            Get or set the value for the system timer used by this class
+            </summary>
+        </member>
         <member name="T:PFTimers.Stopwatch">
             <summary>
             Class implements functionality to get elapsed time for a section of code.
@@ -115,124 +141,6 @@
             Output will look like: Elapsed time: 1 day 1 hour 5 minutes 21 seconds 291 ms 
             </summary>
         </member>
-        <member name="T:PFTimers.PFSystemTimer">
-            <summary>
-            Class implements .NET system timer processing.
-            </summary>
-        </member>
-        <member name="M:PFTimers.PFSystemTimer.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:PFTimers.PFSystemTimer.#ctor(System.Int32)">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:PFTimers.PFSystemTimer.Start">
-            <summary>
-            Starts the timer.
-            </summary>
-        </member>
-        <member name="M:PFTimers.PFSystemTimer.Stop">
-            <summary>
-            Stops the timer.
-            </summary>
-        </member>
-        <member name="M:PFTimers.PFSystemTimer.Pause">
-            <summary>
-            Pauses the timer.
-            </summary>
-        </member>
-        <member name="M:PFTimers.PFSystemTimer.Restart">
-            <summary>
-            Restarts a paused timer.
-            </summary>
-        </member>
-        <member name="M:PFTimers.PFSystemTimer.SetEventHandler(System.Object)">
-            <summary>
-            Sets the routine to receive timer alerts.
-            </summary>
-            <param name="proc">Method that will receive the timer alerts.</param>
-        </member>
-        <member name="E:PFTimers.PFSystemTimer.elapsedTimeStatusReport">
-            <summary>
-            Event that returns status information for encrypt or decrypt operation to the calling program.
-            </summary>
-        </member>
-        <member name="P:PFTimers.PFSystemTimer.Timer">
-            <summary>
-            Timer Property.
-            </summary>
-        </member>
-        <member name="P:PFTimers.PFSystemTimer.IntervalInSecs">
-            <summary>
-            IntervalInSecs Property.
-            </summary>
-        </member>
-        <member name="P:PFTimers.PFSystemTimer.Enabled">
-            <summary>
-            Enabled Property.
-            </summary>
-        </member>
-        <member name="T:PFTimers.PFSystemTimer.ElapsedTimeReportDelegate">
-            <summary>
-            Event delegate used for setting up callbacks that report on number of bytes and elapsed time from encryption and decryption methods.
-            </summary>
-            <param name="elapsedTime">Time elapsed since timer was started.</param>
-            <param name="currentTime">Current time.</param>
-            <param name="startTime">Time at which timer was started.</param>
-        </member>
-        <member name="T:PFTimers.IntervalTimer">
-            <summary>
-            IntervalTimer is used when smallest time slices down to millisends need to be measured. Timing is done using the Win32 API GetTickCount.
-            </summary>
-        </member>
-        <member name="M:PFTimers.IntervalTimer.GetTickCount">
-            <summary>
-            Use Win32 API GetTickCount. Retrieves the number of milliseconds that have elapsed since the system was started, up to 49.7 days. 
-            </summary>
-            <returns>The return value is the number of milliseconds that have elapsed since the system was started.</returns>
-        </member>
-        <member name="M:PFTimers.IntervalTimer.PauseTimer">
-            <summary>
-            Pause is only valid if the timer is running and the
-            timer has not already been paused.
-            </summary>
-        </member>
-        <member name="M:PFTimers.IntervalTimer.StartTimer">
-            <summary>
-            Begins the timed interval.
-            </summary>
-            <remarks>If timer is alredy running when this method is called,
-             then no changes are made to the time counters. If timer is stopped or paused, a new time interval is started.</remarks>
-        </member>
-        <member name="M:PFTimers.IntervalTimer.StopTimer">
-            <summary>
-            Marks the end of timed interval.
-            </summary>
-        </member>
-        <member name="P:PFTimers.IntervalTimer.ElapsedTime">
-            <summary>
-            ElapsedTime in milliseconds
-            </summary>
-        </member>
-        <member name="P:PFTimers.IntervalTimer.ElapsedTimeInSeconds">
-            <summary>
-            Elapsed time in seconds.
-            </summary>
-        </member>
-        <member name="P:PFTimers.IntervalTimer.TimerIsPaused">
-            <summary>
-            Stopwatch is still running but is paused.
-            </summary>
-        </member>
-        <member name="P:PFTimers.IntervalTimer.TimerIsRunning">
-            <summary>
-            Stopwatch is running.
-            </summary>
-        </member>
         <member name="T:PFTimers.StatusTimer">
             <summary>
             Class to manage to frequency with which status events occur. Class uses an internal timer to determine if the interval between status reports has been passed and a new status report is needed.
@@ -314,31 +222,123 @@
             Returns true if status timer is currently running; otherwise returns false.
             </summary>
         </member>
-        <member name="T:PFTimers.WaitTimer">
+        <member name="T:PFTimers.IntervalTimer">
             <summary>
-            Class implementing wait interval functionality.
+            IntervalTimer is used when smallest time slices down to millisends need to be measured. Timing is done using the Win32 API GetTickCount.
             </summary>
         </member>
-        <member name="M:PFTimers.WaitTimer.#ctor">
+        <member name="M:PFTimers.IntervalTimer.GetTickCount">
+            <summary>
+            Use Win32 API GetTickCount. Retrieves the number of milliseconds that have elapsed since the system was started, up to 49.7 days. 
+            </summary>
+            <returns>The return value is the number of milliseconds that have elapsed since the system was started.</returns>
+        </member>
+        <member name="M:PFTimers.IntervalTimer.PauseTimer">
+            <summary>
+            Pause is only valid if the timer is running and the
+            timer has not already been paused.
+            </summary>
+        </member>
+        <member name="M:PFTimers.IntervalTimer.StartTimer">
+            <summary>
+            Begins the timed interval.
+            </summary>
+            <remarks>If timer is alredy running when this method is called,
+             then no changes are made to the time counters. If timer is stopped or paused, a new time interval is started.</remarks>
+        </member>
+        <member name="M:PFTimers.IntervalTimer.StopTimer">
+            <summary>
+            Marks the end of timed interval.
+            </summary>
+        </member>
+        <member name="P:PFTimers.IntervalTimer.ElapsedTime">
+            <summary>
+            ElapsedTime in milliseconds
+            </summary>
+        </member>
+        <member name="P:PFTimers.IntervalTimer.ElapsedTimeInSeconds">
+            <summary>
+            Elapsed time in seconds.
+            </summary>
+        </member>
+        <member name="P:PFTimers.IntervalTimer.TimerIsPaused">
+            <summary>
+            Stopwatch is still running but is paused.
+            </summary>
+        </member>
+        <member name="P:PFTimers.IntervalTimer.TimerIsRunning">
+            <summary>
+            Stopwatch is running.
+            </summary>
+        </member>
+        <member name="T:PFTimers.PFSystemTimer">
+            <summary>
+            Class implements .NET system timer processing.
+            </summary>
+        </member>
+        <member name="M:PFTimers.PFSystemTimer.#ctor">
             <summary>
             Constructor.
             </summary>
         </member>
-        <member name="M:PFTimers.WaitTimer.Wait(System.Int64)">
+        <member name="M:PFTimers.PFSystemTimer.#ctor(System.Int32)">
             <summary>
-            Causes current thread to sleep for specified number of seconds.
-            </summary>
-            <param name="numSecsToWait"></param>
-        </member>
-        <member name="P:PFTimers.WaitTimer.ThreadSleepInterval">
-            <summary>
-            Number of milliseconds an instance of this class will sleep to allow other processes cpu time.
+            Constructor.
             </summary>
         </member>
-        <member name="P:PFTimers.WaitTimer.Timer">
+        <member name="M:PFTimers.PFSystemTimer.Start">
             <summary>
-            Get or set the value for the system timer used by this class
+            Starts the timer.
             </summary>
+        </member>
+        <member name="M:PFTimers.PFSystemTimer.Stop">
+            <summary>
+            Stops the timer.
+            </summary>
+        </member>
+        <member name="M:PFTimers.PFSystemTimer.Pause">
+            <summary>
+            Pauses the timer.
+            </summary>
+        </member>
+        <member name="M:PFTimers.PFSystemTimer.Restart">
+            <summary>
+            Restarts a paused timer.
+            </summary>
+        </member>
+        <member name="M:PFTimers.PFSystemTimer.SetEventHandler(System.Object)">
+            <summary>
+            Sets the routine to receive timer alerts.
+            </summary>
+            <param name="proc">Method that will receive the timer alerts.</param>
+        </member>
+        <member name="E:PFTimers.PFSystemTimer.elapsedTimeStatusReport">
+            <summary>
+            Event that returns status information for encrypt or decrypt operation to the calling program.
+            </summary>
+        </member>
+        <member name="P:PFTimers.PFSystemTimer.Timer">
+            <summary>
+            Timer Property.
+            </summary>
+        </member>
+        <member name="P:PFTimers.PFSystemTimer.IntervalInSecs">
+            <summary>
+            IntervalInSecs Property.
+            </summary>
+        </member>
+        <member name="P:PFTimers.PFSystemTimer.Enabled">
+            <summary>
+            Enabled Property.
+            </summary>
+        </member>
+        <member name="T:PFTimers.PFSystemTimer.ElapsedTimeReportDelegate">
+            <summary>
+            Event delegate used for setting up callbacks that report on number of bytes and elapsed time from encryption and decryption methods.
+            </summary>
+            <param name="elapsedTime">Time elapsed since timer was started.</param>
+            <param name="currentTime">Current time.</param>
+            <param name="startTime">Time at which timer was started.</param>
         </member>
     </members>
 </doc>

@@ -38,3 +38,13 @@ C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFGlobalObject
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFGlobalObjects\obj\Release\GenerateResource.write.1.tlog
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFGlobalObjects\obj\Release\PFGlobalObjects.dll
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFGlobalObjects\obj\Release\PFGlobalObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\bin\Release\PFGlobalObjects.XML
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\bin\Release\PFGlobalObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\bin\Release\PFGlobalObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\obj\Release\AppGlobals.InputBox.resources
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\obj\Release\AppGlobals.ModelessPopupDialogForm.resources
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\obj\Release\GenerateResource.read.1.tlog
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\obj\Release\GenerateResource.write.1.tlog
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\obj\Release\PFGlobalObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFGlobalObjects\obj\Release\PFGlobalObjects.pdb

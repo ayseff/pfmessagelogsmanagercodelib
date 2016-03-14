@@ -109,6 +109,21 @@ namespace TestprogLogManager
                 logMsg.MessageText = "Message from a test program ... the error is found!!*";
                 logMgr.WriteMessageToLog(logMsg);
 
+
+                if (logMgr != null)
+                {
+                    if (String.IsNullOrEmpty(logMgr.LogFileConnectionString) == false)
+                    {
+                        _msg.Length = 0;
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append("Log messages written to ");
+                        _msg.Append(logMgr.LogFileConnectionString);
+                        _msg.Append(Environment.NewLine);
+                        Program._messageLog.WriteLine(_msg.ToString());
+                    }
+                }
+
             }
             catch (System.Exception ex)
             {
@@ -160,6 +175,20 @@ namespace TestprogLogManager
                 logMsg.MessageText = "Message from a test program ... the error is found!!*";
                 logMgr.WriteMessageToLogRetryQueue(logMsg);
 
+                if (logMgr != null)
+                {
+                    if (String.IsNullOrEmpty(logMgr.LogFileConnectionString) == false)
+                    {
+                        _msg.Length = 0;
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append("Log messages written to retry queue at ");
+                        _msg.Append(logMgr.LogRetryQueueConnectionString);
+                        _msg.Append(Environment.NewLine);
+                        Program._messageLog.WriteLine(_msg.ToString());
+                    }
+                }
+
             }
             catch (System.Exception ex)
             {
@@ -199,6 +228,22 @@ namespace TestprogLogManager
                 _msg.Append(numMsgsSent.ToString("#,##0"));
                 Program._messageLog.WriteLine(_msg.ToString());
 
+                if (logMgr != null)
+                {
+                    if (String.IsNullOrEmpty(logMgr.LogFileConnectionString) == false)
+                    {
+                        _msg.Length = 0;
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append("Log messages read from retry queue at ");
+                        _msg.Append(logMgr.LogRetryQueueConnectionString);
+                        _msg.Append(" to log file at ");
+                        _msg.Append(logMgr.LogFileConnectionString);
+                        _msg.Append(Environment.NewLine);
+                        Program._messageLog.WriteLine(_msg.ToString());
+                    }
+                }
+
             }
             catch (System.Exception ex)
             {
@@ -235,6 +280,22 @@ namespace TestprogLogManager
                 _msg.Append(numMsgsSent.ToString("#,##0"));
                 Program._messageLog.WriteLine(_msg.ToString());
 
+                if (logMgr != null)
+                {
+                    if (String.IsNullOrEmpty(logMgr.LogFileConnectionString) == false)
+                    {
+                        _msg.Length = 0;
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append("Log messages read from retry queue at ");
+                        _msg.Append(logMgr.LogRetryQueueConnectionString);
+                        _msg.Append(" to log file at ");
+                        _msg.Append(logMgr.LogFileConnectionString);
+                        _msg.Append(Environment.NewLine);
+                        Program._messageLog.WriteLine(_msg.ToString());
+                    }
+                }
+
             }
             catch (System.Exception ex)
             {
@@ -270,6 +331,20 @@ namespace TestprogLogManager
 
                 logMgr.WriteMessageToLog(logMsg);
 
+                if (logMgr != null)
+                {
+                    if (String.IsNullOrEmpty(logMgr.LogFileConnectionString) == false)
+                    {
+                        _msg.Length = 0;
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append("Message written to ");
+                        _msg.Append(logMgr.LogFileConnectionString);
+                        _msg.Append(Environment.NewLine);
+                        Program._messageLog.WriteLine(_msg.ToString());
+                    }
+                }
+
             }
             catch (System.Exception ex)
             {
@@ -302,6 +377,20 @@ namespace TestprogLogManager
                 logMsg.MessageText = frm.txtMessage.Text;
 
                 logMgr.WriteMessageToLogRetryQueue(logMsg);
+
+                if (logMgr != null)
+                {
+                    if (String.IsNullOrEmpty(logMgr.LogFileConnectionString) == false)
+                    {
+                        _msg.Length = 0;
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append(Environment.NewLine);
+                        _msg.Append("Message written to retry queue at ");
+                        _msg.Append(logMgr.LogRetryQueueConnectionString);
+                        _msg.Append(Environment.NewLine);
+                        Program._messageLog.WriteLine(_msg.ToString());
+                    }
+                }
 
             }
             catch (System.Exception ex)

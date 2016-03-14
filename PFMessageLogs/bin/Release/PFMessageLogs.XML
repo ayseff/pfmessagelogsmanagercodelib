@@ -4,6 +4,44 @@
         <name>PFMessageLogs</name>
     </assembly>
     <members>
+        <member name="T:PFMessageLogs.MessageLogForm">
+            <summary>
+            Displays form on which messages can be displayed.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.FileSave(System.Boolean)">
+            <summary>
+            Saves file without prompting for file name.
+            </summary>
+            <param name="pbRunningInBatchMode">Not used.</param>
+        </member>
+        <member name="F:PFMessageLogs.MessageLogForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFMessageLogs.MessageLogForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.MessageLogForm.AllowFileErase">
+            <summary>
+            Allows caller of the form to specify whether or not the File\Erase menu option is visible.
+            </summary>
+        </member>
         <member name="T:PFMessageLogs.MessageLog">
             <summary>
             Classes containing the routines for updating the MessageLogForm.
@@ -96,6 +134,186 @@
         <member name="P:PFMessageLogs.MessageLog.FontSize">
             <summary>
             Specifies the font size to use for displayed messages.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.TextLogFile">
+            <summary>
+            Class for routines to write messages to a text log file. No User Interface output window is provided by this class.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileName">Name of file messages will be stored in.</param>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.TruncateFile">
+            <summary>
+            Sets file size to 0 bytes. Erases any existing messages in the log.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.WriteLine(System.String)">
+            <summary>
+            Writes message line to text log file. This is considered to be an Information message.
+            </summary>
+            <param name="message">Text to output.</param>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.WriteLine(System.String,PFMessageLogs.TextLogFile.LogMessageType)">
+            <summary>
+            Writes message line to text log file. Type of message is also specified.
+            </summary>
+            <param name="message">Text to output.</param>
+            <param name="logMessageType">Use LogMessageType enumeration to specify the type of the message: e.g. Information, warning, error.</param>
+        </member>
+        <member name="M:PFMessageLogs.TextLogFile.WriteBlankLine">
+            <summary>
+            Writes empty string to text log file.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ApplicationName">
+            <summary>
+            Name of application writing to the log. This will be shown as part of each message. Leave blank to not include application name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.DateTimeFormat">
+            <summary>
+            .NET format string to use for display of date/time values.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.FileName">
+            <summary>
+            Full path to log file.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.MachineName">
+            <summary>
+            Name of PC on which log writes taking place. This name will be shown as part of each message. Leave blank to not include machine name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ShowDatetime">
+            <summary>
+            Specifies whether or not to show date/time with each message.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ShowMessageType">
+            <summary>
+            Specifies whether or not to include the message type with the message. 
+            When true, all message types are identified as part of the message output.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.TextLogFile.ShowErrorWarningTypes">
+            <summary>
+            Specifies whether or not to include Error and Warning message types with the message. 
+            When true, only the Error and Warning message type identifications are included as part of the message output.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.TextLogFile.LogMessageType">
+            <summary>
+            Enumerates different types of messages that can appear in the log.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.DllMessageLog">
+            <summary>
+            Class that wraps functionality for displaying a message log window directly from a DLL.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.Clear">
+            <summary>
+            Erases currently displayed text in the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.CloseWindow">
+            <summary>
+            Closes the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.Focus">
+            <summary>
+            Shifts focus to MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.HideWindow">
+            <summary>
+            Hides MessageLogForm windows.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.LoadFile(System.String)">
+            <summary>
+            Loads contents of specified file to the MessageLogForm display.
+            </summary>
+            <param name="filename">Path to file containing text to load.</param>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.SaveFile(System.String)">
+            <summary>
+            Saves contents of the MessageLogForm display to a file.
+            </summary>
+            <param name="filename">Saves contents of message log window to specified file.</param>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.ShowWindow">
+            <summary>
+            Makes the MessageLogForm visible.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.DllMessageLog.WriteLine(System.String)">
+            <summary>
+            Writes a line of text to the MessageLogForm display.
+            </summary>
+            <param name="message">Text to output.</param>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.AllowFileErase">
+            <summary>
+            If true the File/Erase menu item will be displayed on the MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.Caption">
+            <summary>
+            Sets MessageLogForm caption at top of form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.Form">
+            <summary>
+            Retrieves reference to the MessageLogForm. 
+            This allows caller to directly control the form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.FormIsVisible">
+            <summary>
+            Returns whether or not the MessageLogForm is currently visible.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.RetainFocus">
+            <summary>
+            Forces focus to remain on MessageLogForm after a line of text is written.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.ShowDatetime">
+            <summary>
+            Specifies whether or not to show the date and time with each message displayed on MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.Font">
+            <summary>
+            Specifies the name of the font to use for the displayed messages.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.DllMessageLog.FontSize">
+            <summary>
+            Specifies the font size to use for displayed messages.
+            </summary>
+        </member>
+        <member name="T:PFMessageLogs.Interfaces.IMessageLog">
+            <summary>
+            Interface for creating MessageLog classes.
             </summary>
         </member>
         <member name="T:PFMessageLogs.WindowsLog">
@@ -271,224 +489,6 @@
         <member name="T:PFMessageLogs.WindowsLog.WindowsEventLogEntryType">
             <summary>
             Enumeration of valid message types for windows event logs.
-            </summary>
-        </member>
-        <member name="T:PFMessageLogs.MessageLogForm">
-            <summary>
-            Displays form on which messages can be displayed.
-            </summary>
-        </member>
-        <member name="F:PFMessageLogs.MessageLogForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.MessageLogForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:PFMessageLogs.MessageLogForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.MessageLogForm.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.MessageLogForm.FileSave(System.Boolean)">
-            <summary>
-            Saves file without prompting for file name.
-            </summary>
-            <param name="pbRunningInBatchMode">Not used.</param>
-        </member>
-        <member name="P:PFMessageLogs.MessageLogForm.AllowFileErase">
-            <summary>
-            Allows caller of the form to specify whether or not the File\Erase menu option is visible.
-            </summary>
-        </member>
-        <member name="T:PFMessageLogs.DllMessageLog">
-            <summary>
-            Class that wraps functionality for displaying a message log window directly from a DLL.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.#ctor">
-            <summary>
-            Default constructor.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.Clear">
-            <summary>
-            Erases currently displayed text in the MessageLogForm.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.CloseWindow">
-            <summary>
-            Closes the MessageLogForm.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.Focus">
-            <summary>
-            Shifts focus to MessageLogForm.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.HideWindow">
-            <summary>
-            Hides MessageLogForm windows.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.LoadFile(System.String)">
-            <summary>
-            Loads contents of specified file to the MessageLogForm display.
-            </summary>
-            <param name="filename">Path to file containing text to load.</param>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.SaveFile(System.String)">
-            <summary>
-            Saves contents of the MessageLogForm display to a file.
-            </summary>
-            <param name="filename">Saves contents of message log window to specified file.</param>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.ShowWindow">
-            <summary>
-            Makes the MessageLogForm visible.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.DllMessageLog.WriteLine(System.String)">
-            <summary>
-            Writes a line of text to the MessageLogForm display.
-            </summary>
-            <param name="message">Text to output.</param>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.AllowFileErase">
-            <summary>
-            If true the File/Erase menu item will be displayed on the MessageLogForm.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.Caption">
-            <summary>
-            Sets MessageLogForm caption at top of form.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.Form">
-            <summary>
-            Retrieves reference to the MessageLogForm. 
-            This allows caller to directly control the form.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.FormIsVisible">
-            <summary>
-            Returns whether or not the MessageLogForm is currently visible.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.RetainFocus">
-            <summary>
-            Forces focus to remain on MessageLogForm after a line of text is written.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.ShowDatetime">
-            <summary>
-            Specifies whether or not to show the date and time with each message displayed on MessageLogForm.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.Font">
-            <summary>
-            Specifies the name of the font to use for the displayed messages.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.DllMessageLog.FontSize">
-            <summary>
-            Specifies the font size to use for displayed messages.
-            </summary>
-        </member>
-        <member name="T:PFMessageLogs.Interfaces.IMessageLog">
-            <summary>
-            Interface for creating MessageLog classes.
-            </summary>
-        </member>
-        <member name="T:PFMessageLogs.TextLogFile">
-            <summary>
-            Class for routines to write messages to a text log file. No User Interface output window is provided by this class.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.TextLogFile.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.TextLogFile.#ctor(System.String)">
-            <summary>
-            Constructor.
-            </summary>
-            <param name="fileName">Name of file messages will be stored in.</param>
-        </member>
-        <member name="M:PFMessageLogs.TextLogFile.TruncateFile">
-            <summary>
-            Sets file size to 0 bytes. Erases any existing messages in the log.
-            </summary>
-        </member>
-        <member name="M:PFMessageLogs.TextLogFile.WriteLine(System.String)">
-            <summary>
-            Writes message line to text log file. This is considered to be an Information message.
-            </summary>
-            <param name="message">Text to output.</param>
-        </member>
-        <member name="M:PFMessageLogs.TextLogFile.WriteLine(System.String,PFMessageLogs.TextLogFile.LogMessageType)">
-            <summary>
-            Writes message line to text log file. Type of message is also specified.
-            </summary>
-            <param name="message">Text to output.</param>
-            <param name="logMessageType">Use LogMessageType enumeration to specify the type of the message: e.g. Information, warning, error.</param>
-        </member>
-        <member name="M:PFMessageLogs.TextLogFile.WriteBlankLine">
-            <summary>
-            Writes empty string to text log file.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.TextLogFile.ApplicationName">
-            <summary>
-            Name of application writing to the log. This will be shown as part of each message. Leave blank to not include application name in the message output. 
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.TextLogFile.DateTimeFormat">
-            <summary>
-            .NET format string to use for display of date/time values.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.TextLogFile.FileName">
-            <summary>
-            Full path to log file.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.TextLogFile.MachineName">
-            <summary>
-            Name of PC on which log writes taking place. This name will be shown as part of each message. Leave blank to not include machine name in the message output. 
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.TextLogFile.ShowDatetime">
-            <summary>
-            Specifies whether or not to show date/time with each message.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.TextLogFile.ShowMessageType">
-            <summary>
-            Specifies whether or not to include the message type with the message. 
-            When true, all message types are identified as part of the message output.
-            </summary>
-        </member>
-        <member name="P:PFMessageLogs.TextLogFile.ShowErrorWarningTypes">
-            <summary>
-            Specifies whether or not to include Error and Warning message types with the message. 
-            When true, only the Error and Warning message type identifications are included as part of the message output.
-            </summary>
-        </member>
-        <member name="T:PFMessageLogs.TextLogFile.LogMessageType">
-            <summary>
-            Enumerates different types of messages that can appear in the log.
             </summary>
         </member>
     </members>

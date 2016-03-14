@@ -10,3 +10,9 @@ C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\bin\R
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\obj\Release\PFTimers.dll
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTimers\obj\Release\PFTimers.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTimers\bin\Release\PFTimers.XML
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTimers\bin\Release\PFTimers.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTimers\bin\Release\PFTimers.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTimers\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTimers\obj\Release\PFTimers.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTimers\obj\Release\PFTimers.pdb

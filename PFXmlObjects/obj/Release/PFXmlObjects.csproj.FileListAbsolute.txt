@@ -14,3 +14,12 @@ C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\o
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\obj\Release\PFXmlObjects.pdb
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.pdb
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.xml
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\bin\Release\PFXmlObjects.XML
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\bin\Release\PFXmlObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\bin\Release\PFXmlObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\bin\Release\PFGlobalObjects.xml
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\obj\Release\PFXmlObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFXmlObjects\obj\Release\PFXmlObjects.pdb

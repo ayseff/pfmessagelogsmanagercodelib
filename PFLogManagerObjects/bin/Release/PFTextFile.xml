@@ -4,6 +4,212 @@
         <name>PFTextFile</name>
     </assembly>
     <members>
+        <member name="T:PFTextFiles.PFTextLogFile">
+            <summary>
+            Class for routines to write messages to a text log file.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFTextLogFile.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFTextLogFile.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileName">Name of file messages will be stored in.</param>
+        </member>
+        <member name="M:PFTextFiles.PFTextLogFile.WriteLine(System.String)">
+            <summary>
+            Writes message line to text log file. This is considered to be an Information message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PFTextFiles.PFTextLogFile.WriteLine(System.String,PFTextFiles.PFTextLogFile.LogMessageType)">
+            <summary>
+            Writes message line to text log file. Type of message is also specified.
+            </summary>
+            <param name="message"></param>
+            <param name="logMessageType"></param>
+        </member>
+        <member name="M:PFTextFiles.PFTextLogFile.WriteBlankLine">
+            <summary>
+            Writes empty string to text log file.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFTextLogFile.ApplicationName">
+            <summary>
+            Name of application writing to the log. This will be shown as part of each message. Leave blank to not include application name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFTextLogFile.DateTimeFormat">
+            <summary>
+            .NET format string to use for display of date/time values.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFTextLogFile.FileName">
+            <summary>
+            Full path to log file.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFTextLogFile.MachineName">
+            <summary>
+            Name of PC on which log writes taking place. This name will be shown as part of each message. Leave blank to not include machine name in the message output. 
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFTextLogFile.ShowDatetime">
+            <summary>
+            Specifies whether or not to show date/time with each message.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFTextLogFile.ShowMessageType">
+            <summary>
+            Specifies whether or not to include the message type with the message. 
+            When true, all message types are identified as part of the message output.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFTextLogFile.ShowErrorWarningTypes">
+            <summary>
+            Specifies whether or not to include Error and Warning message types with the message. 
+            When true, only the Error and Warning message type identifications are included as part of the message output.
+            </summary>
+        </member>
+        <member name="T:PFTextFiles.PFFixedLengthDataPrompt">
+            <summary>
+            Windows form that can be used to capture column and line delimiter selections for a delimited output file.
+            </summary>
+            <summary>
+            Designer class for delimiters winforms prompt.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.InitializeForm">
+            <summary>
+            Method to set form variables to their defaults.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.HideForm">
+            <summary>
+            Method to hide the form.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.CloseForm">
+            <summary>
+            Method to close the form.
+            </summary>
+        </member>
+        <member name="F:PFTextFiles.PFFixedLengthDataPrompt.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.IncludeColumnHeadersInOutput">
+            <summary>
+            IncludeColumnHeadersInOutput Property.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.AllowDataTruncation">
+            <summary>
+            AllowDataTruncation Property.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.UseLineTerminator">
+            <summary>
+            UseLineTerminator property.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.LineTerminatorChars">
+            <summary>
+            LineTerminatorChars Property.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.ColumnWidthForStringData">
+            <summary>
+            ColumnWidthForStringData Property.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.MaximumAllowedColumnWidth">
+            <summary>
+            MaximumAllowedColumnWidth Property.
+            </summary>
+        </member>
+        <member name="T:PFTextFiles.PFDataDelimitersPrompt">
+            <summary>
+            Designer class for delimiters winforms prompt.
+            </summary>
+            <summary>
+            Windows form that can be used to capture column and line delimiter selections for a delimited output file.
+            </summary>
+        </member>
+        <member name="F:PFTextFiles.PFDataDelimitersPrompt.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFDataDelimitersPrompt.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDataDelimitersPrompt.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFDataDelimitersPrompt.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFDataDelimitersPrompt.InitializeForm">
+            <summary>
+            Method to set form variables to their defaults.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFDataDelimitersPrompt.HideForm">
+            <summary>
+            Method to hide the form.
+            </summary>
+        </member>
+        <member name="M:PFTextFiles.PFDataDelimitersPrompt.CloseForm">
+            <summary>
+            Method to close the form.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFDataDelimitersPrompt.ColumnDelimiter">
+            <summary>
+            ColumnDelimiter Property.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFDataDelimitersPrompt.LineTerminator">
+            <summary>
+            LineTerminator Property.
+            </summary>
+        </member>
+        <member name="P:PFTextFiles.PFDataDelimitersPrompt.IncludeColumnHeadersInOutput">
+            <summary>
+            IncludeColumnHeadersInOutput property.
+            </summary>
+        </member>
         <member name="T:PFTextFiles.PFFileOpenOperation">
             <summary>
             Open modes for PFTextFile instances.
@@ -64,222 +270,6 @@
             <remarks>Use to produce fixed length data extract files. If line terminator is defined, file is divided into equally sized lines. 
             If there is no line terminator, the data streams into one big blob. With or without a line terminator, the program reading a fixed length file has to have the column and row definitions in order to correctly parse the data.
             </remarks>
-        </member>
-        <member name="T:PFTextFiles.PFDataDelimitersPrompt">
-            <summary>
-            Windows form that can be used to capture column and line delimiter selections for a delimited output file.
-            </summary>
-            <summary>
-            Designer class for delimiters winforms prompt.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDataDelimitersPrompt.#ctor">
-            <summary>
-            Constructor.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDataDelimitersPrompt.InitializeForm">
-            <summary>
-            Method to set form variables to their defaults.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDataDelimitersPrompt.HideForm">
-            <summary>
-            Method to hide the form.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDataDelimitersPrompt.CloseForm">
-            <summary>
-            Method to close the form.
-            </summary>
-        </member>
-        <member name="F:PFTextFiles.PFDataDelimitersPrompt.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDataDelimitersPrompt.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDataDelimitersPrompt.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDataDelimitersPrompt.ColumnDelimiter">
-            <summary>
-            ColumnDelimiter Property.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDataDelimitersPrompt.LineTerminator">
-            <summary>
-            LineTerminator Property.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDataDelimitersPrompt.IncludeColumnHeadersInOutput">
-            <summary>
-            IncludeColumnHeadersInOutput property.
-            </summary>
-        </member>
-        <member name="T:PFTextFiles.PFTextFile">
-            <summary>
-            Class to read and write data in a text file.
-            </summary>
-            <remarks>
-            Open mode is one of the following:
-                DoNotOpenFile,
-                OpenFileForAppend
-                OpenFileToRead
-                OpenFileForWrite
-            </remarks>
-            <example>
-            <code>
-            PFTextFile textFile = new PFTextFile(fileName, PFFileOpenOperation.OpenFileForWrite);
-            textFile.WriteLine("This is line 1.");
-            textFile.WriteLine("This is line 2.");
-            textFile.CloseFile();
-            //Read the data just written
-            textFile.OpenFile(fileName, PFFileOpenOperation.OpenFileToRead);
-            while (textFile.Peek() >= 0)
-            {
-                fileData = textFile.ReadLine();
-                Program._messageLog.WriteLine(fileData);
-            }
-            textFile.CloseFile();
-            </code>
-            </example>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.#ctor(System.String,PFTextFiles.PFFileOpenOperation)">
-            <summary>
-            Constructor for PFTextClass. Specify path to file and type of i/o required.
-            </summary>
-            <param name="filePath">Full path to file to be opened in this instance.</param>
-            <param name="fileOperation">Type of processing to be done on the file.</param>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.#ctor">
-            <summary>
-            Constructor for PFTextClass. Use OpenFile method to specify file and type of i/o.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.CreateFile(System.String)">
-            <summary>
-            Creates file and returns a PFTextFile instance for that file.
-            </summary>
-            <param name="filePath">Full pathname of file.</param>
-            <returns>An instance of PFTextFile object.</returns>
-            <remarks>If file already exists, it will be overwritten and left empty.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.DeleteFile(PFTextFiles.PFTextFile)">
-            <summary>
-            Deletes file represented by an instance of PFTextFile.
-            </summary>
-            <param name="textFile">Instance of PFTextFile. Is nulled after file represented by the instance is deleted.</param>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.OpenFile(System.String,PFTextFiles.PFFileOpenOperation)">
-            <summary>
-            Opens a file for processing by this instance of PFTextFile.
-            </summary>
-            <param name="filePath">Full path to file to be opened.</param>
-            <param name="fileOperation">Read/Write/Append/DoNotOpen</param>
-            <remarks>Explicitly close any file opened by this instance before opening a new file. Exception will be thrown if instance is already processing a file.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.CloseFile">
-            <summary>
-            Closes the file represented by this instance.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.ClearFile">
-            <summary>
-            Deletes all data in the file. File is left open but has no data.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.ReadAllText">
-            <summary>
-            Reads all the data in a file and returns it to the caller in a string.
-            </summary>
-            <returns>String containing all the data in the file.</returns>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.ReadData(System.Int32)">
-            <summary>
-            Reads specified number of bytes from the file.
-            </summary>
-            <param name="numBytesToRead">Number of bytes to read each time file is read.</param>
-            <returns>Data that was retrieved from the file.</returns>
-            <remarks>This method works best when data is structured in a fixed length format.
-            if actual number of bytes read does not match the number specified by numBytesToRead, an exception is thrown.
-             If numBytesToRead does not match the current value of BufferSizeForReadData, the buffer size will be adjusted to match the numBytesToRead.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.ReadData(System.Int32,System.Boolean)">
-            <summary>
-            Reads specified number of bytes from the file.
-            </summary>
-            <param name="numBytesToRead">Data that was retrieved from the file.</param>
-            <param name="errorIfNumBytesMismatch">True/False.</param>
-            <returns>Data that was retrieved from the file.</returns>
-            <remarks> If true is specified for errorIfNumBytesMismatch parameter, the method throws an exception if number of bytes read do not match the number specified by numBytesToRead.
-             If numBytesToRead does not match the current value of BufferSizeForReadData, the buffer size will be adjusted to match the numBytesToRead.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.Peek">
-            <summary>
-            Checks to see if there is any more data in the file.
-            </summary>
-            <returns>-1 if no data; 0 or more if there is data.</returns>
-            ///<remarks>This method is using the Peek method of the StreamReader class.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.ReadLine">
-            <summary>
-            Reads data one line at a time.
-            </summary>
-            <returns>String containing the line.</returns>
-            <remarks>StreamReader is used to retrieve data. A line is defined as a sequence of characters followed by a line feed ("\n"), a carriage return ("\r"), or a carriage return immediately followed by a line feed ("\r\n"). The string that is returned does not contain the terminating carriage return or line feed. The returned value is null if the end of the input stream is reached. </remarks>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.WriteLine(System.String)">
-            <summary>
-            Writes data as a line. 
-            </summary>
-            <param name="line">Data to be written.</param>
-            <remarks>Line terminator is appended to the data. StreamWriter.WriteLine is used.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.WriteData(System.String)">
-            <summary>
-            Data is written as is to the file. No line terminators added.
-            </summary>
-            <param name="data">Data to be written.</param>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.WriteBlankLine">
-            <summary>
-            Writes a blank line that only contains a line terminator.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFTextFile.WriteBlankLine(System.Int32)">
-            <summary>
-            Writes out the number spaces specified and then terminates then with a line terminator.
-            </summary>
-            <param name="numSpacesToInsert"></param>
-        </member>
-        <member name="P:PFTextFiles.PFTextFile.FileName">
-            <summary>
-            Returns full path of file being processed by the instance.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextFile.BufferSizeForReadData">
-            <summary>
-            Property to manually specify the read buffer for ReadData method.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextFile.FileIsOpen">
-            <summary>
-            Reports whether or not the file is in an Open state.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextFile.Length">
-            <summary>
-            Returns the number of bytes in the file being processed by the instance.
-            </summary>
         </member>
         <member name="T:PFTextFiles.PFFixedLengthDataLine">
             <summary>
@@ -492,150 +482,349 @@
             Returns the width in bytes of the data row as defined by this instance of the class.
             </summary>
         </member>
-        <member name="T:PFTextFiles.PFFixedLengthDataPrompt">
+        <member name="T:PFTextFiles.PFDelimitedDataLine">
             <summary>
-            Windows form that can be used to capture column and line delimiter selections for a delimited output file.
-            </summary>
-            <summary>
-            Designer class for delimiters winforms prompt.
+            Class for containing definition and data for a text file line where data is separated by delimiters.
             </summary>
         </member>
-        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.#ctor">
+        <member name="M:PFTextFiles.PFDelimitedDataLine.#ctor">
             <summary>
-            Constructor.
+            Constructor used for serialization operations.
             </summary>
         </member>
-        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.InitializeForm">
+        <member name="M:PFTextFiles.PFDelimitedDataLine.#ctor(System.Int32)">
             <summary>
-            Method to set form variables to their defaults.
+            Constructor for the class.
             </summary>
         </member>
-        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.HideForm">
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDefinition(System.Int32,System.String)">
             <summary>
-            Method to hide the form.
+            Method to specify column definitions for the current instance.
+            </summary>
+            <param name="columnIndex">0-based index of the column being defined.</param>
+            <param name="columnName">Name to assign to the column. This will become the column header for the output.</param>
+            <remarks>There is no limit on the size of the column name or the size of the data.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDefinition(System.Int32,System.String,System.Int32)">
+            <summary>
+            Method to specify column definitions for the current instance.
+            </summary>
+            <param name="columnIndex">0-based index of the column being defined.</param>
+            <param name="columnName">Name to assign to the column. This will become the column header for the output.</param>
+            <param name="maxColumnLength">Maximum number of bytes this the data in this column can have. Size of the data can be from 0 to maxColumnLength. There is no limit on the size of the column name.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnData(System.Int32,System.String)">
+            <summary>
+            Sets the value of the column at the specified column index.
+            </summary>
+            <param name="columnInx"> 0-based index.</param>
+            <param name="value">Data value for column at specified index.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataNoQuotes(System.Int32,System.String)">
+            <summary>
+            Sets the value of the column at the specified column index.
+            </summary>
+            <param name="columnInx"> 0-based index.</param>
+            <param name="value">Data value for column at specified index.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataWithQuotes(System.Int32,System.String)">
+            <summary>
+            Sets the value of the column at the specified column index.
+            </summary>
+            <param name="columnInx"> 0-based index.</param>
+            <param name="value">Data value for column at specified index.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnData(System.String[])">
+            <summary>
+            Array of values for the current line.
+            </summary>
+            <param name="values">String array. Length of array must match number of columns defined for this instance of the line.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataNoQuotes(System.String[])">
+            <summary>
+            Array of values for the current line.
+            </summary>
+            <param name="values">String array. Length of array must match number of columns defined for this instance of the line.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataWithQuotes(System.String[])">
+            <summary>
+            Array of values for the current line.
+            </summary>
+            <param name="values">String array. Length of array must match number of columns defined for this instance of the line.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.OutputColumnNames">
+            <summary>
+            Creates data line containing column names. 
+            </summary>
+            <returns>String containg delimited line of column names.</returns>
+            <remarks>Use this to produce formatted delimited column names for output.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.OutputColumnData">
+            <summary>
+            Creates data line containing the data for this instance.
+            </summary>
+            <returns>String containing delimited data line.</returns>
+            <remarks>Use this method to produced formatted delimited data for output.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.OutputColumnData(System.Boolean)">
+            <summary>
+            Creates data line containing the data for this instance.
+            </summary>
+            <param name="enforceMaxLength">If true, method throws exception if data length is greater than maximum length defined for the column.</param>
+            <returns>String containing delimited data line.</returns>
+            <remarks>Use this method to check for data length errors when producing formatted delimited data for output.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.VerifyColumnNames(System.String)">
+            <summary>
+            Method to verify that line of input contains valid column names for this instance.
+            </summary>
+            <param name="input">String of data read from input file.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.ParseData(System.String)">
+            <summary>
+            Method to break up line of input based on column separator defined for this instance. Data is stored in ColumnData property.
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.ParseDataNoDoubleQuotes(System.String)">
+            <summary>
+            Method to break up line of input based on column separator defined for this instance. Data is stored in ColumnData property.
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.ParseDataContainingDoubleQuotes(System.String)">
+            <summary>
+            Method to break up line of input based on column separator defined for this instance. Data is stored in ColumnData property.
+            </summary>
+            <param name="input"></param>
+            <remarks>This routine removes leading and trailing double quotes from values.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.SaveToXmlFile(System.String)">
+            <summary>
+            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
+            </summary>
+            <param name="filePath">Full path for output file.</param>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.LoadFromXmlFile(System.String)">
+            <summary>
+            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
+            </summary>
+            <param name="filePath">Full path for the input file.</param>
+            <returns>An instance of PFFixedLengthLine.</returns>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.ToString">
+            <summary>
+            Override that outputs the values of the class' public properties.
+            </summary>
+            <returns>String containing property names and values of the class' public properties.</returns>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.ToXmlString">
+            <summary>
+            Returns a string containing the contents of the object in XML format.
+            </summary>
+            <returns>String value in xml format.</returns>
+            ///<remarks>XML Serialization is used for the transformation.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFDelimitedDataLine.ToXmlDocument">
+            <summary>
+            Converts instance of this class into an XML document.
+            </summary>
+            <returns>XmlDocument</returns>
+            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
+        </member>
+        <member name="P:PFTextFiles.PFDelimitedDataLine.LineTerminator">
+            <summary>
+            Character(s) placed at end of line to force new line in output.
             </summary>
         </member>
-        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.CloseForm">
+        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnNamesOnFirstLine">
             <summary>
-            Method to close the form.
+            Specifies whether or not the first line of the output contains the column names.
             </summary>
         </member>
-        <member name="F:PFTextFiles.PFFixedLengthDataPrompt.components">
+        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnSeparator">
             <summary>
-            Required designer variable.
+            One or more characters serving as a separator between columns of data in the output.
             </summary>
         </member>
-        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.Dispose(System.Boolean)">
+        <member name="P:PFTextFiles.PFDelimitedDataLine.NumberOfColumns">
             <summary>
-            Clean up any resources being used.
+            Specifies the number of columns into which the output will be separated.
             </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+            <remarks>Whenever this value is set, the existing ColumnDefinitions and ColumnData properties will be overwritten and set to the new number of columns. 
+             Any previously stored column definitions or data will be lost.
+            </remarks>
         </member>
-        <member name="M:PFTextFiles.PFFixedLengthDataPrompt.InitializeComponent">
+        <member name="P:PFTextFiles.PFDelimitedDataLine.StringValuesSurroundedWithQuotationMarks">
             <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.IncludeColumnHeadersInOutput">
-            <summary>
-            IncludeColumnHeadersInOutput Property.
+            If true, then all string values on the line are enclosed within double quotes.
             </summary>
         </member>
-        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.AllowDataTruncation">
+        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnDefinitions">
             <summary>
-            AllowDataTruncation Property.
+            Object containing the definitions for each column in the delimited line.
             </summary>
         </member>
-        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.UseLineTerminator">
+        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnData">
             <summary>
-            UseLineTerminator property.
+            Object containg the data on the delimited line.
+            </summary>
+            <remarks>Use this object where writing out or reading in data.</remarks>
+        </member>
+        <member name="T:PFTextFiles.PFTextFile">
+            <summary>
+            Class to read and write data in a text file.
+            </summary>
+            <remarks>
+            Open mode is one of the following:
+                DoNotOpenFile,
+                OpenFileForAppend
+                OpenFileToRead
+                OpenFileForWrite
+            </remarks>
+            <example>
+            <code>
+            PFTextFile textFile = new PFTextFile(fileName, PFFileOpenOperation.OpenFileForWrite);
+            textFile.WriteLine("This is line 1.");
+            textFile.WriteLine("This is line 2.");
+            textFile.CloseFile();
+            //Read the data just written
+            textFile.OpenFile(fileName, PFFileOpenOperation.OpenFileToRead);
+            while (textFile.Peek() >= 0)
+            {
+                fileData = textFile.ReadLine();
+                Program._messageLog.WriteLine(fileData);
+            }
+            textFile.CloseFile();
+            </code>
+            </example>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.#ctor(System.String,PFTextFiles.PFFileOpenOperation)">
+            <summary>
+            Constructor for PFTextClass. Specify path to file and type of i/o required.
+            </summary>
+            <param name="filePath">Full path to file to be opened in this instance.</param>
+            <param name="fileOperation">Type of processing to be done on the file.</param>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.#ctor">
+            <summary>
+            Constructor for PFTextClass. Use OpenFile method to specify file and type of i/o.
             </summary>
         </member>
-        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.LineTerminatorChars">
+        <member name="M:PFTextFiles.PFTextFile.CreateFile(System.String)">
             <summary>
-            LineTerminatorChars Property.
+            Creates file and returns a PFTextFile instance for that file.
+            </summary>
+            <param name="filePath">Full pathname of file.</param>
+            <returns>An instance of PFTextFile object.</returns>
+            <remarks>If file already exists, it will be overwritten and left empty.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.DeleteFile(PFTextFiles.PFTextFile)">
+            <summary>
+            Deletes file represented by an instance of PFTextFile.
+            </summary>
+            <param name="textFile">Instance of PFTextFile. Is nulled after file represented by the instance is deleted.</param>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.OpenFile(System.String,PFTextFiles.PFFileOpenOperation)">
+            <summary>
+            Opens a file for processing by this instance of PFTextFile.
+            </summary>
+            <param name="filePath">Full path to file to be opened.</param>
+            <param name="fileOperation">Read/Write/Append/DoNotOpen</param>
+            <remarks>Explicitly close any file opened by this instance before opening a new file. Exception will be thrown if instance is already processing a file.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.CloseFile">
+            <summary>
+            Closes the file represented by this instance.
             </summary>
         </member>
-        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.ColumnWidthForStringData">
+        <member name="M:PFTextFiles.PFTextFile.ClearFile">
             <summary>
-            ColumnWidthForStringData Property.
+            Deletes all data in the file. File is left open but has no data.
             </summary>
         </member>
-        <member name="P:PFTextFiles.PFFixedLengthDataPrompt.MaximumAllowedColumnWidth">
+        <member name="M:PFTextFiles.PFTextFile.ReadAllText">
             <summary>
-            MaximumAllowedColumnWidth Property.
+            Reads all the data in a file and returns it to the caller in a string.
+            </summary>
+            <returns>String containing all the data in the file.</returns>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.ReadData(System.Int32)">
+            <summary>
+            Reads specified number of bytes from the file.
+            </summary>
+            <param name="numBytesToRead">Number of bytes to read each time file is read.</param>
+            <returns>Data that was retrieved from the file.</returns>
+            <remarks>This method works best when data is structured in a fixed length format.
+            if actual number of bytes read does not match the number specified by numBytesToRead, an exception is thrown.
+             If numBytesToRead does not match the current value of BufferSizeForReadData, the buffer size will be adjusted to match the numBytesToRead.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.ReadData(System.Int32,System.Boolean)">
+            <summary>
+            Reads specified number of bytes from the file.
+            </summary>
+            <param name="numBytesToRead">Data that was retrieved from the file.</param>
+            <param name="errorIfNumBytesMismatch">True/False.</param>
+            <returns>Data that was retrieved from the file.</returns>
+            <remarks> If true is specified for errorIfNumBytesMismatch parameter, the method throws an exception if number of bytes read do not match the number specified by numBytesToRead.
+             If numBytesToRead does not match the current value of BufferSizeForReadData, the buffer size will be adjusted to match the numBytesToRead.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.Peek">
+            <summary>
+            Checks to see if there is any more data in the file.
+            </summary>
+            <returns>-1 if no data; 0 or more if there is data.</returns>
+            ///<remarks>This method is using the Peek method of the StreamReader class.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.ReadLine">
+            <summary>
+            Reads data one line at a time.
+            </summary>
+            <returns>String containing the line.</returns>
+            <remarks>StreamReader is used to retrieve data. A line is defined as a sequence of characters followed by a line feed ("\n"), a carriage return ("\r"), or a carriage return immediately followed by a line feed ("\r\n"). The string that is returned does not contain the terminating carriage return or line feed. The returned value is null if the end of the input stream is reached. </remarks>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.WriteLine(System.String)">
+            <summary>
+            Writes data as a line. 
+            </summary>
+            <param name="line">Data to be written.</param>
+            <remarks>Line terminator is appended to the data. StreamWriter.WriteLine is used.</remarks>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.WriteData(System.String)">
+            <summary>
+            Data is written as is to the file. No line terminators added.
+            </summary>
+            <param name="data">Data to be written.</param>
+        </member>
+        <member name="M:PFTextFiles.PFTextFile.WriteBlankLine">
+            <summary>
+            Writes a blank line that only contains a line terminator.
             </summary>
         </member>
-        <member name="T:PFTextFiles.PFTextLogFile">
+        <member name="M:PFTextFiles.PFTextFile.WriteBlankLine(System.Int32)">
             <summary>
-            Class for routines to write messages to a text log file.
+            Writes out the number spaces specified and then terminates then with a line terminator.
+            </summary>
+            <param name="numSpacesToInsert"></param>
+        </member>
+        <member name="P:PFTextFiles.PFTextFile.FileName">
+            <summary>
+            Returns full path of file being processed by the instance.
             </summary>
         </member>
-        <member name="M:PFTextFiles.PFTextLogFile.#ctor">
+        <member name="P:PFTextFiles.PFTextFile.BufferSizeForReadData">
             <summary>
-            Constructor.
+            Property to manually specify the read buffer for ReadData method.
             </summary>
         </member>
-        <member name="M:PFTextFiles.PFTextLogFile.#ctor(System.String)">
+        <member name="P:PFTextFiles.PFTextFile.FileIsOpen">
             <summary>
-            Constructor.
-            </summary>
-            <param name="fileName">Name of file messages will be stored in.</param>
-        </member>
-        <member name="M:PFTextFiles.PFTextLogFile.WriteLine(System.String)">
-            <summary>
-            Writes message line to text log file. This is considered to be an Information message.
-            </summary>
-            <param name="message"></param>
-        </member>
-        <member name="M:PFTextFiles.PFTextLogFile.WriteLine(System.String,PFTextFiles.PFTextLogFile.LogMessageType)">
-            <summary>
-            Writes message line to text log file. Type of message is also specified.
-            </summary>
-            <param name="message"></param>
-            <param name="logMessageType"></param>
-        </member>
-        <member name="M:PFTextFiles.PFTextLogFile.WriteBlankLine">
-            <summary>
-            Writes empty string to text log file.
+            Reports whether or not the file is in an Open state.
             </summary>
         </member>
-        <member name="P:PFTextFiles.PFTextLogFile.ApplicationName">
+        <member name="P:PFTextFiles.PFTextFile.Length">
             <summary>
-            Name of application writing to the log. This will be shown as part of each message. Leave blank to not include application name in the message output. 
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextLogFile.DateTimeFormat">
-            <summary>
-            .NET format string to use for display of date/time values.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextLogFile.FileName">
-            <summary>
-            Full path to log file.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextLogFile.MachineName">
-            <summary>
-            Name of PC on which log writes taking place. This name will be shown as part of each message. Leave blank to not include machine name in the message output. 
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextLogFile.ShowDatetime">
-            <summary>
-            Specifies whether or not to show date/time with each message.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextLogFile.ShowMessageType">
-            <summary>
-            Specifies whether or not to include the message type with the message. 
-            When true, all message types are identified as part of the message output.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFTextLogFile.ShowErrorWarningTypes">
-            <summary>
-            Specifies whether or not to include Error and Warning message types with the message. 
-            When true, only the Error and Warning message type identifications are included as part of the message output.
+            Returns the number of bytes in the file being processed by the instance.
             </summary>
         </member>
         <member name="T:PFTextFiles.PFColumnDefinitions">
@@ -941,195 +1130,6 @@
             <summary>
             Data to output.
             </summary>
-        </member>
-        <member name="T:PFTextFiles.PFDelimitedDataLine">
-            <summary>
-            Class for containing definition and data for a text file line where data is separated by delimiters.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.#ctor">
-            <summary>
-            Constructor used for serialization operations.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.#ctor(System.Int32)">
-            <summary>
-            Constructor for the class.
-            </summary>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDefinition(System.Int32,System.String)">
-            <summary>
-            Method to specify column definitions for the current instance.
-            </summary>
-            <param name="columnIndex">0-based index of the column being defined.</param>
-            <param name="columnName">Name to assign to the column. This will become the column header for the output.</param>
-            <remarks>There is no limit on the size of the column name or the size of the data.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDefinition(System.Int32,System.String,System.Int32)">
-            <summary>
-            Method to specify column definitions for the current instance.
-            </summary>
-            <param name="columnIndex">0-based index of the column being defined.</param>
-            <param name="columnName">Name to assign to the column. This will become the column header for the output.</param>
-            <param name="maxColumnLength">Maximum number of bytes this the data in this column can have. Size of the data can be from 0 to maxColumnLength. There is no limit on the size of the column name.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnData(System.Int32,System.String)">
-            <summary>
-            Sets the value of the column at the specified column index.
-            </summary>
-            <param name="columnInx"> 0-based index.</param>
-            <param name="value">Data value for column at specified index.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataNoQuotes(System.Int32,System.String)">
-            <summary>
-            Sets the value of the column at the specified column index.
-            </summary>
-            <param name="columnInx"> 0-based index.</param>
-            <param name="value">Data value for column at specified index.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataWithQuotes(System.Int32,System.String)">
-            <summary>
-            Sets the value of the column at the specified column index.
-            </summary>
-            <param name="columnInx"> 0-based index.</param>
-            <param name="value">Data value for column at specified index.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnData(System.String[])">
-            <summary>
-            Array of values for the current line.
-            </summary>
-            <param name="values">String array. Length of array must match number of columns defined for this instance of the line.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataNoQuotes(System.String[])">
-            <summary>
-            Array of values for the current line.
-            </summary>
-            <param name="values">String array. Length of array must match number of columns defined for this instance of the line.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SetColumnDataWithQuotes(System.String[])">
-            <summary>
-            Array of values for the current line.
-            </summary>
-            <param name="values">String array. Length of array must match number of columns defined for this instance of the line.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.OutputColumnNames">
-            <summary>
-            Creates data line containing column names. 
-            </summary>
-            <returns>String containg delimited line of column names.</returns>
-            <remarks>Use this to produce formatted delimited column names for output.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.OutputColumnData">
-            <summary>
-            Creates data line containing the data for this instance.
-            </summary>
-            <returns>String containing delimited data line.</returns>
-            <remarks>Use this method to produced formatted delimited data for output.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.OutputColumnData(System.Boolean)">
-            <summary>
-            Creates data line containing the data for this instance.
-            </summary>
-            <param name="enforceMaxLength">If true, method throws exception if data length is greater than maximum length defined for the column.</param>
-            <returns>String containing delimited data line.</returns>
-            <remarks>Use this method to check for data length errors when producing formatted delimited data for output.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.VerifyColumnNames(System.String)">
-            <summary>
-            Method to verify that line of input contains valid column names for this instance.
-            </summary>
-            <param name="input">String of data read from input file.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.ParseData(System.String)">
-            <summary>
-            Method to break up line of input based on column separator defined for this instance. Data is stored in ColumnData property.
-            </summary>
-            <param name="input"></param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.ParseDataNoDoubleQuotes(System.String)">
-            <summary>
-            Method to break up line of input based on column separator defined for this instance. Data is stored in ColumnData property.
-            </summary>
-            <param name="input"></param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.ParseDataContainingDoubleQuotes(System.String)">
-            <summary>
-            Method to break up line of input based on column separator defined for this instance. Data is stored in ColumnData property.
-            </summary>
-            <param name="input"></param>
-            <remarks>This routine removes leading and trailing double quotes from values.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.SaveToXmlFile(System.String)">
-            <summary>
-            Saves the column definitions contained in the current instance to the specified file. Serialization is used for the save.
-            </summary>
-            <param name="filePath">Full path for output file.</param>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.LoadFromXmlFile(System.String)">
-            <summary>
-            Creates and initializes an instance of the class by loading a serialized version of the instance from a file.
-            </summary>
-            <param name="filePath">Full path for the input file.</param>
-            <returns>An instance of PFFixedLengthLine.</returns>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.ToString">
-            <summary>
-            Override that outputs the values of the class' public properties.
-            </summary>
-            <returns>String containing property names and values of the class' public properties.</returns>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.ToXmlString">
-            <summary>
-            Returns a string containing the contents of the object in XML format.
-            </summary>
-            <returns>String value in xml format.</returns>
-            ///<remarks>XML Serialization is used for the transformation.</remarks>
-        </member>
-        <member name="M:PFTextFiles.PFDelimitedDataLine.ToXmlDocument">
-            <summary>
-            Converts instance of this class into an XML document.
-            </summary>
-            <returns>XmlDocument</returns>
-            ///<remarks>XML Serialization and XmlDocument class are used for the transformation.</remarks>
-        </member>
-        <member name="P:PFTextFiles.PFDelimitedDataLine.LineTerminator">
-            <summary>
-            Character(s) placed at end of line to force new line in output.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnNamesOnFirstLine">
-            <summary>
-            Specifies whether or not the first line of the output contains the column names.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnSeparator">
-            <summary>
-            One or more characters serving as a separator between columns of data in the output.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDelimitedDataLine.NumberOfColumns">
-            <summary>
-            Specifies the number of columns into which the output will be separated.
-            </summary>
-            <remarks>Whenever this value is set, the existing ColumnDefinitions and ColumnData properties will be overwritten and set to the new number of columns. 
-             Any previously stored column definitions or data will be lost.
-            </remarks>
-        </member>
-        <member name="P:PFTextFiles.PFDelimitedDataLine.StringValuesSurroundedWithQuotationMarks">
-            <summary>
-            If true, then all string values on the line are enclosed within double quotes.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnDefinitions">
-            <summary>
-            Object containing the definitions for each column in the delimited line.
-            </summary>
-        </member>
-        <member name="P:PFTextFiles.PFDelimitedDataLine.ColumnData">
-            <summary>
-            Object containg the data on the delimited line.
-            </summary>
-            <remarks>Use this object where writing out or reading in data.</remarks>
         </member>
     </members>
 </doc>

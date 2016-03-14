@@ -10,3 +10,9 @@ C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\obj\Release\PFTextObjects.dll
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFTextObjects\obj\Release\PFTextObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTextObjects\bin\Release\PFTextObjects.XML
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTextObjects\bin\Release\PFTextObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTextObjects\bin\Release\PFTextObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTextObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTextObjects\obj\Release\PFTextObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFTextObjects\obj\Release\PFTextObjects.pdb

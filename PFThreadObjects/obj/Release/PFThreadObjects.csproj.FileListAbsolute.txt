@@ -16,3 +16,9 @@ C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFThreadObject
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFThreadObjects\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFThreadObjects\obj\Release\PFThreadObjects.dll
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFThreadObjects\obj\Release\PFThreadObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFThreadObjects\bin\Release\PFThreadObjects.xml
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFThreadObjects\bin\Release\PFThreadObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFThreadObjects\bin\Release\PFThreadObjects.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFThreadObjects\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFThreadObjects\obj\Release\PFThreadObjects.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFThreadObjects\obj\Release\PFThreadObjects.pdb

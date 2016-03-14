@@ -10,3 +10,9 @@ C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\b
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\obj\Release\ResolveAssemblyReference.cache
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\obj\Release\PFRandomData.dll
 C:\ProFast\Projects\DotNetCodeLibrariesV3\pfLogManagerCodeLibrary\PFRandomData\obj\Release\PFRandomData.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFRandomData\bin\Release\PFRandomData.XML
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFRandomData\bin\Release\PFRandomData.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFRandomData\bin\Release\PFRandomData.pdb
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFRandomData\obj\Release\ResolveAssemblyReference.cache
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFRandomData\obj\Release\PFRandomData.dll
+C:\ProFast\Projects\CodePlex\pfMessageLogsManagerCodeLibrary\PFRandomData\obj\Release\PFRandomData.pdb

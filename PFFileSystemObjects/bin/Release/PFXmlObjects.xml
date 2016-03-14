@@ -4,6 +4,25 @@
         <name>PFXmlObjects</name>
     </assembly>
     <members>
+        <member name="T:PFXmlObjects.XMLValidator">
+            <summary>
+            Class contains routine that will verify validity of an XmlDocument based on a specified Xml Schema file.
+            </summary>
+        </member>
+        <member name="M:PFXmlObjects.XMLValidator.Validate(System.String,System.String)">
+            <summary>
+            Routine to verify whether or not XML in a file is well-formed.
+            </summary>
+            <param name="xmlFile">Path to Xml file.</param>
+            <param name="xsdFile">Path to Xml Schema file that will be used to validate the data.</param>
+            <returns>True if Xml is well-formed. Otherwise returns false.</returns>
+            <remarks>Check ValidationErrors property for the detailed error messages returned by this routine if any Xml errors were encountered.</remarks>
+        </member>
+        <member name="P:PFXmlObjects.XMLValidator.ValidationErrors">
+            <summary>
+            Returns all validation errors recorded by Validate method. Returns empty string if no errors.
+            </summary>
+        </member>
         <member name="T:PFXmlObjects.PFXmlDocument">
             <summary>
             Class for the processing of XML documents.
@@ -228,25 +247,6 @@
         <member name="P:PFXmlObjects.PFXmlDocument.ChildNodes">
             <summary>
             Returns a list of all the child nodes for the XmlDocument object represented by this class.
-            </summary>
-        </member>
-        <member name="T:PFXmlObjects.XMLValidator">
-            <summary>
-            Class contains routine that will verify validity of an XmlDocument based on a specified Xml Schema file.
-            </summary>
-        </member>
-        <member name="M:PFXmlObjects.XMLValidator.Validate(System.String,System.String)">
-            <summary>
-            Routine to verify whether or not XML in a file is well-formed.
-            </summary>
-            <param name="xmlFile">Path to Xml file.</param>
-            <param name="xsdFile">Path to Xml Schema file that will be used to validate the data.</param>
-            <returns>True if Xml is well-formed. Otherwise returns false.</returns>
-            <remarks>Check ValidationErrors property for the detailed error messages returned by this routine if any Xml errors were encountered.</remarks>
-        </member>
-        <member name="P:PFXmlObjects.XMLValidator.ValidationErrors">
-            <summary>
-            Returns all validation errors recorded by Validate method. Returns empty string if no errors.
             </summary>
         </member>
     </members>

@@ -34,7 +34,20 @@ namespace TestprogLogManager
                 _xmlLogRetryQueueLocation = configValue;
             }
 
+            CreateDirectory(Path.GetDirectoryName(_textLogFileLocation));
+            CreateDirectory(Path.GetDirectoryName(_xmlLogRetryQueueLocation));
+
         }
+
+        private static void CreateDirectory(string dirName)
+        {
+            if (Directory.Exists(dirName) == false)
+            {
+                Directory.CreateDirectory(dirName);
+            }
+        }
+
+
 
         //properties
         public static bool SaveErrorMessagesToAppLog

@@ -6,7 +6,91 @@
     <members>
         <member name="T:PFMessageLogs.Interfaces.IMessageLog">
             <summary>
-            Interface for creating MessageLog classes.
+            Interface for implementing MessageLog functionality.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.Clear">
+            <summary>
+            Erases currently displayed text in the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.CloseWindow">
+            <summary>
+            Closes the MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.Focus">
+            <summary>
+            Shifts focus to MessageLogForm.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.HideWindow">
+            <summary>
+            Hides MessageLogForm windows.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.LoadFile(System.String)">
+            <summary>
+            Loads contents of specified file to the MessageLogForm display.
+            </summary>
+            <param name="filename">Path to file containing text to load.</param>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.SaveFile(System.String)">
+            <summary>
+            Saves contents of the MessageLogForm display to a file.
+            </summary>
+            <param name="filename">Saves contents of message log window to specified file.</param>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.ShowWindow">
+            <summary>
+            Makes the MessageLogForm visible.
+            </summary>
+        </member>
+        <member name="M:PFMessageLogs.Interfaces.IMessageLog.WriteLine(System.String)">
+            <summary>
+            Writes a line of text to the MessageLogForm display.
+            </summary>
+            <param name="message">Text to output.</param>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.AllowFileErase">
+            <summary>
+            If true the File/Erase menu item will be displayed on the MessageLogForm.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.Caption">
+            <summary>
+            Sets MessageLogForm caption at top of form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.Font">
+            <summary>
+            Specifies the name of the font to use for the displayed messages.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.FontSize">
+            <summary>
+            Specifies the font size to use for displayed messages.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.Form">
+            <summary>
+            Retrieves reference to the MessageLogForm. 
+            This allows caller to directly control the form.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.FormIsVisible">
+            <summary>
+            Returns whether or not the MessageLogForm is currently visible.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.RetainFocus">
+            <summary>
+            Forces focus to remain on MessageLogForm after a line of text is written.
+            </summary>
+        </member>
+        <member name="P:PFMessageLogs.Interfaces.IMessageLog.ShowDatetime">
+            <summary>
+            Specifies whether or not to show the date and time with each message displayed on MessageLogForm.
             </summary>
         </member>
         <member name="T:PFMessageLogs.DllMessageLog">
@@ -269,13 +353,13 @@
             <summary>
             Loads contents of specified file to the MessageLogForm display.
             </summary>
-            <param name="filename"></param>
+            <param name="filename">Path to file to load.</param>
         </member>
         <member name="M:PFMessageLogs.DllMessageLogExt.SaveFile(System.String)">
             <summary>
             Saves contents of the MessageLogForm display to a file.
             </summary>
-            <param name="filename"></param>
+            <param name="filename">Path of saved file.</param>
         </member>
         <member name="M:PFMessageLogs.DllMessageLogExt.ShowWindow">
             <summary>
@@ -286,7 +370,7 @@
             <summary>
             Writes a line of text to the MessageLogForm display.
             </summary>
-            <param name="message"></param>
+            <param name="message">String containing message to add to log.</param>
         </member>
         <member name="P:PFMessageLogs.DllMessageLogExt.AllowFileErase">
             <summary>
@@ -394,7 +478,7 @@
             Determines whether or not an event source is registered on the local computer.
             </summary>
             <param name="eventSourceName">Name of the event source.</param>
-            <returns></returns>
+            <returns>True if event source name is registered. Otherwise, returns false.</returns>
         </member>
         <member name="M:PFMessageLogs.WindowsLog.SourceExists(System.String,System.String)">
             <summary>
@@ -402,7 +486,7 @@
             </summary>
             <param name="eventSourceName">Name of the event source.</param>
             <param name="machineName">Name of the computer on which to look, or "." for the local computer.</param>
-            <returns></returns>
+            <returns>True if event source name is registered. Otherwise, returns false.</returns>
         </member>
         <member name="M:PFMessageLogs.WindowsLog.CreateEventSource(System.String)">
             <summary>

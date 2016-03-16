@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PFListObjects
+namespace PFCollectionsObjects
 {
     /// <summary>
     /// Set of methods for allowing the sorting of key lists.

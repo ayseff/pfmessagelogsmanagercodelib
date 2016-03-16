@@ -337,17 +337,17 @@
             Navigates to and selects the previous item in the collection. Return null if navigation moves past the first item in the collection.
             </summary>
         </member>
-        <member name="T:PFListObjects.PFListComparers">
+        <member name="T:PFCollectionsObjects.PFListComparers">
             <summary>
             Set of methods for allowing the sorting of key lists.
             </summary>
         </member>
-        <member name="M:PFListObjects.PFListComparers.#ctor">
+        <member name="M:PFCollectionsObjects.PFListComparers.#ctor">
             <summary>
             Constructor
             </summary>
         </member>
-        <member name="M:PFListObjects.PFListComparers.CompareListString(System.String,System.String)">
+        <member name="M:PFCollectionsObjects.PFListComparers.CompareListString(System.String,System.String)">
             <summary>
             Compares two strings.
             </summary>
@@ -355,7 +355,7 @@
             <param name="y">Second string to compare.</param>
             <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
         </member>
-        <member name="M:PFListObjects.PFListComparers.CompareListInt(System.Int32,System.Int32)">
+        <member name="M:PFCollectionsObjects.PFListComparers.CompareListInt(System.Int32,System.Int32)">
             <summary>
             Compares two int values.
             </summary>
@@ -363,7 +363,7 @@
             <param name="y">Second int to compare.</param>
             <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
         </member>
-        <member name="M:PFListObjects.PFListComparers.CompareListLong(System.Int64,System.Int64)">
+        <member name="M:PFCollectionsObjects.PFListComparers.CompareListLong(System.Int64,System.Int64)">
             <summary>
             Compares two long values.
             </summary>
@@ -371,7 +371,7 @@
             <param name="y">Second long to compare.</param>
             <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
         </member>
-        <member name="M:PFListObjects.PFListComparers.CompareListDouble(System.Double,System.Double)">
+        <member name="M:PFCollectionsObjects.PFListComparers.CompareListDouble(System.Double,System.Double)">
             <summary>
             Compares two double values.
             </summary>
@@ -379,7 +379,7 @@
             <param name="y">Second double to compare.</param>
             <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
         </member>
-        <member name="M:PFListObjects.PFListComparers.CompareListDecimal(System.Decimal,System.Decimal)">
+        <member name="M:PFCollectionsObjects.PFListComparers.CompareListDecimal(System.Decimal,System.Decimal)">
             <summary>
             Compares two decimal values.
             </summary>
@@ -387,7 +387,7 @@
             <param name="y">Second decimal to compare.</param>
             <returns>Less than zero: x precedes y in the sort order.  Zero: x occurs in the same position in the sort order as y. Greater than zero: x follows y in the sort order. </returns>
         </member>
-        <member name="M:PFListObjects.PFListComparers.CompareListDateTime(System.DateTime,System.DateTime)">
+        <member name="M:PFCollectionsObjects.PFListComparers.CompareListDateTime(System.DateTime,System.DateTime)">
             <summary>
             Compares two DateTime values.
             </summary>
